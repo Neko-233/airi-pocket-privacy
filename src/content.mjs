@@ -30,8 +30,8 @@ export const localizedContent = {
     pages: {
       privacy: {
         title: '隐私政策',
-        description: 'Airi Pocket iOS 应用的隐私政策。',
-        summary: '本政策说明 Airi Pocket 在提供账号、AI 对话、语音、购买和可选产品分析功能时如何处理数据。',
+        description: 'AIRI Lite iOS 应用的隐私政策。',
+        summary: '本政策说明 AIRI Lite 在提供账号、AI 对话、语音、购买和可选产品分析功能时如何处理数据。',
         highlights: [
           { symbol: '○', text: '**产品分析默认关闭**，可随时在应用内开启或关闭。' },
           { symbol: '⌁', text: '**不将聊天正文用于产品分析**，不提供广告追踪。' },
@@ -42,8 +42,8 @@ export const localizedContent = {
             id: 'scope',
             title: '1. 适用范围',
             paragraphs: [
-              '本政策仅适用于 Airi Pocket iOS 应用及其官方移动端服务，不替代 Project AIRI 网站、桌面端或第三方服务各自的隐私政策。',
-              '本文中的“我们”指 Airi Pocket 的开发者和为应用提供官方服务的 Project AIRI 维护者。使用第三方服务时，其自身条款和隐私政策也可能适用。',
+              '本政策仅适用于 AIRI Lite iOS 应用及其官方移动端服务，不替代 Project AIRI 网站、桌面端或第三方服务各自的隐私政策。',
+              '本文中的“我们”指 AIRI Lite 的开发者和为应用提供官方服务的 Project AIRI 维护者。使用第三方服务时，其自身条款和隐私政策也可能适用。',
             ],
           },
           {
@@ -57,7 +57,7 @@ export const localizedContent = {
               '**网络与安全信息：**服务器在接收请求时可能处理 IP 地址、请求时间、响应状态和防滥用安全记录。',
               '**设备本地数据：**对话历史、已确认记忆、记忆候选、自定义聊天背景、偏好设置、缓存、日志和临时上下文保存在应用容器内。相关记忆在与当前请求有关时可能作为上下文随聊天请求发送。',
             ],
-            note: 'Airi Pocket 不请求精确位置，不出售个人数据，也不使用数据进行跨应用广告追踪。',
+            note: 'AIRI Lite 不请求精确位置，不出售个人数据，也不使用数据进行跨应用广告追踪。',
           },
           {
             id: 'analytics',
@@ -120,7 +120,7 @@ export const localizedContent = {
             id: 'children',
             title: '9. 未成年人',
             paragraphs: [
-              'Airi Pocket 不以低于所在地区数字同意最低年龄的儿童为目标。若您认为未成年人在未经适当同意的情况下向我们提供了个人数据，请通过下方联系方式告知我们。',
+              'AIRI Lite 不以低于所在地区数字同意最低年龄的儿童为目标。若您认为未成年人在未经适当同意的情况下向我们提供了个人数据，请通过下方联系方式告知我们。',
             ],
           },
           {
@@ -131,22 +131,22 @@ export const localizedContent = {
               '账号删除请优先使用应用内入口。其他隐私问题或文档更正可通过本页底部的 GitHub 仓库联系我们；请勿在公开 Issue 中填写电子邮件、账号标识、交易信息或其他个人数据。',
             ],
             links: [
-              { label: 'Airi Pocket 隐私仓库', url: 'https://github.com/Neko-233/airi-pocket-privacy' },
+              { label: 'AIRI Lite 隐私仓库', url: 'https://github.com/Neko-233/airi-pocket-privacy' },
             ],
           },
         ],
       },
       terms: {
         title: '服务条款',
-        description: 'Airi Pocket iOS 应用的服务条款。',
-        summary: '这些条款约定您使用 Airi Pocket 账号、AI 对话、语音、购买和其他移动端功能时的基本规则。',
+        description: 'AIRI Lite iOS 应用的服务条款。',
+        summary: '这些条款约定您使用 AIRI Lite 账号、AI 对话、语音、购买和其他移动端功能时的基本规则。',
         sections: [
           {
             id: 'acceptance',
             title: '1. 接受条款',
             paragraphs: [
-              '下载、访问或使用 Airi Pocket 即表示您同意本条款和隐私政策。如果您不同意，请停止使用应用。',
-              'Airi Pocket 仍在持续开发中，TestFlight 或测试版本可能不稳定、功能变化或停止提供，不应依赖其完成关键任务。',
+              '下载、访问或使用 AIRI Lite 即表示您同意本条款和隐私政策。如果您不同意，请停止使用应用。',
+              'AIRI Lite 仍在持续开发中，TestFlight 或测试版本可能不稳定、功能变化或停止提供，不应依赖其完成关键任务。',
             ],
           },
           {
@@ -162,7 +162,7 @@ export const localizedContent = {
             id: 'ai',
             title: '3. AI 内容与限制',
             paragraphs: [
-              'Airi Pocket 使用生成式 AI。输出可能不准确、不完整、令人不适或与您的预期不符，也不代表开发者或贡献者的观点。请在依赖输出前自行核实。',
+              'AIRI Lite 使用生成式 AI。输出可能不准确、不完整、令人不适或与您的预期不符，也不代表开发者或贡献者的观点。请在依赖输出前自行核实。',
               '本服务不提供医疗、法律、财务或其他专业建议，也不用于紧急情况、高风险控制或可能造成人身和财产损害的决策。',
             ],
           },
@@ -189,7 +189,7 @@ export const localizedContent = {
             title: '6. 购买、Flux 与退款',
             paragraphs: [
               '应用内购买由 Apple 的 StoreKit 和您的 App Store 账号处理。价格、税费、退款和付款方式受 Apple 规则及购买界面显示的信息约束。',
-              'Flux 或其他数字权益仅用于 Airi Pocket 中明确显示的功能，不是货币，不可兑换现金或转让。除法律或 Apple 规则另有要求外，已消耗的数字权益通常不可退还。',
+              'Flux 或其他数字权益仅用于 AIRI Lite 中明确显示的功能，不是货币，不可兑换现金或转让。除法律或 Apple 规则另有要求外，已消耗的数字权益通常不可退还。',
             ],
             links: [
               { label: 'Apple 媒体服务条款', url: 'https://www.apple.com/legal/internet-services/itunes/' },
@@ -200,7 +200,7 @@ export const localizedContent = {
             title: '7. 第三方与开源组件',
             paragraphs: [
               '应用可能依赖 Apple、AI/语音提供商、PostHog 或其他第三方服务。第三方服务可能受其自己的条款约束，且我们不控制其持续可用性。',
-              'Airi Pocket 包含开源软件。相应开源许可证继续适用于这些组件；本条款不会限制许可证已授予您的权利。',
+              'AIRI Lite 包含开源软件。相应开源许可证继续适用于这些组件；本条款不会限制许可证已授予您的权利。',
             ],
           },
           {
@@ -231,8 +231,8 @@ export const localizedContent = {
       },
       'account-deletion': {
         title: '账号删除',
-        description: '如何删除 Airi Pocket 账号和关联数据。',
-        summary: '您可以直接在 Airi Pocket 内发起账号删除，无需访问主站或联系客服。',
+        description: '如何删除 AIRI Lite 账号和关联数据。',
+        summary: '您可以直接在 AIRI Lite 内发起账号删除，无需访问主站或联系客服。',
         highlights: [
           { symbol: '1', text: '**在应用内发起**，入口位于“数据与隐私”。' },
           { symbol: '2', text: '**按提示验证**，服务器可能要求邮件确认或重新登录。' },
@@ -243,7 +243,7 @@ export const localizedContent = {
             id: 'steps',
             title: '删除步骤',
             steps: [
-              '打开 **Airi Pocket** 并进入角色页的设置。',
+              '打开 **AIRI Lite** 并进入角色页的设置。',
               '选择 **数据与隐私**。',
               '轻点 **删除账号**，阅读说明后选择 **继续删除**。',
               '如服务器要求，请完成邮件确认或重新登录验证。请求被接受后，应用会在本机退出登录。',
@@ -263,7 +263,7 @@ export const localizedContent = {
             id: 'local',
             title: '设备本地数据',
             paragraphs: [
-              '账号删除主要处理服务端账号数据。若要一并移除对话历史、记忆、自定义聊天背景、缓存和其他设备本地数据，请使用应用内相应清理功能或从设备卸载 Airi Pocket。',
+              '账号删除主要处理服务端账号数据。若要一并移除对话历史、记忆、自定义聊天背景、缓存和其他设备本地数据，请使用应用内相应清理功能或从设备卸载 AIRI Lite。',
             ],
           },
           {
@@ -313,8 +313,8 @@ export const localizedContent = {
     pages: {
       privacy: {
         title: '隱私權政策',
-        description: 'Airi Pocket iOS 應用程式的隱私權政策。',
-        summary: '本政策說明 Airi Pocket 在提供帳號、AI 對話、語音、購買及選用產品分析功能時如何處理資料。',
+        description: 'AIRI Lite iOS 應用程式的隱私權政策。',
+        summary: '本政策說明 AIRI Lite 在提供帳號、AI 對話、語音、購買及選用產品分析功能時如何處理資料。',
         highlights: [
           { symbol: '○', text: '**產品分析預設關閉**，可隨時在應用程式內開啟或關閉。' },
           { symbol: '⌁', text: '**不將聊天正文用於產品分析**，不提供廣告追蹤。' },
@@ -325,8 +325,8 @@ export const localizedContent = {
             id: 'scope',
             title: '1. 適用範圍',
             paragraphs: [
-              '本政策僅適用於 Airi Pocket iOS 應用程式及其官方行動服務，不取代 Project AIRI 網站、桌面版或第三方服務各自的隱私權政策。',
-              '本文中的「我們」指 Airi Pocket 的開發者及為應用程式提供官方服務的 Project AIRI 維護者。使用第三方服務時，其自身條款與隱私權政策亦可能適用。',
+              '本政策僅適用於 AIRI Lite iOS 應用程式及其官方行動服務，不取代 Project AIRI 網站、桌面版或第三方服務各自的隱私權政策。',
+              '本文中的「我們」指 AIRI Lite 的開發者及為應用程式提供官方服務的 Project AIRI 維護者。使用第三方服務時，其自身條款與隱私權政策亦可能適用。',
             ],
           },
           {
@@ -340,7 +340,7 @@ export const localizedContent = {
               '**網路與安全資訊：**伺服器接收請求時可能處理 IP 位址、請求時間、回應狀態及防濫用安全紀錄。',
               '**裝置本機資料：**對話紀錄、已確認記憶、記憶候選、自訂聊天背景、偏好設定、快取、記錄及暫時內容保存在應用程式容器。相關記憶在與目前請求有關時，可能作為內容隨聊天請求傳送。',
             ],
-            note: 'Airi Pocket 不要求精確位置、不出售個人資料，也不使用資料進行跨應用程式廣告追蹤。',
+            note: 'AIRI Lite 不要求精確位置、不出售個人資料，也不使用資料進行跨應用程式廣告追蹤。',
           },
           {
             id: 'analytics',
@@ -403,7 +403,7 @@ export const localizedContent = {
             id: 'children',
             title: '9. 未成年人',
             paragraphs: [
-              'Airi Pocket 並非以低於所在地區數位同意最低年齡的兒童為對象。若您認為未成年人未經適當同意便向我們提供個人資料，請透過下方聯絡方式告知。',
+              'AIRI Lite 並非以低於所在地區數位同意最低年齡的兒童為對象。若您認為未成年人未經適當同意便向我們提供個人資料，請透過下方聯絡方式告知。',
             ],
           },
           {
@@ -414,22 +414,22 @@ export const localizedContent = {
               '帳號刪除請優先使用應用程式內入口。其他隱私問題或文件修正可透過本頁底部的 GitHub 儲存庫聯絡我們；請勿在公開 Issue 中填寫電子郵件、帳號識別碼、交易資訊或其他個人資料。',
             ],
             links: [
-              { label: 'Airi Pocket 隱私儲存庫', url: 'https://github.com/Neko-233/airi-pocket-privacy' },
+              { label: 'AIRI Lite 隱私儲存庫', url: 'https://github.com/Neko-233/airi-pocket-privacy' },
             ],
           },
         ],
       },
       terms: {
         title: '服務條款',
-        description: 'Airi Pocket iOS 應用程式的服務條款。',
-        summary: '本條款規範您使用 Airi Pocket 帳號、AI 對話、語音、購買及其他行動功能時的基本規則。',
+        description: 'AIRI Lite iOS 應用程式的服務條款。',
+        summary: '本條款規範您使用 AIRI Lite 帳號、AI 對話、語音、購買及其他行動功能時的基本規則。',
         sections: [
           {
             id: 'acceptance',
             title: '1. 接受條款',
             paragraphs: [
-              '下載、存取或使用 Airi Pocket，即表示您同意本條款及隱私權政策。若您不同意，請停止使用應用程式。',
-              'Airi Pocket 仍持續開發中。TestFlight 或測試版本可能不穩定、功能變更或停止提供，不應依賴其完成關鍵任務。',
+              '下載、存取或使用 AIRI Lite，即表示您同意本條款及隱私權政策。若您不同意，請停止使用應用程式。',
+              'AIRI Lite 仍持續開發中。TestFlight 或測試版本可能不穩定、功能變更或停止提供，不應依賴其完成關鍵任務。',
             ],
           },
           {
@@ -445,7 +445,7 @@ export const localizedContent = {
             id: 'ai',
             title: '3. AI 內容與限制',
             paragraphs: [
-              'Airi Pocket 使用生成式 AI。輸出可能不準確、不完整、令人不適或不符合預期，亦不代表開發者或貢獻者的觀點。依賴輸出前請自行查證。',
+              'AIRI Lite 使用生成式 AI。輸出可能不準確、不完整、令人不適或不符合預期，亦不代表開發者或貢獻者的觀點。依賴輸出前請自行查證。',
               '本服務不提供醫療、法律、財務或其他專業建議，也不得用於緊急情況、高風險控制或可能造成人身與財產損害的決策。',
             ],
           },
@@ -472,7 +472,7 @@ export const localizedContent = {
             title: '6. 購買、Flux 與退款',
             paragraphs: [
               'App 內購買由 Apple StoreKit 與您的 App Store 帳號處理。價格、稅費、退款及付款方式受 Apple 規則與購買介面顯示資訊約束。',
-              'Flux 或其他數位權益僅供 Airi Pocket 中明確顯示的功能使用，不是貨幣、不可兌換現金或轉讓。除法律或 Apple 規則另有要求外，已使用的數位權益通常不予退款。',
+              'Flux 或其他數位權益僅供 AIRI Lite 中明確顯示的功能使用，不是貨幣、不可兌換現金或轉讓。除法律或 Apple 規則另有要求外，已使用的數位權益通常不予退款。',
             ],
             links: [
               { label: 'Apple 媒體服務條款', url: 'https://www.apple.com/legal/internet-services/itunes/' },
@@ -483,7 +483,7 @@ export const localizedContent = {
             title: '7. 第三方與開源元件',
             paragraphs: [
               '應用程式可能依賴 Apple、AI／語音供應商、PostHog 或其他第三方服務。第三方服務可能受其自身條款約束，且我們無法控制其持續可用性。',
-              'Airi Pocket 包含開源軟體。相關開源授權仍適用於各元件；本條款不會限制授權已賦予您的權利。',
+              'AIRI Lite 包含開源軟體。相關開源授權仍適用於各元件；本條款不會限制授權已賦予您的權利。',
             ],
           },
           {
@@ -514,8 +514,8 @@ export const localizedContent = {
       },
       'account-deletion': {
         title: '帳號刪除',
-        description: '如何刪除 Airi Pocket 帳號與關聯資料。',
-        summary: '您可直接在 Airi Pocket 內提出帳號刪除，無需造訪主站或聯絡客服。',
+        description: '如何刪除 AIRI Lite 帳號與關聯資料。',
+        summary: '您可直接在 AIRI Lite 內提出帳號刪除，無需造訪主站或聯絡客服。',
         highlights: [
           { symbol: '1', text: '**在應用程式內提出**，入口位於「資料與隱私」。' },
           { symbol: '2', text: '**依提示驗證**，伺服器可能要求電子郵件確認或重新登入。' },
@@ -526,7 +526,7 @@ export const localizedContent = {
             id: 'steps',
             title: '刪除步驟',
             steps: [
-              '開啟 **Airi Pocket** 並進入角色頁的設定。',
+              '開啟 **AIRI Lite** 並進入角色頁的設定。',
               '選擇 **資料與隱私**。',
               '點一下 **刪除帳號**，閱讀說明後選擇 **繼續刪除**。',
               '如伺服器要求，請完成電子郵件確認或重新登入驗證。請求獲接受後，應用程式會在本機登出。',
@@ -546,7 +546,7 @@ export const localizedContent = {
             id: 'local',
             title: '裝置本機資料',
             paragraphs: [
-              '帳號刪除主要處理伺服器端帳號資料。若要同時移除對話紀錄、記憶、自訂聊天背景、快取及其他裝置本機資料，請使用應用程式內相應清理功能或從裝置解除安裝 Airi Pocket。',
+              '帳號刪除主要處理伺服器端帳號資料。若要同時移除對話紀錄、記憶、自訂聊天背景、快取及其他裝置本機資料，請使用應用程式內相應清理功能或從裝置解除安裝 AIRI Lite。',
             ],
           },
           {
@@ -596,8 +596,8 @@ export const localizedContent = {
     pages: {
       privacy: {
         title: 'Privacy Policy',
-        description: 'Privacy Policy for the Airi Pocket iOS app.',
-        summary: 'This policy explains how Airi Pocket handles data when providing accounts, AI chat, voice, purchases, and optional product analytics.',
+        description: 'Privacy Policy for the AIRI Lite iOS app.',
+        summary: 'This policy explains how AIRI Lite handles data when providing accounts, AI chat, voice, purchases, and optional product analytics.',
         highlights: [
           { symbol: '○', text: '**Product analytics is off by default** and can be changed in the app at any time.' },
           { symbol: '⌁', text: '**Chat content is excluded from product analytics**, with no advertising tracking.' },
@@ -608,8 +608,8 @@ export const localizedContent = {
             id: 'scope',
             title: '1. Scope',
             paragraphs: [
-              'This policy applies only to the Airi Pocket iOS app and its official mobile services. It does not replace the separate privacy policies for the Project AIRI website, desktop apps, or third-party services.',
-              'In this policy, “we” means the Airi Pocket developer and Project AIRI maintainers who provide the app’s official services. When you use a third-party service, that service’s terms and privacy policy may also apply.',
+              'This policy applies only to the AIRI Lite iOS app and its official mobile services. It does not replace the separate privacy policies for the Project AIRI website, desktop apps, or third-party services.',
+              'In this policy, “we” means the AIRI Lite developer and Project AIRI maintainers who provide the app’s official services. When you use a third-party service, that service’s terms and privacy policy may also apply.',
             ],
           },
           {
@@ -623,7 +623,7 @@ export const localizedContent = {
               '**Network and security data:** servers may process IP addresses, request times, response status, and abuse-prevention security records when receiving requests.',
               '**On-device data:** conversation history, confirmed memories, memory suggestions, custom chat backgrounds, preferences, caches, logs, and temporary context are stored in the app container. Relevant memories may be included as context in a chat request when they are useful to that request.',
             ],
-            note: 'Airi Pocket does not request precise location, sell personal data, or use data for cross-app advertising tracking.',
+            note: 'AIRI Lite does not request precise location, sell personal data, or use data for cross-app advertising tracking.',
           },
           {
             id: 'analytics',
@@ -686,7 +686,7 @@ export const localizedContent = {
             id: 'children',
             title: '9. Children',
             paragraphs: [
-              'Airi Pocket is not directed to children below the minimum age of digital consent in their region. If you believe a child provided personal data without appropriate consent, please contact us using the method below.',
+              'AIRI Lite is not directed to children below the minimum age of digital consent in their region. If you believe a child provided personal data without appropriate consent, please contact us using the method below.',
             ],
           },
           {
@@ -697,22 +697,22 @@ export const localizedContent = {
               'Use the in-app flow for account deletion. For other privacy questions or documentation corrections, use the GitHub repository linked below. Do not include email addresses, account identifiers, transaction details, or other personal data in a public issue.',
             ],
             links: [
-              { label: 'Airi Pocket privacy repository', url: 'https://github.com/Neko-233/airi-pocket-privacy' },
+              { label: 'AIRI Lite privacy repository', url: 'https://github.com/Neko-233/airi-pocket-privacy' },
             ],
           },
         ],
       },
       terms: {
         title: 'Terms of Service',
-        description: 'Terms of Service for the Airi Pocket iOS app.',
-        summary: 'These terms set the basic rules for using Airi Pocket accounts, AI chat, voice, purchases, and other mobile features.',
+        description: 'Terms of Service for the AIRI Lite iOS app.',
+        summary: 'These terms set the basic rules for using AIRI Lite accounts, AI chat, voice, purchases, and other mobile features.',
         sections: [
           {
             id: 'acceptance',
             title: '1. Accepting these terms',
             paragraphs: [
-              'By downloading, accessing, or using Airi Pocket, you agree to these terms and the Privacy Policy. If you do not agree, do not use the app.',
-              'Airi Pocket is under active development. TestFlight and other test builds may be unstable, change features, or stop operating and should not be relied on for critical tasks.',
+              'By downloading, accessing, or using AIRI Lite, you agree to these terms and the Privacy Policy. If you do not agree, do not use the app.',
+              'AIRI Lite is under active development. TestFlight and other test builds may be unstable, change features, or stop operating and should not be relied on for critical tasks.',
             ],
           },
           {
@@ -728,7 +728,7 @@ export const localizedContent = {
             id: 'ai',
             title: '3. AI content and limitations',
             paragraphs: [
-              'Airi Pocket uses generative AI. Output may be inaccurate, incomplete, offensive, or unexpected and does not represent the views of the developer or contributors. Verify output before relying on it.',
+              'AIRI Lite uses generative AI. Output may be inaccurate, incomplete, offensive, or unexpected and does not represent the views of the developer or contributors. Verify output before relying on it.',
               'The service does not provide medical, legal, financial, or other professional advice and must not be used for emergencies, high-risk control, or decisions that may cause personal injury or property damage.',
             ],
           },
@@ -755,7 +755,7 @@ export const localizedContent = {
             title: '6. Purchases, Flux, and refunds',
             paragraphs: [
               'In-app purchases are handled through Apple StoreKit and your App Store account. Prices, taxes, refunds, and payment methods are governed by Apple’s rules and the information shown at purchase.',
-              'Flux and other digital entitlements may be used only for the Airi Pocket features shown in the app. They are not currency, cannot be redeemed for cash, and cannot be transferred. Consumed digital entitlements are generally non-refundable unless law or Apple policy requires otherwise.',
+              'Flux and other digital entitlements may be used only for the AIRI Lite features shown in the app. They are not currency, cannot be redeemed for cash, and cannot be transferred. Consumed digital entitlements are generally non-refundable unless law or Apple policy requires otherwise.',
             ],
             links: [
               { label: 'Apple Media Services Terms', url: 'https://www.apple.com/legal/internet-services/itunes/' },
@@ -766,7 +766,7 @@ export const localizedContent = {
             title: '7. Third-party and open-source components',
             paragraphs: [
               'The app may rely on Apple, AI or speech providers, PostHog, and other third-party services. Their own terms may apply, and we do not control their continued availability.',
-              'Airi Pocket includes open-source software. The corresponding licenses continue to apply to those components, and these terms do not limit rights already granted under those licenses.',
+              'AIRI Lite includes open-source software. The corresponding licenses continue to apply to those components, and these terms do not limit rights already granted under those licenses.',
             ],
           },
           {
@@ -797,8 +797,8 @@ export const localizedContent = {
       },
       'account-deletion': {
         title: 'Account Deletion',
-        description: 'How to delete your Airi Pocket account and associated data.',
-        summary: 'You can request account deletion directly inside Airi Pocket without visiting the main website or contacting support.',
+        description: 'How to delete your AIRI Lite account and associated data.',
+        summary: 'You can request account deletion directly inside AIRI Lite without visiting the main website or contacting support.',
         highlights: [
           { symbol: '1', text: '**Start in the app** from Data & Privacy settings.' },
           { symbol: '2', text: '**Complete verification** if the server requests email confirmation or a new sign-in.' },
@@ -809,7 +809,7 @@ export const localizedContent = {
             id: 'steps',
             title: 'How to delete your account',
             steps: [
-              'Open **Airi Pocket** and enter Settings from the Character screen.',
+              'Open **AIRI Lite** and enter Settings from the Character screen.',
               'Select **Data & Privacy**.',
               'Tap **Delete Account**, read the explanation, then choose **Continue Deletion**.',
               'Complete email confirmation or sign-in verification if requested by the server. Once the request is accepted, the app signs you out on this device.',
@@ -829,7 +829,7 @@ export const localizedContent = {
             id: 'local',
             title: 'Data stored on your device',
             paragraphs: [
-              'Account deletion primarily handles server-side account data. To also remove conversation history, memories, a custom chat background, caches, and other on-device data, use the related in-app controls or uninstall Airi Pocket from the device.',
+              'Account deletion primarily handles server-side account data. To also remove conversation history, memories, a custom chat background, caches, and other on-device data, use the related in-app controls or uninstall AIRI Lite from the device.',
             ],
           },
           {
@@ -879,8 +879,8 @@ export const localizedContent = {
     pages: {
       privacy: {
         title: 'プライバシーポリシー',
-        description: 'Airi Pocket iOS アプリのプライバシーポリシー。',
-        summary: '本ポリシーでは、Airi Pocket がアカウント、AI チャット、音声、購入、および任意の製品分析を提供する際のデータ取扱いを説明します。',
+        description: 'AIRI Lite iOS アプリのプライバシーポリシー。',
+        summary: '本ポリシーでは、AIRI Lite がアカウント、AI チャット、音声、購入、および任意の製品分析を提供する際のデータ取扱いを説明します。',
         highlights: [
           { symbol: '○', text: '**製品分析は初期状態でオフ**で、アプリ内からいつでも変更できます。' },
           { symbol: '⌁', text: '**チャット本文は製品分析に含まれず**、広告トラッキングも行いません。' },
@@ -891,8 +891,8 @@ export const localizedContent = {
             id: 'scope',
             title: '1. 適用範囲',
             paragraphs: [
-              '本ポリシーは Airi Pocket iOS アプリと公式モバイルサービスにのみ適用されます。Project AIRI のウェブサイト、デスクトップアプリ、第三者サービスには、それぞれ別のプライバシーポリシーが適用されます。',
-              '本ポリシーの「当方」とは、Airi Pocket の開発者および公式サービスを提供する Project AIRI のメンテナーを指します。第三者サービスを利用する場合、そのサービスの規約とプライバシーポリシーも適用されることがあります。',
+              '本ポリシーは AIRI Lite iOS アプリと公式モバイルサービスにのみ適用されます。Project AIRI のウェブサイト、デスクトップアプリ、第三者サービスには、それぞれ別のプライバシーポリシーが適用されます。',
+              '本ポリシーの「当方」とは、AIRI Lite の開発者および公式サービスを提供する Project AIRI のメンテナーを指します。第三者サービスを利用する場合、そのサービスの規約とプライバシーポリシーも適用されることがあります。',
             ],
           },
           {
@@ -906,7 +906,7 @@ export const localizedContent = {
               '**ネットワークとセキュリティ情報：**サーバーはリクエスト受信時に IP アドレス、時刻、応答状態、不正利用防止のセキュリティ記録を処理する場合があります。',
               '**端末内データ：**会話履歴、確認済みメモリ、メモリ候補、カスタムチャット背景、設定、キャッシュ、ログ、一時コンテキストはアプリコンテナに保存されます。現在のリクエストに有用なメモリは、チャットのコンテキストとして送信される場合があります。',
             ],
-            note: 'Airi Pocket は正確な位置情報を要求せず、個人データを販売せず、クロスアプリ広告トラッキングを行いません。',
+            note: 'AIRI Lite は正確な位置情報を要求せず、個人データを販売せず、クロスアプリ広告トラッキングを行いません。',
           },
           {
             id: 'analytics',
@@ -969,7 +969,7 @@ export const localizedContent = {
             id: 'children',
             title: '9. 子どものプライバシー',
             paragraphs: [
-              'Airi Pocket は、地域で定められたデジタル同意の最低年齢未満の子どもを対象としていません。適切な同意なく子どもが個人データを提供したと思われる場合は、下記の方法でお知らせください。',
+              'AIRI Lite は、地域で定められたデジタル同意の最低年齢未満の子どもを対象としていません。適切な同意なく子どもが個人データを提供したと思われる場合は、下記の方法でお知らせください。',
             ],
           },
           {
@@ -980,22 +980,22 @@ export const localizedContent = {
               'アカウント削除はアプリ内の手順をご利用ください。その他のプライバシーに関する質問や文書修正は、下記 GitHub リポジトリへお寄せください。公開 Issue にメールアドレス、アカウント識別子、取引情報、その他の個人データを記載しないでください。',
             ],
             links: [
-              { label: 'Airi Pocket プライバシーリポジトリ', url: 'https://github.com/Neko-233/airi-pocket-privacy' },
+              { label: 'AIRI Lite プライバシーリポジトリ', url: 'https://github.com/Neko-233/airi-pocket-privacy' },
             ],
           },
         ],
       },
       terms: {
         title: '利用規約',
-        description: 'Airi Pocket iOS アプリの利用規約。',
-        summary: '本規約は、Airi Pocket のアカウント、AI チャット、音声、購入、その他のモバイル機能を利用する際の基本ルールを定めます。',
+        description: 'AIRI Lite iOS アプリの利用規約。',
+        summary: '本規約は、AIRI Lite のアカウント、AI チャット、音声、購入、その他のモバイル機能を利用する際の基本ルールを定めます。',
         sections: [
           {
             id: 'acceptance',
             title: '1. 規約への同意',
             paragraphs: [
-              'Airi Pocket をダウンロード、アクセス、または使用することで、本規約とプライバシーポリシーに同意したものとみなされます。同意しない場合はアプリを使用しないでください。',
-              'Airi Pocket は開発中です。TestFlight などのテスト版は不安定で、機能が変更または停止する場合があり、重要な作業に依存すべきではありません。',
+              'AIRI Lite をダウンロード、アクセス、または使用することで、本規約とプライバシーポリシーに同意したものとみなされます。同意しない場合はアプリを使用しないでください。',
+              'AIRI Lite は開発中です。TestFlight などのテスト版は不安定で、機能が変更または停止する場合があり、重要な作業に依存すべきではありません。',
             ],
           },
           {
@@ -1011,7 +1011,7 @@ export const localizedContent = {
             id: 'ai',
             title: '3. AI コンテンツと制限',
             paragraphs: [
-              'Airi Pocket は生成 AI を使用します。出力は不正確、不完全、不快、または予期しない場合があり、開発者や貢献者の見解を示すものではありません。利用前に確認してください。',
+              'AIRI Lite は生成 AI を使用します。出力は不正確、不完全、不快、または予期しない場合があり、開発者や貢献者の見解を示すものではありません。利用前に確認してください。',
               '本サービスは医療、法律、金融、その他の専門的助言を提供せず、緊急事態、高リスク制御、人身・財産への損害につながる判断に使用してはなりません。',
             ],
           },
@@ -1038,7 +1038,7 @@ export const localizedContent = {
             title: '6. 購入、Flux、返金',
             paragraphs: [
               'アプリ内購入は Apple StoreKit と App Store アカウントで処理されます。価格、税、返金、支払方法には Apple の規則と購入画面の情報が適用されます。',
-              'Flux などのデジタル権利は、アプリに表示された Airi Pocket 機能にのみ使用できます。通貨ではなく、現金化や譲渡はできません。法律または Apple の規則で必要な場合を除き、使用済みのデジタル権利は通常返金されません。',
+              'Flux などのデジタル権利は、アプリに表示された AIRI Lite 機能にのみ使用できます。通貨ではなく、現金化や譲渡はできません。法律または Apple の規則で必要な場合を除き、使用済みのデジタル権利は通常返金されません。',
             ],
             links: [
               { label: 'Apple メディアサービス利用規約', url: 'https://www.apple.com/legal/internet-services/itunes/' },
@@ -1049,7 +1049,7 @@ export const localizedContent = {
             title: '7. 第三者サービスとオープンソース',
             paragraphs: [
               'アプリは Apple、AI／音声提供者、PostHog などの第三者サービスに依存する場合があります。それぞれの規約が適用されることがあり、当方は継続的な利用可能性を管理できません。',
-              'Airi Pocket にはオープンソースソフトウェアが含まれます。各ライセンスは引き続き適用され、本規約はライセンスで付与された権利を制限しません。',
+              'AIRI Lite にはオープンソースソフトウェアが含まれます。各ライセンスは引き続き適用され、本規約はライセンスで付与された権利を制限しません。',
             ],
           },
           {
@@ -1080,8 +1080,8 @@ export const localizedContent = {
       },
       'account-deletion': {
         title: 'アカウント削除',
-        description: 'Airi Pocket アカウントと関連データを削除する方法。',
-        summary: 'メインサイトへのアクセスやサポートへの連絡なしで、Airi Pocket アプリ内から直接アカウント削除を申請できます。',
+        description: 'AIRI Lite アカウントと関連データを削除する方法。',
+        summary: 'メインサイトへのアクセスやサポートへの連絡なしで、AIRI Lite アプリ内から直接アカウント削除を申請できます。',
         highlights: [
           { symbol: '1', text: '「データとプライバシー」から**アプリ内で開始**します。' },
           { symbol: '2', text: 'メール確認または再ログインを求められた場合は**確認を完了**します。' },
@@ -1092,7 +1092,7 @@ export const localizedContent = {
             id: 'steps',
             title: 'アカウント削除の手順',
             steps: [
-              '**Airi Pocket** を開き、キャラクター画面から設定へ進みます。',
+              '**AIRI Lite** を開き、キャラクター画面から設定へ進みます。',
               '**データとプライバシー**を選択します。',
               '**アカウントを削除**をタップし、説明を読んで**削除を続ける**を選択します。',
               'サーバーから求められた場合は、メール確認またはサインイン確認を完了します。申請が受理されると、この端末のアプリからサインアウトします。',
@@ -1112,7 +1112,7 @@ export const localizedContent = {
             id: 'local',
             title: '端末内に保存されたデータ',
             paragraphs: [
-              'アカウント削除は主にサーバー上のアカウントデータを処理します。会話履歴、メモリ、カスタムチャット背景、キャッシュ、その他の端末内データも削除するには、アプリ内の各削除機能を使用するか、端末から Airi Pocket をアンインストールしてください。',
+              'アカウント削除は主にサーバー上のアカウントデータを処理します。会話履歴、メモリ、カスタムチャット背景、キャッシュ、その他の端末内データも削除するには、アプリ内の各削除機能を使用するか、端末から AIRI Lite をアンインストールしてください。',
             ],
           },
           {
