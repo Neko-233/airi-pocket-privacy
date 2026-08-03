@@ -53,7 +53,7 @@ export const localizedContent = {
               '**账号与登录数据：**姓名或显示名称、电子邮件地址、后端用户 ID、登录方式，以及维持登录所需的访问凭据。登录凭据存放在 iOS 钥匙串或受保护的应用存储中。',
               '**AI 功能内容：**为生成回复，您发送的文字、相关对话上下文以及您选择或确认的相关记忆片段会通过加密连接发送至 AIRI 官方服务及完成请求所需的 AI 基础设施。使用语音合成时，待朗读文本也会被发送至语音服务。',
               '**购买与权益数据：**所选商品、交易或收据验证标识、购买状态、Flux 余额及履约记录。付款由 Apple 处理，我们不会获得完整银行卡信息。',
-              '**可选产品分析：**开启后会处理应用版本、功能事件、耗时、模型或服务类别、消息数量、购买流程阶段，以及账号或设备分析标识。不会包含聊天正文、提示词、回复正文、姓名、电子邮件、令牌、完整 URL 或原始错误详情。',
+              '**可选产品分析：**开启后会处理应用版本、页面类别、功能操作及结果、功能入口、登录或输入方式、模型或服务类别、性能耗时、消息数量、Flux 余额、所选套餐与购买流程阶段，以及账号或设备分析标识。不会包含聊天正文、提示词、回复正文、姓名、电子邮件、令牌、完整 URL、用户填写的名称或原始错误详情。',
               '**网络与安全信息：**服务器在接收请求时可能处理 IP 地址、请求时间、响应状态和防滥用安全记录。',
               '**设备本地数据：**对话历史、已确认记忆、记忆候选、自定义聊天背景、偏好设置、缓存、日志和临时上下文保存在应用容器内。相关记忆在与当前请求有关时可能作为上下文随聊天请求发送。',
             ],
@@ -64,7 +64,7 @@ export const localizedContent = {
             title: '3. 产品分析',
             paragraphs: [
               '正式版本的产品分析**默认关闭**。只有当您在“设置 → 数据与隐私”明确开启后，应用才会创建并发送白名单事件。关闭后会立即停止新的分析传输，并清理应用在本机保存的 PostHog 分析状态。',
-              '我们关闭了自动屏幕采集、元素自动采集、会话回放、调查和广告用途。分析数据仅用于发现故障、衡量性能并改进启动、聊天、语音和购买流程。',
+              '我们不会截取屏幕图像，并关闭了 SDK 的自动页面采集、元素自动采集、会话回放、调查和广告用途。开启后仅发送白名单中的页面类别和主要功能操作事件，用于发现故障、衡量性能，以及改进账号与登录、启动、聊天、语音、模型与个性化设置、记忆和购买流程。',
             ],
           },
           {
@@ -336,7 +336,7 @@ export const localizedContent = {
               '**帳號與登入資料：**姓名或顯示名稱、電子郵件地址、後端使用者 ID、登入方式，以及維持登入所需的存取憑證。登入憑證存放於 iOS 鑰匙圈或受保護的應用程式儲存空間。',
               '**AI 功能內容：**為產生回覆，您傳送的文字、相關對話內容，以及您選擇或確認的相關記憶片段，會透過加密連線傳送至 AIRI 官方服務及完成請求所需的 AI 基礎設施。使用語音合成時，待朗讀文字亦會傳送至語音服務。',
               '**購買與權益資料：**所選商品、交易或收據驗證識別碼、購買狀態、Flux 餘額及履約紀錄。付款由 Apple 處理，我們不會取得完整的信用卡資料。',
-              '**選用產品分析：**開啟後會處理應用程式版本、功能事件、耗時、模型或服務類別、訊息數量、購買流程階段，以及帳號或裝置分析識別碼。不包含聊天正文、提示詞、回覆正文、姓名、電子郵件、權杖、完整 URL 或原始錯誤詳情。',
+              '**選用產品分析：**開啟後會處理應用程式版本、頁面類別、功能操作及結果、功能入口、登入或輸入方式、模型或服務類別、效能耗時、訊息數量、Flux 餘額、所選方案與購買流程階段，以及帳號或裝置分析識別碼。不包含聊天正文、提示詞、回覆正文、姓名、電子郵件、權杖、完整 URL、使用者填寫的名稱或原始錯誤詳情。',
               '**網路與安全資訊：**伺服器接收請求時可能處理 IP 位址、請求時間、回應狀態及防濫用安全紀錄。',
               '**裝置本機資料：**對話紀錄、已確認記憶、記憶候選、自訂聊天背景、偏好設定、快取、記錄及暫時內容保存在應用程式容器。相關記憶在與目前請求有關時，可能作為內容隨聊天請求傳送。',
             ],
@@ -347,7 +347,7 @@ export const localizedContent = {
             title: '3. 產品分析',
             paragraphs: [
               '正式版本的產品分析**預設關閉**。只有當您在「設定 → 資料與隱私」明確開啟後，應用程式才會建立並傳送白名單事件。關閉後會立即停止新的分析傳輸，並清除應用程式在本機儲存的 PostHog 分析狀態。',
-              '我們已關閉自動畫面擷取、元素自動收集、工作階段重播、問卷及廣告用途。分析資料僅用於發現故障、衡量效能並改善啟動、聊天、語音及購買流程。',
+              '我們不會擷取螢幕影像，並已關閉 SDK 的自動頁面收集、元素自動收集、工作階段重播、問卷及廣告用途。開啟後僅傳送白名單中的頁面類別與主要功能操作事件，用於發現故障、衡量效能，以及改善帳號與登入、啟動、聊天、語音、模型與個人化設定、記憶及購買流程。',
             ],
           },
           {
@@ -619,7 +619,7 @@ export const localizedContent = {
               '**Account and sign-in data:** name or display name, email address, backend user ID, sign-in method, and access credentials required to keep you signed in. Credentials are stored in the iOS Keychain or protected app storage.',
               '**AI feature content:** the text you send, relevant conversation context, and relevant memory excerpts you selected or confirmed are sent over encrypted connections to AIRI official services and the AI infrastructure needed to fulfill your request. When speech synthesis is used, the text to be spoken is also sent to a speech service.',
               '**Purchases and entitlements:** selected products, transaction or receipt-verification identifiers, purchase state, Flux balance, and fulfillment records. Apple processes payment details; we do not receive full payment-card information.',
-              '**Optional product analytics:** when enabled, app version, feature events, timings, model or service categories, message counts, purchase-flow stages, and an account or device analytics identifier. Analytics excludes chat content, prompts, response text, names, email addresses, tokens, full URLs, and raw error details.',
+              '**Optional product analytics:** when enabled, app version, page categories, feature actions and outcomes, entry points, sign-in or input methods, model or service categories, performance timings, message counts, Flux balance, selected plans and purchase-flow stages, and an account or device analytics identifier. Analytics excludes chat content, prompts, response text, names, email addresses, tokens, full URLs, user-entered labels, and raw error details.',
               '**Network and security data:** servers may process IP addresses, request times, response status, and abuse-prevention security records when receiving requests.',
               '**On-device data:** conversation history, confirmed memories, memory suggestions, custom chat backgrounds, preferences, caches, logs, and temporary context are stored in the app container. Relevant memories may be included as context in a chat request when they are useful to that request.',
             ],
@@ -630,7 +630,7 @@ export const localizedContent = {
             title: '3. Product analytics',
             paragraphs: [
               'Product analytics is **off by default** in release builds. The app creates and sends allow-listed events only after you explicitly enable it under Settings → Data & Privacy. Turning it off immediately stops new analytics delivery and clears PostHog analytics state stored by the app on your device.',
-              'Automatic screen capture, element capture, session replay, surveys, and advertising uses are disabled. Analytics is used only to diagnose failures, measure performance, and improve launch, chat, voice, and purchase flows.',
+              'The app does not capture screen images, and SDK-level automatic screen-view capture, element capture, session replay, surveys, and advertising uses are disabled. When enabled, only allow-listed page categories and principal feature-action events are sent to diagnose failures, measure performance, and improve account and sign-in, launch, chat, voice, model and personalization settings, memory, and purchase flows.',
             ],
           },
           {
@@ -902,7 +902,7 @@ export const localizedContent = {
               '**アカウントとサインイン情報：**氏名または表示名、メールアドレス、バックエンドのユーザー ID、サインイン方法、およびログイン維持に必要な認証情報。認証情報は iOS キーチェーンまたは保護されたアプリストレージに保存されます。',
               '**AI 機能の内容：**返信生成のため、送信したテキスト、関連する会話コンテキスト、選択または確認した関連メモリの抜粋が、暗号化された接続を通じて AIRI 公式サービスおよび処理に必要な AI 基盤へ送信されます。音声合成を使用する場合、読み上げるテキストも音声サービスへ送信されます。',
               '**購入と権利情報：**選択商品、取引またはレシート検証識別子、購入状態、Flux 残高、提供記録。支払い情報は Apple が処理し、当方がカード番号全体を受け取ることはありません。',
-              '**任意の製品分析：**有効にした場合、アプリバージョン、機能イベント、所要時間、モデルまたはサービス種別、メッセージ数、購入フローの段階、アカウントまたは端末の分析識別子を処理します。チャット本文、プロンプト、返信本文、氏名、メールアドレス、トークン、完全な URL、生のエラー詳細は含みません。',
+              '**任意の製品分析：**有効にした場合、アプリバージョン、画面カテゴリ、機能操作と結果、操作入口、サインインまたは入力方法、モデルまたはサービス種別、性能測定時間、メッセージ数、Flux 残高、選択したプランと購入フローの段階、アカウントまたは端末の分析識別子を処理します。チャット本文、プロンプト、返信本文、氏名、メールアドレス、トークン、完全な URL、ユーザーが入力した名称、生のエラー詳細は含みません。',
               '**ネットワークとセキュリティ情報：**サーバーはリクエスト受信時に IP アドレス、時刻、応答状態、不正利用防止のセキュリティ記録を処理する場合があります。',
               '**端末内データ：**会話履歴、確認済みメモリ、メモリ候補、カスタムチャット背景、設定、キャッシュ、ログ、一時コンテキストはアプリコンテナに保存されます。現在のリクエストに有用なメモリは、チャットのコンテキストとして送信される場合があります。',
             ],
@@ -913,7 +913,7 @@ export const localizedContent = {
             title: '3. 製品分析',
             paragraphs: [
               'リリース版の製品分析は**初期状態でオフ**です。「設定 → データとプライバシー」で明示的に有効にした場合に限り、許可リストのイベントが作成・送信されます。無効にすると新しい分析送信は直ちに停止し、アプリが端末に保存した PostHog の分析状態が消去されます。',
-              '画面の自動取得、要素の自動取得、セッションリプレイ、アンケート、広告目的の利用は無効です。分析は障害の診断、性能測定、起動・チャット・音声・購入フローの改善にのみ使用します。',
+              '画面画像は取得せず、SDK による画面表示の自動取得、要素の自動取得、セッションリプレイ、アンケート、広告目的の利用も無効です。有効にした場合は、許可リストに含まれる画面カテゴリと主要機能の操作イベントのみを送信し、障害の診断、性能測定、アカウントとサインイン、起動、チャット、音声、モデルと個人設定、メモリ、購入フローの改善に使用します。',
             ],
           },
           {
