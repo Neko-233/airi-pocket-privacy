@@ -1,6 +1,6 @@
-# Airi Pocket Legal
+# AIRI Lite Legal
 
-Static, multilingual legal pages for the Airi Pocket iOS app.
+Static, multilingual legal pages for the AIRI Lite iOS app.
 
 ## Published pages
 
@@ -30,5 +30,5 @@ The build uses only Node.js and has no third-party dependencies.
 
 ## Privacy contact
 
-Account deletion is available inside Airi Pocket. For documentation corrections,
+Account deletion is available inside AIRI Lite. For documentation corrections,
 open an issue in this repository without including personal information.

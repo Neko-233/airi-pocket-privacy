@@ -64,7 +64,7 @@ function renderStructuredData(locale, page, content) {
     dateModified: '2026-08-03',
     isPartOf: {
       '@type': 'WebSite',
-      name: 'Airi Pocket Legal',
+      name: 'AIRI Lite Legal',
       url: siteOrigin,
     },
   }
@@ -88,9 +88,9 @@ export function renderPage(locale, content, page) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="color-scheme" content="light dark">
-  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f4f6f8">
-  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0b0d10">
-  <title>${escapeHtml(pageContent.title)} · Airi Pocket</title>
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#111111">
+  <title>${escapeHtml(pageContent.title)} · AIRI Lite</title>
   <meta name="description" content="${escapeHtml(pageContent.description)}">
   <link rel="canonical" href="${siteOrigin}/${locale}/${page}/">
   ${alternateLinks}
@@ -101,9 +101,9 @@ export function renderPage(locale, content, page) {
   <a class="skip-link" href="#content">${escapeHtml(content.ui.skip)}</a>
   <header class="site-header">
     <div class="header-inner">
-      <a class="brand" href="../../${locale}/privacy/" aria-label="Airi Pocket Legal">
-        <span class="brand-mark" aria-hidden="true"><span></span></span>
-        <span><strong>Airi Pocket</strong><small>${escapeHtml(content.ui.legal)}</small></span>
+      <a class="brand" href="../../${locale}/privacy/" aria-label="AIRI Lite Legal">
+        <strong>AIRI Lite</strong>
+        <small>${escapeHtml(content.ui.legal)}</small>
       </a>
       <nav class="primary-nav" aria-label="${escapeHtml(content.ui.primaryNavigation)}">
         ${renderNav(locale, content, page)}
@@ -120,7 +120,7 @@ export function renderPage(locale, content, page) {
 
   <main id="content">
     <section class="hero" aria-labelledby="page-title">
-      <div class="eyebrow">Airi Pocket · iOS</div>
+      <div class="eyebrow">AIRI Lite · iOS</div>
       <h1 id="page-title">${escapeHtml(pageContent.title)}</h1>
       <p class="lede">${escapeHtml(pageContent.summary)}</p>
       <div class="metadata">
@@ -139,17 +139,14 @@ export function renderPage(locale, content, page) {
         ${toc}
       </aside>
       <article class="legal-document">
-        ${pageContent.highlights?.length ? `<div class="highlights">${pageContent.highlights.map((item) => `<div><span aria-hidden="true">${escapeHtml(item.symbol)}</span><p>${renderInline(item.text)}</p></div>`).join('')}</div>` : ''}
+        ${pageContent.highlights?.length ? `<ul class="key-points">${pageContent.highlights.map((item) => `<li>${renderInline(item.text)}</li>`).join('')}</ul>` : ''}
         ${sections}
       </article>
     </div>
   </main>
 
   <footer>
-    <div>
-      <p><strong>Airi Pocket</strong> · ${escapeHtml(content.ui.footer)}</p>
-      <a href="https://github.com/Neko-233/airi-pocket-privacy" rel="external">GitHub</a>
-    </div>
+    <p><strong>AIRI Lite</strong> · ${escapeHtml(content.ui.footer)} · <a href="https://github.com/Neko-233/airi-pocket-privacy" rel="external">GitHub</a></p>
     <button id="copy-link" type="button" data-label="${escapeHtml(content.ui.copyLink)}" data-copied="${escapeHtml(content.ui.copied)}">${escapeHtml(content.ui.copyLink)}</button>
   </footer>
   <script src="../../assets/site.js" defer></script>
@@ -163,8 +160,8 @@ export function renderRootRedirect() {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Airi Pocket Legal</title>
-  <meta name="description" content="Privacy Policy, Terms of Service, and Account Deletion for Airi Pocket.">
+  <title>AIRI Lite Legal</title>
+  <meta name="description" content="Privacy Policy, Terms of Service, and Account Deletion for AIRI Lite.">
   <link rel="stylesheet" href="./assets/styles.css">
   <script>
     (() => {
@@ -178,8 +175,7 @@ export function renderRootRedirect() {
 </head>
 <body class="landing">
   <main>
-    <span class="brand-mark" aria-hidden="true"><span></span></span>
-    <h1>Airi Pocket Legal</h1>
+    <h1>AIRI Lite Legal</h1>
     <p>Choose a language to view the Privacy Policy, Terms of Service, and Account Deletion instructions.</p>
     <nav aria-label="Languages">
       <a href="./zh-Hans/privacy/">简体中文</a>
@@ -199,15 +195,14 @@ export function renderLanguageRedirect(locale, content) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="refresh" content="0; url=./privacy/">
-  <title>${escapeHtml(content.navigation.privacy)} · Airi Pocket</title>
+  <title>${escapeHtml(content.navigation.privacy)} · AIRI Lite</title>
   <link rel="canonical" href="${siteOrigin}/${locale}/privacy/">
   <link rel="stylesheet" href="../assets/styles.css">
   <script>location.replace('./privacy/')</script>
 </head>
 <body class="landing">
   <main>
-    <span class="brand-mark" aria-hidden="true"><span></span></span>
-    <h1>Airi Pocket</h1>
+    <h1>AIRI Lite</h1>
     <p><a href="./privacy/">${escapeHtml(content.navigation.privacy)}</a></p>
   </main>
 </body>
