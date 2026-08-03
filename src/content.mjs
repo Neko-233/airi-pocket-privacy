@@ -64,7 +64,7 @@ export const localizedContent = {
             title: '3. 产品分析',
             paragraphs: [
               '正式版本的产品分析**默认关闭**。只有当您在“设置 → 数据与隐私”明确开启后，应用才会创建并发送白名单事件。关闭后会立即停止新的分析传输，并清理应用在本机保存的 PostHog 分析状态。',
-              '我们不会截取屏幕图像，并关闭了 SDK 的自动页面采集、元素自动采集、会话回放、调查和广告用途。开启后仅发送白名单中的页面类别和主要功能操作事件，用于发现故障、衡量性能，以及改进账号与登录、启动、聊天、语音、模型与个性化设置、记忆和购买流程。',
+              '我们不会截取屏幕图像，并关闭了 SDK 的自动页面采集、元素自动采集、会话回放、调查和广告用途。开启后仅发送白名单事件，包括页面类别、主要功能操作、性能和购买流程事件，用于发现故障、衡量性能，以及改进账号与登录、启动、聊天、语音、模型与个性化设置、记忆和购买流程。',
             ],
           },
           {
@@ -347,7 +347,7 @@ export const localizedContent = {
             title: '3. 產品分析',
             paragraphs: [
               '正式版本的產品分析**預設關閉**。只有當您在「設定 → 資料與隱私」明確開啟後，應用程式才會建立並傳送白名單事件。關閉後會立即停止新的分析傳輸，並清除應用程式在本機儲存的 PostHog 分析狀態。',
-              '我們不會擷取螢幕影像，並已關閉 SDK 的自動頁面收集、元素自動收集、工作階段重播、問卷及廣告用途。開啟後僅傳送白名單中的頁面類別與主要功能操作事件，用於發現故障、衡量效能，以及改善帳號與登入、啟動、聊天、語音、模型與個人化設定、記憶及購買流程。',
+              '我們不會擷取螢幕影像，並已關閉 SDK 的自動頁面收集、元素自動收集、工作階段重播、問卷及廣告用途。開啟後僅傳送白名單事件，包括頁面類別、主要功能操作、效能及購買流程事件，用於發現故障、衡量效能，以及改善帳號與登入、啟動、聊天、語音、模型與個人化設定、記憶及購買流程。',
             ],
           },
           {
@@ -630,7 +630,7 @@ export const localizedContent = {
             title: '3. Product analytics',
             paragraphs: [
               'Product analytics is **off by default** in release builds. The app creates and sends allow-listed events only after you explicitly enable it under Settings → Data & Privacy. Turning it off immediately stops new analytics delivery and clears PostHog analytics state stored by the app on your device.',
-              'The app does not capture screen images, and SDK-level automatic screen-view capture, element capture, session replay, surveys, and advertising uses are disabled. When enabled, only allow-listed page categories and principal feature-action events are sent to diagnose failures, measure performance, and improve account and sign-in, launch, chat, voice, model and personalization settings, memory, and purchase flows.',
+              'The app does not capture screen images, and SDK-level automatic screen-view capture, element capture, session replay, surveys, and advertising uses are disabled. When enabled, only allow-listed events are sent, including page categories, principal feature actions, performance, and purchase-flow events, to diagnose failures, measure performance, and improve account and sign-in, launch, chat, voice, model and personalization settings, memory, and purchase flows.',
             ],
           },
           {
@@ -913,7 +913,7 @@ export const localizedContent = {
             title: '3. 製品分析',
             paragraphs: [
               'リリース版の製品分析は**初期状態でオフ**です。「設定 → データとプライバシー」で明示的に有効にした場合に限り、許可リストのイベントが作成・送信されます。無効にすると新しい分析送信は直ちに停止し、アプリが端末に保存した PostHog の分析状態が消去されます。',
-              '画面画像は取得せず、SDK による画面表示の自動取得、要素の自動取得、セッションリプレイ、アンケート、広告目的の利用も無効です。有効にした場合は、許可リストに含まれる画面カテゴリと主要機能の操作イベントのみを送信し、障害の診断、性能測定、アカウントとサインイン、起動、チャット、音声、モデルと個人設定、メモリ、購入フローの改善に使用します。',
+              '画面画像は取得せず、SDK による画面表示の自動取得、要素の自動取得、セッションリプレイ、アンケート、広告目的の利用も無効です。有効にした場合は、画面カテゴリ、主要機能の操作、性能、購入フローを含む許可リストのイベントのみを送信し、障害の診断、性能測定、アカウントとサインイン、起動、チャット、音声、モデルと個人設定、メモリ、購入フローの改善に使用します。',
             ],
           },
           {
