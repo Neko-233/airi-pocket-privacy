@@ -1,5 +1,11 @@
 export const pageOrder = ['privacy', 'terms', 'account-deletion']
 
+export const pageModifiedDates = {
+  privacy: '2026-08-04',
+  terms: '2026-08-03',
+  'account-deletion': '2026-08-03',
+}
+
 export const languages = {
   'zh-Hans': { label: '简体中文' },
   'zh-Hant': { label: '繁體中文' },
@@ -20,7 +26,6 @@ export const localizedContent = {
       primaryNavigation: '法律文档',
       language: '语言',
       effectiveDate: '生效日期：',
-      date: '2026 年 8 月 4 日',
       version: '版本',
       onThisPage: '本页内容',
       footer: '移动端法律文档',
@@ -30,6 +35,7 @@ export const localizedContent = {
     pages: {
       privacy: {
         title: '隐私政策',
+        effectiveDate: '2026 年 8 月 4 日',
         description: 'AIRI Lite iOS 应用的隐私政策。',
         summary: '本政策说明 AIRI Lite 在提供账号、AI 对话、语音、购买和可选产品分析功能时如何处理数据。',
         highlights: [
@@ -83,6 +89,7 @@ export const localizedContent = {
             title: '5. 服务提供商与共享',
             paragraphs: [
               '我们只在提供功能、保障安全或履行法律义务所必需的范围内向服务提供商传输数据。这些服务商可能包括 Apple（登录、应用分发与应用内购买）、AIRI 官方后端、第三方 AI 与语音服务提供商，以及仅在您开启分析时使用的 PostHog。',
+              '我们要求所有可访问用户数据的第三方提供与本政策及 Apple 要求相同或同等水平的数据保护。',
               '我们不会出售或出租个人数据。除非法律要求、保护用户或服务安全，或在业务承接且继续受本政策约束的情况下，我们不会向其他方披露个人数据。',
             ],
             links: [
@@ -139,6 +146,7 @@ export const localizedContent = {
       },
       terms: {
         title: '服务条款',
+        effectiveDate: '2026 年 8 月 3 日',
         description: 'AIRI Lite iOS 应用的服务条款。',
         summary: '这些条款约定您使用 AIRI Lite 账号、AI 对话、语音、购买和其他移动端功能时的基本规则。',
         sections: [
@@ -232,6 +240,7 @@ export const localizedContent = {
       },
       'account-deletion': {
         title: '账号删除',
+        effectiveDate: '2026 年 8 月 3 日',
         description: '如何删除 AIRI Lite 账号和关联数据。',
         summary: '您可以直接在 AIRI Lite 内发起账号删除，无需访问主站或联系客服。',
         highlights: [
@@ -304,7 +313,6 @@ export const localizedContent = {
       primaryNavigation: '法律文件',
       language: '語言',
       effectiveDate: '生效日期：',
-      date: '2026 年 8 月 4 日',
       version: '版本',
       onThisPage: '本頁內容',
       footer: '行動版法律文件',
@@ -314,6 +322,7 @@ export const localizedContent = {
     pages: {
       privacy: {
         title: '隱私權政策',
+        effectiveDate: '2026 年 8 月 4 日',
         description: 'AIRI Lite iOS 應用程式的隱私權政策。',
         summary: '本政策說明 AIRI Lite 在提供帳號、AI 對話、語音、購買及選用產品分析功能時如何處理資料。',
         highlights: [
@@ -367,6 +376,7 @@ export const localizedContent = {
             title: '5. 服務供應商與分享',
             paragraphs: [
               '我們僅在提供功能、確保安全或履行法律義務所需的範圍內，向服務供應商傳輸資料。這些供應商可能包括 Apple（登入、應用程式發佈與 App 內購買）、AIRI 官方後端、第三方 AI 與語音服務供應商，以及僅在您開啟分析時使用的 PostHog。',
+              '我們要求所有可存取使用者資料的第三方，提供與本政策及 Apple 要求相同或同等程度的資料保護。',
               '我們不會出售或出租個人資料。除非法律要求、為保護使用者或服務安全，或在業務承接且持續受本政策約束的情況下，我們不會向其他方揭露個人資料。',
             ],
             links: [
@@ -423,6 +433,7 @@ export const localizedContent = {
       },
       terms: {
         title: '服務條款',
+        effectiveDate: '2026 年 8 月 3 日',
         description: 'AIRI Lite iOS 應用程式的服務條款。',
         summary: '本條款規範您使用 AIRI Lite 帳號、AI 對話、語音、購買及其他行動功能時的基本規則。',
         sections: [
@@ -516,6 +527,7 @@ export const localizedContent = {
       },
       'account-deletion': {
         title: '帳號刪除',
+        effectiveDate: '2026 年 8 月 3 日',
         description: '如何刪除 AIRI Lite 帳號與關聯資料。',
         summary: '您可直接在 AIRI Lite 內提出帳號刪除，無需造訪主站或聯絡客服。',
         highlights: [
@@ -588,7 +600,6 @@ export const localizedContent = {
       primaryNavigation: 'Legal documents',
       language: 'Language',
       effectiveDate: 'Effective: ',
-      date: 'August 4, 2026',
       version: 'Version',
       onThisPage: 'On this page',
       footer: 'Mobile legal documents',
@@ -598,6 +609,7 @@ export const localizedContent = {
     pages: {
       privacy: {
         title: 'Privacy Policy',
+        effectiveDate: 'August 4, 2026',
         description: 'Privacy Policy for the AIRI Lite iOS app.',
         summary: 'This policy explains how AIRI Lite handles data when providing accounts, AI chat, voice, purchases, and optional product analytics.',
         highlights: [
@@ -651,6 +663,7 @@ export const localizedContent = {
             title: '5. Service providers and sharing',
             paragraphs: [
               'We transfer data to service providers only as needed to provide a feature, keep the service secure, or meet legal obligations. Providers may include Apple for sign-in, app distribution, and in-app purchases; the AIRI official backend; third-party AI and speech service providers; and PostHog only when you enable analytics.',
+              'We require every third party that can access user data to provide the same or an equivalent level of protection as this policy and Apple’s requirements.',
               'We do not sell or rent personal data. We do not disclose it to other parties except when required by law, necessary to protect users or the service, or part of a business transfer that remains subject to this policy.',
             ],
             links: [
@@ -707,6 +720,7 @@ export const localizedContent = {
       },
       terms: {
         title: 'Terms of Service',
+        effectiveDate: 'August 3, 2026',
         description: 'Terms of Service for the AIRI Lite iOS app.',
         summary: 'These terms set the basic rules for using AIRI Lite accounts, AI chat, voice, purchases, and other mobile features.',
         sections: [
@@ -800,6 +814,7 @@ export const localizedContent = {
       },
       'account-deletion': {
         title: 'Account Deletion',
+        effectiveDate: 'August 3, 2026',
         description: 'How to delete your AIRI Lite account and associated data.',
         summary: 'You can request account deletion directly inside AIRI Lite without visiting the main website or contacting support.',
         highlights: [
@@ -872,7 +887,6 @@ export const localizedContent = {
       primaryNavigation: '法的文書',
       language: '言語',
       effectiveDate: '発効日：',
-      date: '2026年8月4日',
       version: 'バージョン',
       onThisPage: 'このページの内容',
       footer: 'モバイル版法的文書',
@@ -882,6 +896,7 @@ export const localizedContent = {
     pages: {
       privacy: {
         title: 'プライバシーポリシー',
+        effectiveDate: '2026年8月4日',
         description: 'AIRI Lite iOS アプリのプライバシーポリシー。',
         summary: '本ポリシーでは、AIRI Lite がアカウント、AI チャット、音声、購入、および任意の製品分析を提供する際のデータ取扱いを説明します。',
         highlights: [
@@ -935,6 +950,7 @@ export const localizedContent = {
             title: '5. サービス提供者と共有',
             paragraphs: [
               '機能提供、安全確保、法的義務の履行に必要な範囲でのみ、サービス提供者へデータを送信します。提供者には、サインイン・アプリ配布・アプリ内購入を扱う Apple、AIRI 公式バックエンド、第三者の AI・音声サービス提供者、分析を有効にした場合のみ利用する PostHog が含まれる場合があります。',
+              'ユーザーデータにアクセスできるすべての第三者に対し、本ポリシーおよび Apple の要件と同一または同等の水準でデータを保護することを求めます。',
               '個人データを販売または貸与しません。法律上必要な場合、ユーザーやサービスの安全保護に必要な場合、または本ポリシーに引き続き従う事業承継の場合を除き、他者へ開示しません。',
             ],
             links: [
@@ -991,6 +1007,7 @@ export const localizedContent = {
       },
       terms: {
         title: '利用規約',
+        effectiveDate: '2026年8月3日',
         description: 'AIRI Lite iOS アプリの利用規約。',
         summary: '本規約は、AIRI Lite のアカウント、AI チャット、音声、購入、その他のモバイル機能を利用する際の基本ルールを定めます。',
         sections: [
@@ -1084,6 +1101,7 @@ export const localizedContent = {
       },
       'account-deletion': {
         title: 'アカウント削除',
+        effectiveDate: '2026年8月3日',
         description: 'AIRI Lite アカウントと関連データを削除する方法。',
         summary: 'メインサイトへのアクセスやサポートへの連絡なしで、AIRI Lite アプリ内から直接アカウント削除を申請できます。',
         highlights: [
