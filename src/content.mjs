@@ -20,7 +20,7 @@ export const localizedContent = {
       primaryNavigation: '法律文档',
       language: '语言',
       effectiveDate: '生效日期：',
-      date: '2026 年 8 月 3 日',
+      date: '2026 年 8 月 4 日',
       version: '版本',
       onThisPage: '本页内容',
       footer: '移动端法律文档',
@@ -51,7 +51,7 @@ export const localizedContent = {
             title: '2. 我们处理的数据',
             items: [
               '**账号与登录数据：**姓名或显示名称、电子邮件地址、后端用户 ID、登录方式，以及维持登录所需的访问凭据。登录凭据存放在 iOS 钥匙串或受保护的应用存储中。',
-              '**AI 功能内容：**为生成回复，您发送的文字、相关对话上下文以及您选择或确认的相关记忆片段会通过加密连接发送至 AIRI 官方服务及完成请求所需的 AI 基础设施。使用语音合成时，待朗读文本也会被发送至语音服务。',
+              '**AI 功能内容：**仅在您明确允许后，为生成回复，您发送的文字、相关对话上下文以及您选择或确认的相关记忆片段会通过加密连接发送至 AIRI 官方服务及完成请求所需的第三方 AI 服务提供商。使用语音合成时，待朗读文本也会被发送至第三方语音服务提供商。',
               '**购买与权益数据：**所选商品、交易或收据验证标识、购买状态、Flux 余额及履约记录。付款由 Apple 处理，我们不会获得完整银行卡信息。',
               '**可选产品分析：**开启后会处理应用版本、页面类别、功能操作及结果、功能入口、登录或输入方式、模型或服务类别、性能耗时、消息数量、Flux 余额、所选套餐与购买流程阶段，以及账号或设备分析标识。不会包含聊天正文、提示词、回复正文、姓名、电子邮件、令牌、完整 URL、用户填写的名称或原始错误详情。',
               '**网络与安全信息：**服务器在接收请求时可能处理 IP 地址、请求时间、响应状态和防滥用安全记录。',
@@ -82,7 +82,7 @@ export const localizedContent = {
             id: 'sharing',
             title: '5. 服务提供商与共享',
             paragraphs: [
-              '我们只在提供功能、保障安全或履行法律义务所必需的范围内向服务提供商传输数据。这些服务商可能包括 Apple（登录、应用分发与应用内购买）、AIRI 官方后端和 AI/语音基础设施，以及仅在您开启分析时使用的 PostHog。',
+              '我们只在提供功能、保障安全或履行法律义务所必需的范围内向服务提供商传输数据。这些服务商可能包括 Apple（登录、应用分发与应用内购买）、AIRI 官方后端、第三方 AI 与语音服务提供商，以及仅在您开启分析时使用的 PostHog。',
               '我们不会出售或出租个人数据。除非法律要求、保护用户或服务安全，或在业务承接且继续受本政策约束的情况下，我们不会向其他方披露个人数据。',
             ],
             links: [
@@ -102,6 +102,7 @@ export const localizedContent = {
             id: 'choices',
             title: '7. 您的选择与权利',
             items: [
+              '在“设置 → 数据与隐私”允许或拒绝 AI 服务处理聊天内容；关闭后，应用会停止向 AIRI 官方服务及第三方 AI 与语音服务提供商发送新的聊天或试听内容。',
               '在“设置 → 数据与隐私”开启或关闭产品分析。',
               '在应用内查看、编辑、取消置顶或删除本地记忆，并可清除自定义聊天背景。',
               '通过 iOS 设置管理照片、麦克风和通知等系统权限。',
@@ -303,7 +304,7 @@ export const localizedContent = {
       primaryNavigation: '法律文件',
       language: '語言',
       effectiveDate: '生效日期：',
-      date: '2026 年 8 月 3 日',
+      date: '2026 年 8 月 4 日',
       version: '版本',
       onThisPage: '本頁內容',
       footer: '行動版法律文件',
@@ -334,7 +335,7 @@ export const localizedContent = {
             title: '2. 我們處理的資料',
             items: [
               '**帳號與登入資料：**姓名或顯示名稱、電子郵件地址、後端使用者 ID、登入方式，以及維持登入所需的存取憑證。登入憑證存放於 iOS 鑰匙圈或受保護的應用程式儲存空間。',
-              '**AI 功能內容：**為產生回覆，您傳送的文字、相關對話內容，以及您選擇或確認的相關記憶片段，會透過加密連線傳送至 AIRI 官方服務及完成請求所需的 AI 基礎設施。使用語音合成時，待朗讀文字亦會傳送至語音服務。',
+              '**AI 功能內容：**只有在您明確允許後，為產生回覆，您傳送的文字、相關對話內容，以及您選擇或確認的相關記憶片段，才會透過加密連線傳送至 AIRI 官方服務及完成請求所需的第三方 AI 服務供應商。使用語音合成時，待朗讀文字亦會傳送至第三方語音服務供應商。',
               '**購買與權益資料：**所選商品、交易或收據驗證識別碼、購買狀態、Flux 餘額及履約紀錄。付款由 Apple 處理，我們不會取得完整的信用卡資料。',
               '**選用產品分析：**開啟後會處理應用程式版本、頁面類別、功能操作及結果、功能入口、登入或輸入方式、模型或服務類別、效能耗時、訊息數量、Flux 餘額、所選方案與購買流程階段，以及帳號或裝置分析識別碼。不包含聊天正文、提示詞、回覆正文、姓名、電子郵件、權杖、完整 URL、使用者填寫的名稱或原始錯誤詳情。',
               '**網路與安全資訊：**伺服器接收請求時可能處理 IP 位址、請求時間、回應狀態及防濫用安全紀錄。',
@@ -365,7 +366,7 @@ export const localizedContent = {
             id: 'sharing',
             title: '5. 服務供應商與分享',
             paragraphs: [
-              '我們僅在提供功能、確保安全或履行法律義務所需的範圍內，向服務供應商傳輸資料。這些供應商可能包括 Apple（登入、應用程式發佈與 App 內購買）、AIRI 官方後端與 AI／語音基礎設施，以及僅在您開啟分析時使用的 PostHog。',
+              '我們僅在提供功能、確保安全或履行法律義務所需的範圍內，向服務供應商傳輸資料。這些供應商可能包括 Apple（登入、應用程式發佈與 App 內購買）、AIRI 官方後端、第三方 AI 與語音服務供應商，以及僅在您開啟分析時使用的 PostHog。',
               '我們不會出售或出租個人資料。除非法律要求、為保護使用者或服務安全，或在業務承接且持續受本政策約束的情況下，我們不會向其他方揭露個人資料。',
             ],
             links: [
@@ -385,6 +386,7 @@ export const localizedContent = {
             id: 'choices',
             title: '7. 您的選擇與權利',
             items: [
+              '在「設定 → 資料與隱私」允許或拒絕 AI 服務處理聊天內容；關閉後，應用程式會停止向 AIRI 官方服務及第三方 AI 與語音服務供應商傳送新的聊天或試聽內容。',
               '在「設定 → 資料與隱私」開啟或關閉產品分析。',
               '在應用程式內檢視、編輯、取消置頂或刪除本機記憶，並可清除自訂聊天背景。',
               '透過 iOS 設定管理照片、麥克風與通知等系統權限。',
@@ -586,7 +588,7 @@ export const localizedContent = {
       primaryNavigation: 'Legal documents',
       language: 'Language',
       effectiveDate: 'Effective: ',
-      date: 'August 3, 2026',
+      date: 'August 4, 2026',
       version: 'Version',
       onThisPage: 'On this page',
       footer: 'Mobile legal documents',
@@ -617,7 +619,7 @@ export const localizedContent = {
             title: '2. Data we process',
             items: [
               '**Account and sign-in data:** name or display name, email address, backend user ID, sign-in method, and access credentials required to keep you signed in. Credentials are stored in the iOS Keychain or protected app storage.',
-              '**AI feature content:** the text you send, relevant conversation context, and relevant memory excerpts you selected or confirmed are sent over encrypted connections to AIRI official services and the AI infrastructure needed to fulfill your request. When speech synthesis is used, the text to be spoken is also sent to a speech service.',
+              '**AI feature content:** only after you explicitly allow it, the text you send, relevant conversation context, and relevant memory excerpts you selected or confirmed are sent over encrypted connections to AIRI official services and third-party AI service providers needed to fulfill your request. When speech synthesis is used, the text to be spoken is also sent to third-party speech service providers.',
               '**Purchases and entitlements:** selected products, transaction or receipt-verification identifiers, purchase state, Flux balance, and fulfillment records. Apple processes payment details; we do not receive full payment-card information.',
               '**Optional product analytics:** when enabled, app version, page categories, feature actions and outcomes, entry points, sign-in or input methods, model or service categories, performance timings, message counts, Flux balance, selected plans and purchase-flow stages, and an account or device analytics identifier. Analytics excludes chat content, prompts, response text, names, email addresses, tokens, full URLs, user-entered labels, and raw error details.',
               '**Network and security data:** servers may process IP addresses, request times, response status, and abuse-prevention security records when receiving requests.',
@@ -648,7 +650,7 @@ export const localizedContent = {
             id: 'sharing',
             title: '5. Service providers and sharing',
             paragraphs: [
-              'We transfer data to service providers only as needed to provide a feature, keep the service secure, or meet legal obligations. Providers may include Apple for sign-in, app distribution, and in-app purchases; AIRI official backend and AI or speech infrastructure; and PostHog only when you enable analytics.',
+              'We transfer data to service providers only as needed to provide a feature, keep the service secure, or meet legal obligations. Providers may include Apple for sign-in, app distribution, and in-app purchases; the AIRI official backend; third-party AI and speech service providers; and PostHog only when you enable analytics.',
               'We do not sell or rent personal data. We do not disclose it to other parties except when required by law, necessary to protect users or the service, or part of a business transfer that remains subject to this policy.',
             ],
             links: [
@@ -668,6 +670,7 @@ export const localizedContent = {
             id: 'choices',
             title: '7. Your choices and rights',
             items: [
+              'Allow or decline AI services processing chat content under Settings → Data & Privacy. Turning it off stops the app from sending new chat or preview content to AIRI official services and third-party AI or speech service providers.',
               'Enable or disable product analytics under Settings → Data & Privacy.',
               'Review, edit, unpin, or delete local memories in the app, and remove a custom chat background.',
               'Manage system permissions such as Photos, Microphone, and Notifications through iOS Settings.',
@@ -869,7 +872,7 @@ export const localizedContent = {
       primaryNavigation: '法的文書',
       language: '言語',
       effectiveDate: '発効日：',
-      date: '2026年8月3日',
+      date: '2026年8月4日',
       version: 'バージョン',
       onThisPage: 'このページの内容',
       footer: 'モバイル版法的文書',
@@ -900,7 +903,7 @@ export const localizedContent = {
             title: '2. 処理するデータ',
             items: [
               '**アカウントとサインイン情報：**氏名または表示名、メールアドレス、バックエンドのユーザー ID、サインイン方法、およびログイン維持に必要な認証情報。認証情報は iOS キーチェーンまたは保護されたアプリストレージに保存されます。',
-              '**AI 機能の内容：**返信生成のため、送信したテキスト、関連する会話コンテキスト、選択または確認した関連メモリの抜粋が、暗号化された接続を通じて AIRI 公式サービスおよび処理に必要な AI 基盤へ送信されます。音声合成を使用する場合、読み上げるテキストも音声サービスへ送信されます。',
+              '**AI 機能の内容：**明示的に許可した場合に限り、返信生成のため、送信したテキスト、関連する会話コンテキスト、選択または確認した関連メモリの抜粋が、暗号化された接続を通じて AIRI 公式サービスおよび処理に必要な第三者 AI サービス提供者へ送信されます。音声合成を使用する場合、読み上げるテキストも第三者の音声サービス提供者へ送信されます。',
               '**購入と権利情報：**選択商品、取引またはレシート検証識別子、購入状態、Flux 残高、提供記録。支払い情報は Apple が処理し、当方がカード番号全体を受け取ることはありません。',
               '**任意の製品分析：**有効にした場合、アプリバージョン、画面カテゴリ、機能操作と結果、操作入口、サインインまたは入力方法、モデルまたはサービス種別、性能測定時間、メッセージ数、Flux 残高、選択したプランと購入フローの段階、アカウントまたは端末の分析識別子を処理します。チャット本文、プロンプト、返信本文、氏名、メールアドレス、トークン、完全な URL、ユーザーが入力した名称、生のエラー詳細は含みません。',
               '**ネットワークとセキュリティ情報：**サーバーはリクエスト受信時に IP アドレス、時刻、応答状態、不正利用防止のセキュリティ記録を処理する場合があります。',
@@ -931,7 +934,7 @@ export const localizedContent = {
             id: 'sharing',
             title: '5. サービス提供者と共有',
             paragraphs: [
-              '機能提供、安全確保、法的義務の履行に必要な範囲でのみ、サービス提供者へデータを送信します。提供者には、サインイン・アプリ配布・アプリ内購入を扱う Apple、AIRI 公式バックエンドと AI／音声基盤、分析を有効にした場合のみ利用する PostHog が含まれる場合があります。',
+              '機能提供、安全確保、法的義務の履行に必要な範囲でのみ、サービス提供者へデータを送信します。提供者には、サインイン・アプリ配布・アプリ内購入を扱う Apple、AIRI 公式バックエンド、第三者の AI・音声サービス提供者、分析を有効にした場合のみ利用する PostHog が含まれる場合があります。',
               '個人データを販売または貸与しません。法律上必要な場合、ユーザーやサービスの安全保護に必要な場合、または本ポリシーに引き続き従う事業承継の場合を除き、他者へ開示しません。',
             ],
             links: [
@@ -951,6 +954,7 @@ export const localizedContent = {
             id: 'choices',
             title: '7. 選択肢と権利',
             items: [
+              '「設定 → データとプライバシー」で、AI サービスによるチャット内容の処理を許可または拒否する。無効にすると、AIRI 公式サービスおよび第三者の AI・音声サービス提供者への新しいチャットや試聴内容の送信が停止します。',
               '「設定 → データとプライバシー」で製品分析を有効または無効にする。',
               'アプリ内でローカルメモリを確認、編集、ピン解除、削除し、カスタムチャット背景を削除する。',
               'iOS 設定から写真、マイク、通知などのシステム権限を管理する。',
