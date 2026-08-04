@@ -1,7 +1,7 @@
 import { cp, mkdir, readFile, rm, writeFile } from 'node:fs/promises'
 import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { languages, localizedContent, pageOrder } from '../src/content.mjs'
+import { languages, localizedContent, pageModifiedDates, pageOrder } from '../src/content.mjs'
 import { renderLanguageRedirect, renderPage, renderRootRedirect } from '../src/template.mjs'
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..')
@@ -19,6 +19,8 @@ async function expectedFiles() {
     if (!content) throw new Error(`Missing content for ${locale}`)
     for (const page of pageOrder) {
       if (!content.pages[page]) throw new Error(`Missing ${page} page for ${locale}`)
+      if (!content.pages[page].effectiveDate) throw new Error(`Missing ${page} effective date for ${locale}`)
+      if (!pageModifiedDates[page]) throw new Error(`Missing ${page} machine-readable modified date`)
       files.set(`${locale}/${page}/index.html`, renderPage(locale, content, page))
     }
     files.set(`${locale}/index.html`, renderLanguageRedirect(locale, content))
@@ -34,6 +36,10 @@ async function validate(files) {
     if (!html.includes('<!doctype html>')) throw new Error(`${path}: missing doctype`)
     if (!html.includes('name="viewport"')) throw new Error(`${path}: missing viewport`)
     if (html.includes('undefined')) throw new Error(`${path}: contains undefined content`)
+    const page = path.split('/')[1]
+    if (pageModifiedDates[page] && !html.includes(`datetime="${pageModifiedDates[page]}"`)) {
+      throw new Error(`${path}: contains the wrong effective date`)
+    }
   }
 
   const legalPages = [...files.keys()].filter((path) => path.endsWith('/index.html') && path.split('/').length === 3)

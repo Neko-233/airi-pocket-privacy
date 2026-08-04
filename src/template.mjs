@@ -1,4 +1,4 @@
-import { languages, pageOrder } from './content.mjs'
+import { languages, pageModifiedDates, pageOrder } from './content.mjs'
 
 const siteOrigin = 'https://neko-233.github.io/airi-pocket-privacy'
 
@@ -61,7 +61,7 @@ function renderStructuredData(locale, page, content) {
     description: content.pages[page].description,
     inLanguage: locale,
     url: `${siteOrigin}/${locale}/${page}/`,
-    dateModified: '2026-08-03',
+    dateModified: pageModifiedDates[page],
     isPartOf: {
       '@type': 'WebSite',
       name: 'AIRI Lite Legal',
@@ -124,7 +124,7 @@ export function renderPage(locale, content, page) {
       <h1 id="page-title">${escapeHtml(pageContent.title)}</h1>
       <p class="lede">${escapeHtml(pageContent.summary)}</p>
       <div class="metadata">
-        <span>${escapeHtml(content.ui.effectiveDate)} <time datetime="2026-08-03">${escapeHtml(content.ui.date)}</time></span>
+        <span>${escapeHtml(content.ui.effectiveDate)} <time datetime="${pageModifiedDates[page]}">${escapeHtml(pageContent.effectiveDate)}</time></span>
         <span>${escapeHtml(content.ui.version)} 1.0</span>
       </div>
     </section>
