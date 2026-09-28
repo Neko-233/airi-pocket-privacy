@@ -45,6 +45,12 @@ export const localizedContent = {
         ],
         sections: [
           {
+            id: 'support',
+            title: "技术支持与用户反馈",
+            paragraphs: ["如需 AIRI Lite 使用帮助、报告问题或提出建议，请发送邮件至 support-airi@moeru.ai。请说明 App 版本、使用平台和问题详情；不要发送密码、验证码或银行卡信息。"],
+            links: [{ label: 'support-airi@moeru.ai', url: 'mailto:support-airi@moeru.ai' }],
+          },
+          {
             id: 'scope',
             title: '1. 适用范围',
             paragraphs: [
@@ -331,6 +337,12 @@ export const localizedContent = {
           { symbol: '⌂', text: '**記憶與自訂背景保存在裝置本機**，由您管理。' },
         ],
         sections: [
+          {
+            id: 'support',
+            title: "技術支援與使用者回饋",
+            paragraphs: ["如需 AIRI Lite 使用協助、回報問題或提出建議，請寄信至 support-airi@moeru.ai。請註明 App 版本、使用平台及問題詳情；請勿傳送密碼、驗證碼或銀行卡資訊。"],
+            links: [{ label: 'support-airi@moeru.ai', url: 'mailto:support-airi@moeru.ai' }],
+          },
           {
             id: 'scope',
             title: '1. 適用範圍',
@@ -619,6 +631,12 @@ export const localizedContent = {
         ],
         sections: [
           {
+            id: 'support',
+            title: "Technical support and feedback",
+            paragraphs: ["For help with AIRI Lite, bug reports, or suggestions, email support-airi@moeru.ai. Include your app version, platform, and a description of the issue. Do not send passwords, verification codes, or payment card details."],
+            links: [{ label: 'support-airi@moeru.ai', url: 'mailto:support-airi@moeru.ai' }],
+          },
+          {
             id: 'scope',
             title: '1. Scope',
             paragraphs: [
@@ -905,6 +923,12 @@ export const localizedContent = {
           { symbol: '⌂', text: '**メモリとカスタム背景は端末内に保存**され、ユーザーが管理できます。' },
         ],
         sections: [
+          {
+            id: 'support',
+            title: "テクニカルサポートとフィードバック",
+            paragraphs: ["AIRI Lite の使い方に関する質問、不具合の報告、ご意見は support-airi@moeru.ai までメールでお送りください。アプリのバージョン、利用環境、問題の詳細をご記載ください。パスワード、認証コード、カード情報は送信しないでください。"],
+            links: [{ label: 'support-airi@moeru.ai', url: 'mailto:support-airi@moeru.ai' }],
+          },
           {
             id: 'scope',
             title: '1. 適用範囲',
