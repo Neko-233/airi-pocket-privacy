@@ -103,8 +103,8 @@ export function renderPage(locale, content, page) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="color-scheme" content="light dark">
-  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#faf8fb">
-  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1c1920">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#181818">
   <title>${escapeHtml(pageContent.title)} · AIRI Lite</title>
   <meta name="description" content="${escapeHtml(pageContent.description)}">
   <link rel="canonical" href="${siteOrigin}/${locale}/${page}/">
@@ -119,7 +119,7 @@ export function renderPage(locale, content, page) {
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="../../${locale}/privacy/" aria-label="AIRI Lite Legal">
-        <img class="brand-icon" src="../../assets/app-icon.png" width="44" height="44" alt="">
+        <img class="brand-icon" src="../../assets/app-icon.png" width="32" height="32" alt="">
         <span class="brand-name"><strong>AIRI Lite</strong><small>${escapeHtml(labels.intro)}</small></span>
       </a>
       <nav class="primary-nav" aria-label="${escapeHtml(content.ui.primaryNavigation)}">
@@ -137,7 +137,7 @@ export function renderPage(locale, content, page) {
 
   <main id="content">
     <section class="hero" aria-labelledby="page-title">
-      <div class="hero-copy"><div class="eyebrow">AIRI Lite <span aria-hidden="true">/</span> ${escapeHtml(content.ui.legal)}</div>
+      <div class="hero-copy">
       <h1 id="page-title">${escapeHtml(pageContent.title)}</h1>
       <p class="lede">${escapeHtml(pageContent.summary)}</p>
       <div class="metadata">
@@ -145,7 +145,6 @@ export function renderPage(locale, content, page) {
         <span>${escapeHtml(content.ui.version)} 1.0</span>
       </div>
       </div>
-      <div class="hero-brand" aria-hidden="true"><img src="../../assets/app-icon.png" width="240" height="240" alt=""><span>AIRI Lite</span></div>
     </section>
 
     <div class="mobile-nav" aria-label="${escapeHtml(content.ui.primaryNavigation)}">
