@@ -1,9 +1,9 @@
 export const pageOrder = ['privacy', 'terms', 'account-deletion']
 
 export const pageModifiedDates = {
-  privacy: '2026-08-04',
+  privacy: '2026-09-30',
   terms: '2026-08-03',
-  'account-deletion': '2026-08-03',
+  'account-deletion': '2026-09-30',
 }
 
 export const languages = {
@@ -35,7 +35,7 @@ export const localizedContent = {
     pages: {
       privacy: {
         title: '隐私政策',
-        effectiveDate: '2026 年 8 月 4 日',
+        effectiveDate: '2026 年 9 月 30 日',
         description: 'AIRI Lite iOS 应用的隐私政策。',
         summary: '本政策说明 AIRI Lite 在提供账号、AI 对话、语音、购买和可选产品分析功能时如何处理数据。',
         highlights: [
@@ -63,11 +63,12 @@ export const localizedContent = {
             title: '2. 我们处理的数据',
             items: [
               '**账号与登录数据：**姓名或显示名称、电子邮件地址、后端用户 ID、登录方式，以及维持登录所需的访问凭据。登录凭据存放在 iOS 钥匙串或受保护的应用存储中。',
-              '**AI 功能内容：**仅在您明确允许后，为生成回复，您发送的文字、相关对话上下文以及您选择或确认的相关记忆片段会通过加密连接发送至 AIRI 官方服务及完成请求所需的第三方 AI 服务提供商。使用语音合成时，待朗读文本也会被发送至第三方语音服务提供商。',
+              '**AI 功能内容：**经您允许后，您发送的文字、图片、相关对话上下文和选定的记忆会通过加密连接发送至 AIRI 服务及完成请求所需的第三方 AI 服务。联网搜索会向上游搜索服务传送查询内容；语音合成会向语音服务传送待朗读文本。加密传输不表示接收数据的服务无法读取内容。',
               '**购买与权益数据：**所选商品、交易或收据验证标识、购买状态、Flux 余额及履约记录。付款由 Apple 处理，我们不会获得完整银行卡信息。',
               '**可选产品分析：**开启后会处理应用版本、页面类别、功能操作及结果、功能入口、登录或输入方式、模型或服务类别、性能耗时、消息数量、Flux 余额、所选套餐与购买流程阶段，以及账号或设备分析标识。不会包含聊天正文、提示词、回复正文、姓名、电子邮件、令牌、完整 URL、用户填写的名称或原始错误详情。',
               '**网络与安全信息：**服务器在接收请求时可能处理 IP 地址、请求时间、响应状态和防滥用安全记录。',
               '**设备本地数据：**对话历史、已确认记忆、记忆候选、自定义聊天背景、偏好设置、缓存、日志和临时上下文保存在应用容器内。相关记忆在与当前请求有关时可能作为上下文随聊天请求发送。',
+              '**聊天云同步与服务记录：**符合云同步条件的聊天文字和回复会与账号关联并保存在服务端，供同步和恢复会话使用。服务端还保存用户 ID、模型、请求状态、耗时、Token 用量和 Flux 消耗等记录。这些记录独立于可选产品分析，不会随关闭产品分析而停止保存。',
             ],
             note: 'AIRI Lite 不请求精确位置，不出售个人数据，也不使用数据进行跨应用广告追踪。',
           },
@@ -95,6 +96,7 @@ export const localizedContent = {
             title: '5. 服务提供商与共享',
             paragraphs: [
               '我们只在提供功能、保障安全或履行法律义务所必需的范围内向服务提供商传输数据。这些服务商可能包括 Apple（登录、应用分发与应用内购买）、AIRI 官方后端、第三方 AI 与语音服务提供商，以及仅在您开启分析时使用的 PostHog。',
+              '当前默认聊天请求通过 OpenRouter，默认语音合成通过 StepFun；其他可用路由还可能使用 Amazon Bedrock、阿里云或其他语音服务。具体服务取决于所选功能及路由配置。第三方可能按其政策和账号设置保留输入、图片、查询或输出；我们不承诺所有请求都采用零数据保留。',
               '我们要求所有可访问用户数据的第三方提供与本政策及 Apple 要求相同或同等水平的数据保护。',
               '我们不会出售或出租个人数据。除非法律要求、保护用户或服务安全，或在业务承接且继续受本政策约束的情况下，我们不会向其他方披露个人数据。',
             ],
@@ -107,8 +109,8 @@ export const localizedContent = {
             id: 'retention',
             title: '6. 保存期限',
             paragraphs: [
-              '设备本地数据会保留至您在应用内删除、清除应用数据或卸载应用。账号和服务数据通常在账号存续期间保留；发起账号删除后，可删除的关联数据会被删除或去标识化。',
-              '为完成退款、财务审计、防欺诈、安全和法定义务，部分交易与安全记录可能按必要期限保留。备份中的残余副本会在正常轮换周期内清除。',
+              '本地数据可通过应用内相应清理功能或卸载应用移除，移除本地副本不会自动删除云端副本。云同步聊天目前没有固定的自动到期清理期限。删除云端会话或注销账号时，当前服务端主要将相关私人会话及用户消息标记为已删除，消息正文仍可能保留在数据库中，并不等于立即彻底清除。',
+              '交易、用量、诊断和安全记录可能因履约、退款、排错、防欺诈或法定义务继续保留。目前尚未制定覆盖所有记录及备份的统一清理期限，因此不承诺在固定天数内自动清除。第三方持有的数据按其适用政策及设置处理。',
             ],
           },
           {
@@ -142,7 +144,7 @@ export const localizedContent = {
             title: '10. 变更与联系',
             paragraphs: [
               '当应用功能或法律要求发生变化时，我们可能更新本政策，并在本页标注新的生效日期。重大变更会通过适当方式另行提示。',
-              '账号删除请优先使用应用内入口。其他隐私问题或文档更正可通过本页底部的 GitHub 仓库联系我们；请勿在公开 Issue 中填写电子邮件、账号标识、交易信息或其他个人数据。',
+              '账号删除请优先使用应用内入口。若需申请进一步清除服务端内容，或行使访问、更正、删除等权利，请联系 support-airi@moeru.ai。请勿发送密码或验证码，也不要在公开 GitHub Issue 中提供个人数据。',
             ],
             links: [
               { label: 'AIRI Lite 隐私仓库', url: 'https://github.com/Neko-233/airi-pocket-privacy' },
@@ -246,7 +248,7 @@ export const localizedContent = {
       },
       'account-deletion': {
         title: '账号删除',
-        effectiveDate: '2026 年 8 月 3 日',
+        effectiveDate: '2026 年 9 月 30 日',
         description: '如何删除 AIRI Lite 账号和关联数据。',
         summary: '您可以直接在 AIRI Lite 内发起账号删除，无需访问主站或联系客服。',
         highlights: [
@@ -269,11 +271,11 @@ export const localizedContent = {
             id: 'deleted',
             title: '会删除什么',
             items: [
-              '账号资料、登录关联和可删除的服务端用户数据。',
-              '与账号关联且不再需要的服务状态和权益记录。',
+              '账号资料和登录关联由账号删除流程处理；服务端关联资源按各自的清理流程处理，不能保证所有数据同时被物理删除。',
+              '私人聊天及用户消息目前主要标记为已删除，正文仍可能保留；共享会话中的消息可能继续保留。交易、用量和诊断记录也可能保留。',
               '可归属于账号的产品分析身份会停止继续关联；分析偏好可在删除前随时关闭。',
             ],
-            note: '部分交易、安全、防欺诈或审计记录可能依据法律和正当业务需要保留，并在可行时去标识化。',
+            note: '当前尚无覆盖聊天正文、服务记录及备份的统一自动清理期限。若需进一步清除个人内容，请联系 support-airi@moeru.ai；请勿发送密码或验证码。',
           },
           {
             id: 'local',
@@ -296,7 +298,7 @@ export const localizedContent = {
             id: 'help',
             title: '无法登录或需要帮助',
             paragraphs: [
-              '如果无法进入应用内删除入口，请通过本页底部的 GitHub 仓库报告“无法访问账号删除入口”。公开反馈中不要填写电子邮件、用户 ID、交易号或其他个人数据；我们会提供下一步安全处理方式。',
+              '账号删除请优先使用应用内入口。若需申请进一步清除服务端内容，或行使访问、更正、删除等权利，请联系 support-airi@moeru.ai。请勿发送密码或验证码，也不要在公开 GitHub Issue 中提供个人数据。',
             ],
             links: [
               { label: '打开支持仓库', url: 'https://github.com/Neko-233/airi-pocket-privacy' },
@@ -328,7 +330,7 @@ export const localizedContent = {
     pages: {
       privacy: {
         title: '隱私權政策',
-        effectiveDate: '2026 年 8 月 4 日',
+        effectiveDate: '2026 年 9 月 30 日',
         description: 'AIRI Lite iOS 應用程式的隱私權政策。',
         summary: '本政策說明 AIRI Lite 在提供帳號、AI 對話、語音、購買及選用產品分析功能時如何處理資料。',
         highlights: [
@@ -356,11 +358,12 @@ export const localizedContent = {
             title: '2. 我們處理的資料',
             items: [
               '**帳號與登入資料：**姓名或顯示名稱、電子郵件地址、後端使用者 ID、登入方式，以及維持登入所需的存取憑證。登入憑證存放於 iOS 鑰匙圈或受保護的應用程式儲存空間。',
-              '**AI 功能內容：**只有在您明確允許後，為產生回覆，您傳送的文字、相關對話內容，以及您選擇或確認的相關記憶片段，才會透過加密連線傳送至 AIRI 官方服務及完成請求所需的第三方 AI 服務供應商。使用語音合成時，待朗讀文字亦會傳送至第三方語音服務供應商。',
+              '**AI 功能內容：**經您允許後，您傳送的文字、圖片、相關對話內容與選定記憶會透過加密連線傳送至 AIRI 服務及完成請求所需的第三方 AI 服務。網路搜尋會向上游搜尋服務傳送查詢內容；語音合成會向語音服務傳送待朗讀文字。加密傳輸不表示接收資料的服務無法讀取內容。',
               '**購買與權益資料：**所選商品、交易或收據驗證識別碼、購買狀態、Flux 餘額及履約紀錄。付款由 Apple 處理，我們不會取得完整的信用卡資料。',
               '**選用產品分析：**開啟後會處理應用程式版本、頁面類別、功能操作及結果、功能入口、登入或輸入方式、模型或服務類別、效能耗時、訊息數量、Flux 餘額、所選方案與購買流程階段，以及帳號或裝置分析識別碼。不包含聊天正文、提示詞、回覆正文、姓名、電子郵件、權杖、完整 URL、使用者填寫的名稱或原始錯誤詳情。',
               '**網路與安全資訊：**伺服器接收請求時可能處理 IP 位址、請求時間、回應狀態及防濫用安全紀錄。',
               '**裝置本機資料：**對話紀錄、已確認記憶、記憶候選、自訂聊天背景、偏好設定、快取、記錄及暫時內容保存在應用程式容器。相關記憶在與目前請求有關時，可能作為內容隨聊天請求傳送。',
+              '**聊天雲端同步與服務紀錄：**符合雲端同步條件的聊天文字與回覆會與帳號關聯並儲存在伺服器，以供同步和恢復對話。伺服器亦保存使用者 ID、模型、請求狀態、耗時、Token 用量與 Flux 消耗等紀錄。這些紀錄獨立於選用的產品分析，不會因關閉產品分析而停止保存。',
             ],
             note: 'AIRI Lite 不要求精確位置、不出售個人資料，也不使用資料進行跨應用程式廣告追蹤。',
           },
@@ -388,6 +391,7 @@ export const localizedContent = {
             title: '5. 服務供應商與分享',
             paragraphs: [
               '我們僅在提供功能、確保安全或履行法律義務所需的範圍內，向服務供應商傳輸資料。這些供應商可能包括 Apple（登入、應用程式發佈與 App 內購買）、AIRI 官方後端、第三方 AI 與語音服務供應商，以及僅在您開啟分析時使用的 PostHog。',
+              '目前預設聊天請求經由 OpenRouter，預設語音合成經由 StepFun；其他可用路由亦可能使用 Amazon Bedrock、阿里雲或其他語音服務。實際服務取決於所選功能與路由設定。第三方可能依其政策和帳號設定保留輸入、圖片、查詢或輸出；我們不承諾所有請求均採零資料保留。',
               '我們要求所有可存取使用者資料的第三方，提供與本政策及 Apple 要求相同或同等程度的資料保護。',
               '我們不會出售或出租個人資料。除非法律要求、為保護使用者或服務安全，或在業務承接且持續受本政策約束的情況下，我們不會向其他方揭露個人資料。',
             ],
@@ -400,8 +404,8 @@ export const localizedContent = {
             id: 'retention',
             title: '6. 保存期限',
             paragraphs: [
-              '裝置本機資料會保留至您在應用程式內刪除、清除應用程式資料或解除安裝。帳號與服務資料通常於帳號存續期間保留；提出帳號刪除後，可刪除的關聯資料將被刪除或去識別化。',
-              '為完成退款、財務稽核、防詐騙、安全及法定義務，部分交易與安全紀錄可能依必要期限保留。備份中的殘留副本會在正常輪替週期內清除。',
+              '本機資料可透過應用程式內相應清理功能或解除安裝移除；移除本機副本不會自動刪除雲端副本。雲端同步聊天目前沒有固定的自動到期清理期限。刪除雲端對話或帳號時，現行伺服器主要將相關私人對話及使用者訊息標記為已刪除，訊息正文仍可能保留在資料庫，並不等於立即徹底清除。',
+              '交易、用量、診斷及安全紀錄可能因履約、退款、除錯、防詐騙或法定義務繼續保留。目前尚未制定涵蓋所有紀錄與備份的統一清理期限，因此不承諾在固定天數內自動清除。第三方持有的資料依其適用政策與設定處理。',
             ],
           },
           {
@@ -435,7 +439,7 @@ export const localizedContent = {
             title: '10. 變更與聯絡',
             paragraphs: [
               '當應用程式功能或法律要求改變時，我們可能更新本政策，並在本頁標示新的生效日期。重大變更會以適當方式另行提示。',
-              '帳號刪除請優先使用應用程式內入口。其他隱私問題或文件修正可透過本頁底部的 GitHub 儲存庫聯絡我們；請勿在公開 Issue 中填寫電子郵件、帳號識別碼、交易資訊或其他個人資料。',
+              '帳號刪除請優先使用應用程式內入口。若需申請進一步清除伺服器內容，或行使存取、更正、刪除等權利，請聯絡 support-airi@moeru.ai。請勿傳送密碼或驗證碼，也不要在公開 GitHub Issue 中提供個人資料。',
             ],
             links: [
               { label: 'AIRI Lite 隱私儲存庫', url: 'https://github.com/Neko-233/airi-pocket-privacy' },
@@ -539,7 +543,7 @@ export const localizedContent = {
       },
       'account-deletion': {
         title: '帳號刪除',
-        effectiveDate: '2026 年 8 月 3 日',
+        effectiveDate: '2026 年 9 月 30 日',
         description: '如何刪除 AIRI Lite 帳號與關聯資料。',
         summary: '您可直接在 AIRI Lite 內提出帳號刪除，無需造訪主站或聯絡客服。',
         highlights: [
@@ -562,11 +566,11 @@ export const localizedContent = {
             id: 'deleted',
             title: '將刪除的內容',
             items: [
-              '帳號資料、登入關聯及可刪除的伺服器端使用者資料。',
-              '與帳號關聯且不再需要的服務狀態及權益紀錄。',
+              '帳號資料及登入關聯由帳號刪除流程處理；伺服器關聯資源依各自清理流程處理，不能保證所有資料同時被實體刪除。',
+              '私人聊天及使用者訊息目前主要標記為已刪除，正文仍可能保留；共享對話中的訊息可能繼續保留。交易、用量和診斷紀錄亦可能保留。',
               '可歸屬於帳號的產品分析身分將停止繼續關聯；分析偏好可在刪除前隨時關閉。',
             ],
-            note: '部分交易、安全、防詐騙或稽核紀錄可能因法律與正當業務需要保留，並在可行時去識別化。',
+            note: '目前尚無涵蓋聊天正文、服務紀錄與備份的統一自動清理期限。如需進一步清除個人內容，請聯絡 support-airi@moeru.ai；請勿傳送密碼或驗證碼。',
           },
           {
             id: 'local',
@@ -589,7 +593,7 @@ export const localizedContent = {
             id: 'help',
             title: '無法登入或需要協助',
             paragraphs: [
-              '若無法進入應用程式內的刪除入口，請透過本頁底部的 GitHub 儲存庫回報「無法存取帳號刪除入口」。公開回報中請勿填寫電子郵件、使用者 ID、交易號或其他個人資料；我們會提供下一步安全處理方式。',
+              '帳號刪除請優先使用應用程式內入口。若需申請進一步清除伺服器內容，或行使存取、更正、刪除等權利，請聯絡 support-airi@moeru.ai。請勿傳送密碼或驗證碼，也不要在公開 GitHub Issue 中提供個人資料。',
             ],
             links: [
               { label: '開啟支援儲存庫', url: 'https://github.com/Neko-233/airi-pocket-privacy' },
@@ -621,7 +625,7 @@ export const localizedContent = {
     pages: {
       privacy: {
         title: 'Privacy Policy',
-        effectiveDate: 'August 4, 2026',
+        effectiveDate: 'September 30, 2026',
         description: 'Privacy Policy for the AIRI Lite iOS app.',
         summary: 'This policy explains how AIRI Lite handles data when providing accounts, AI chat, voice, purchases, and optional product analytics.',
         highlights: [
@@ -649,11 +653,12 @@ export const localizedContent = {
             title: '2. Data we process',
             items: [
               '**Account and sign-in data:** name or display name, email address, backend user ID, sign-in method, and access credentials required to keep you signed in. Credentials are stored in the iOS Keychain or protected app storage.',
-              '**AI feature content:** only after you explicitly allow it, the text you send, relevant conversation context, and relevant memory excerpts you selected or confirmed are sent over encrypted connections to AIRI official services and third-party AI service providers needed to fulfill your request. When speech synthesis is used, the text to be spoken is also sent to third-party speech service providers.',
+              '**AI feature content:** with your permission, text, images, relevant conversation context, and selected memories are sent over encrypted connections to AIRI services and the third-party AI services needed to fulfill your request. Web search sends queries to upstream search services; speech synthesis sends the text to be spoken to speech services. Encryption in transit does not prevent the receiving services from reading the content.',
               '**Purchases and entitlements:** selected products, transaction or receipt-verification identifiers, purchase state, Flux balance, and fulfillment records. Apple processes payment details; we do not receive full payment-card information.',
               '**Optional product analytics:** when enabled, app version, page categories, feature actions and outcomes, entry points, sign-in or input methods, model or service categories, performance timings, message counts, Flux balance, selected plans and purchase-flow stages, and an account or device analytics identifier. Analytics excludes chat content, prompts, response text, names, email addresses, tokens, full URLs, user-entered labels, and raw error details.',
               '**Network and security data:** servers may process IP addresses, request times, response status, and abuse-prevention security records when receiving requests.',
               '**On-device data:** conversation history, confirmed memories, memory suggestions, custom chat backgrounds, preferences, caches, logs, and temporary context are stored in the app container. Relevant memories may be included as context in a chat request when they are useful to that request.',
+              '**Cloud chat synchronization and service records:** eligible chat text and replies are linked to your account and stored on the server to synchronize and restore conversations. The server also stores records such as user ID, model, request status, duration, token usage, and Flux consumption. These records are separate from optional product analytics and do not stop being stored when product analytics is disabled.',
             ],
             note: 'AIRI Lite does not request precise location, sell personal data, or use data for cross-app advertising tracking.',
           },
@@ -681,6 +686,7 @@ export const localizedContent = {
             title: '5. Service providers and sharing',
             paragraphs: [
               'We transfer data to service providers only as needed to provide a feature, keep the service secure, or meet legal obligations. Providers may include Apple for sign-in, app distribution, and in-app purchases; the AIRI official backend; third-party AI and speech service providers; and PostHog only when you enable analytics.',
+              'The current default chat route uses OpenRouter, and default speech synthesis uses StepFun. Other available routes may use Amazon Bedrock, Alibaba Cloud, or other speech services. The service used depends on the selected feature and route configuration. Third parties may retain inputs, images, queries, or outputs under their policies and account settings; we do not promise zero data retention for every request.',
               'We require every third party that can access user data to provide the same or an equivalent level of protection as this policy and Apple’s requirements.',
               'We do not sell or rent personal data. We do not disclose it to other parties except when required by law, necessary to protect users or the service, or part of a business transfer that remains subject to this policy.',
             ],
@@ -693,8 +699,8 @@ export const localizedContent = {
             id: 'retention',
             title: '6. Retention',
             paragraphs: [
-              'On-device data remains until you delete it in the app, clear app data, or uninstall the app. Account and service data is generally retained while your account remains active. After an account-deletion request, associated data that can be deleted is removed or de-identified.',
-              'Some transaction and security records may be retained as necessary for refunds, financial audits, fraud prevention, security, and legal obligations. Residual copies in backups are removed through normal rotation cycles.',
+              'You can remove on-device data using the relevant in-app controls or by uninstalling the app; removing a local copy does not automatically delete its cloud copy. Cloud-synchronized chats currently have no fixed automatic expiration period. When a cloud conversation or account is deleted, the current server implementation mainly marks the relevant private conversations and user messages as deleted. Message content may remain in the database; this is not immediate, complete erasure.',
+              'Transaction, usage, diagnostic, and security records may remain for fulfillment, refunds, troubleshooting, fraud prevention, or legal obligations. A uniform deletion schedule covering all records and backups has not yet been established, so we do not promise automatic erasure within a fixed number of days. Data held by third parties is handled under their applicable policies and settings.',
             ],
           },
           {
@@ -728,7 +734,7 @@ export const localizedContent = {
             title: '10. Changes and contact',
             paragraphs: [
               'We may update this policy when app features or legal requirements change. The effective date on this page will be updated, and material changes will be communicated through an appropriate notice.',
-              'Use the in-app flow for account deletion. For other privacy questions or documentation corrections, use the GitHub repository linked below. Do not include email addresses, account identifiers, transaction details, or other personal data in a public issue.',
+              'Use the in-app account-deletion option first. To request further removal of server-side content, or to exercise access, correction, or deletion rights, contact support-airi@moeru.ai. Do not send passwords or verification codes, or post personal data in public GitHub issues.',
             ],
             links: [
               { label: 'AIRI Lite privacy repository', url: 'https://github.com/Neko-233/airi-pocket-privacy' },
@@ -832,7 +838,7 @@ export const localizedContent = {
       },
       'account-deletion': {
         title: 'Account Deletion',
-        effectiveDate: 'August 3, 2026',
+        effectiveDate: 'September 30, 2026',
         description: 'How to delete your AIRI Lite account and associated data.',
         summary: 'You can request account deletion directly inside AIRI Lite without visiting the main website or contacting support.',
         highlights: [
@@ -855,11 +861,11 @@ export const localizedContent = {
             id: 'deleted',
             title: 'What is deleted',
             items: [
-              'Your account profile, sign-in associations, and deletable server-side user data.',
-              'Service state and entitlement records associated with the account when they are no longer needed.',
+              'The account-deletion flow handles your account profile and sign-in associations. Related server resources follow their respective cleanup procedures; this does not guarantee physical deletion of all data at the same time.',
+              'Private chats and user messages are currently mainly marked as deleted, and their content may remain. Messages in shared conversations may also remain, as may transaction, usage, and diagnostic records.',
               'Product-analytics identity stops being associated with the account. You can turn analytics off at any time before deletion.',
             ],
-            note: 'Some transaction, security, fraud-prevention, or audit records may be retained for legal and legitimate business needs and de-identified where practical.',
+            note: 'There is currently no uniform automatic erasure schedule covering chat content, service records, and backups. For further removal of personal content, contact support-airi@moeru.ai. Do not send passwords or verification codes.',
           },
           {
             id: 'local',
@@ -882,7 +888,7 @@ export const localizedContent = {
             id: 'help',
             title: 'If you cannot sign in',
             paragraphs: [
-              'If you cannot reach the deletion control in the app, report that you “cannot access account deletion” through the GitHub repository linked below. Do not include your email address, user ID, transaction number, or other personal data in the public report. We will provide a safer next step.',
+              'Use the in-app account-deletion option first. To request further removal of server-side content, or to exercise access, correction, or deletion rights, contact support-airi@moeru.ai. Do not send passwords or verification codes, or post personal data in public GitHub issues.',
             ],
             links: [
               { label: 'Open the support repository', url: 'https://github.com/Neko-233/airi-pocket-privacy' },
@@ -914,7 +920,7 @@ export const localizedContent = {
     pages: {
       privacy: {
         title: 'プライバシーポリシー',
-        effectiveDate: '2026年8月4日',
+        effectiveDate: '2026年9月30日',
         description: 'AIRI Lite iOS アプリのプライバシーポリシー。',
         summary: '本ポリシーでは、AIRI Lite がアカウント、AI チャット、音声、購入、および任意の製品分析を提供する際のデータ取扱いを説明します。',
         highlights: [
@@ -942,11 +948,12 @@ export const localizedContent = {
             title: '2. 処理するデータ',
             items: [
               '**アカウントとサインイン情報：**氏名または表示名、メールアドレス、バックエンドのユーザー ID、サインイン方法、およびログイン維持に必要な認証情報。認証情報は iOS キーチェーンまたは保護されたアプリストレージに保存されます。',
-              '**AI 機能の内容：**明示的に許可した場合に限り、返信生成のため、送信したテキスト、関連する会話コンテキスト、選択または確認した関連メモリの抜粋が、暗号化された接続を通じて AIRI 公式サービスおよび処理に必要な第三者 AI サービス提供者へ送信されます。音声合成を使用する場合、読み上げるテキストも第三者の音声サービス提供者へ送信されます。',
+              '**AI 機能の内容：**許可をいただいた上で、送信されたテキスト、画像、関連する会話内容、選択されたメモリを暗号化通信で AIRI および処理に必要な第三者 AI サービスへ送信します。ウェブ検索では検索サービスにクエリを、音声合成では音声サービスに読み上げるテキストを送信します。通信の暗号化は、受信側のサービスが内容を読めないことを意味しません。',
               '**購入と権利情報：**選択商品、取引またはレシート検証識別子、購入状態、Flux 残高、提供記録。支払い情報は Apple が処理し、当方がカード番号全体を受け取ることはありません。',
               '**任意の製品分析：**有効にした場合、アプリバージョン、画面カテゴリ、機能操作と結果、操作入口、サインインまたは入力方法、モデルまたはサービス種別、性能測定時間、メッセージ数、Flux 残高、選択したプランと購入フローの段階、アカウントまたは端末の分析識別子を処理します。チャット本文、プロンプト、返信本文、氏名、メールアドレス、トークン、完全な URL、ユーザーが入力した名称、生のエラー詳細は含みません。',
               '**ネットワークとセキュリティ情報：**サーバーはリクエスト受信時に IP アドレス、時刻、応答状態、不正利用防止のセキュリティ記録を処理する場合があります。',
               '**端末内データ：**会話履歴、確認済みメモリ、メモリ候補、カスタムチャット背景、設定、キャッシュ、ログ、一時コンテキストはアプリコンテナに保存されます。現在のリクエストに有用なメモリは、チャットのコンテキストとして送信される場合があります。',
+              '**会話のクラウド同期とサービス記録：**同期対象の会話テキストと応答はアカウントに関連付けられ、同期と会話の復元のためにサーバーに保存されます。ユーザー ID、モデル、リクエスト状態、所要時間、トークン使用量、Flux 消費量なども記録します。これらは任意の製品分析とは別であり、製品分析を無効にしても保存は停止しません。',
             ],
             note: 'AIRI Lite は正確な位置情報を要求せず、個人データを販売せず、クロスアプリ広告トラッキングを行いません。',
           },
@@ -974,6 +981,7 @@ export const localizedContent = {
             title: '5. サービス提供者と共有',
             paragraphs: [
               '機能提供、安全確保、法的義務の履行に必要な範囲でのみ、サービス提供者へデータを送信します。提供者には、サインイン・アプリ配布・アプリ内購入を扱う Apple、AIRI 公式バックエンド、第三者の AI・音声サービス提供者、分析を有効にした場合のみ利用する PostHog が含まれる場合があります。',
+              '現在の標準チャット経路は OpenRouter、標準音声合成は StepFun を使用します。他の経路では Amazon Bedrock、Alibaba Cloud、その他の音声サービスを使用する場合があります。利用先は選択した機能と経路設定によります。第三者は各自のポリシーとアカウント設定に従い入力、画像、検索クエリ、出力を保持する場合があり、すべてのリクエストについてゼロデータ保持を保証するものではありません。',
               'ユーザーデータにアクセスできるすべての第三者に対し、本ポリシーおよび Apple の要件と同一または同等の水準でデータを保護することを求めます。',
               '個人データを販売または貸与しません。法律上必要な場合、ユーザーやサービスの安全保護に必要な場合、または本ポリシーに引き続き従う事業承継の場合を除き、他者へ開示しません。',
             ],
@@ -986,8 +994,8 @@ export const localizedContent = {
             id: 'retention',
             title: '6. 保存期間',
             paragraphs: [
-              '端末内データは、アプリ内で削除する、アプリデータを消去する、またはアプリをアンインストールするまで保存されます。アカウントとサービスデータは通常、アカウントが有効な間保存されます。削除申請後、削除可能な関連データは削除または匿名化されます。',
-              '返金、会計監査、不正利用防止、セキュリティ、法的義務のため、一部の取引・セキュリティ記録を必要な期間保存する場合があります。バックアップ内の残存コピーは通常のローテーションで削除されます。',
+              '端末内データは対応するアプリ内操作またはアンインストールで削除できますが、ローカルのコピーを削除してもクラウド上のコピーは自動削除されません。クラウド同期された会話には現在、固定の自動削除期限がありません。クラウド会話やアカウントの削除時、現行サーバーは主に対象の非公開会話とユーザーメッセージに削除済みの印を付けます。本文はデータベースに残る場合があり、即時の完全消去ではありません。',
+              '取引、使用量、診断、セキュリティ記録は、サービス提供、返金、障害調査、不正防止、法的義務のため保持される場合があります。全記録とバックアップを対象とする統一的な削除期限は未設定のため、一定日数以内の自動消去を約束していません。第三者が保有するデータには各自のポリシーと設定が適用されます。',
             ],
           },
           {
@@ -1021,7 +1029,7 @@ export const localizedContent = {
             title: '10. 変更とお問い合わせ',
             paragraphs: [
               'アプリ機能や法的要件の変更に応じて本ポリシーを更新する場合があります。このページの発効日を更新し、重要な変更は適切な方法で通知します。',
-              'アカウント削除はアプリ内の手順をご利用ください。その他のプライバシーに関する質問や文書修正は、下記 GitHub リポジトリへお寄せください。公開 Issue にメールアドレス、アカウント識別子、取引情報、その他の個人データを記載しないでください。',
+              'アカウント削除にはアプリ内の操作をご利用ください。サーバー上の内容の追加削除、アクセス、訂正、削除の権利に関するご相談は support-airi@moeru.ai までご連絡ください。パスワードや認証コードを送信したり、公開 GitHub Issue に個人データを書き込んだりしないでください。',
             ],
             links: [
               { label: 'AIRI Lite プライバシーリポジトリ', url: 'https://github.com/Neko-233/airi-pocket-privacy' },
@@ -1125,7 +1133,7 @@ export const localizedContent = {
       },
       'account-deletion': {
         title: 'アカウント削除',
-        effectiveDate: '2026年8月3日',
+        effectiveDate: '2026年9月30日',
         description: 'AIRI Lite アカウントと関連データを削除する方法。',
         summary: 'メインサイトへのアクセスやサポートへの連絡なしで、AIRI Lite アプリ内から直接アカウント削除を申請できます。',
         highlights: [
@@ -1148,11 +1156,11 @@ export const localizedContent = {
             id: 'deleted',
             title: '削除される内容',
             items: [
-              'アカウントプロフィール、サインインの関連付け、削除可能なサーバー上のユーザーデータ。',
-              '不要となったアカウント関連のサービス状態と権利記録。',
+              'アカウント削除処理はプロフィールとログインの関連付けを処理します。関連するサーバー資源はそれぞれの削除処理に従うため、全データの同時の物理削除を保証するものではありません。',
+              '非公開会話とユーザーメッセージは現在、主に削除済みとして扱われ、本文が残る場合があります。共有会話のメッセージや、取引、使用量、診断記録も残る場合があります。',
               '製品分析の識別子はアカウントとの新たな関連付けを停止します。削除前にいつでも分析をオフにできます。',
             ],
-            note: '取引、セキュリティ、不正防止、監査の一部記録は、法的または正当な事業上の必要性により保存され、可能な場合は匿名化されることがあります。',
+            note: '会話本文、サービス記録、バックアップの統一的な自動消去期限は現在未設定です。個人の内容の追加削除は support-airi@moeru.ai までご相談ください。パスワードや認証コードは送信しないでください。',
           },
           {
             id: 'local',
@@ -1175,7 +1183,7 @@ export const localizedContent = {
             id: 'help',
             title: 'サインインできない場合',
             paragraphs: [
-              'アプリ内の削除機能にアクセスできない場合は、下記 GitHub リポジトリから「アカウント削除にアクセスできない」と報告してください。公開投稿にはメールアドレス、ユーザー ID、取引番号、その他の個人データを記載しないでください。安全な次の手順をご案内します。',
+              'アカウント削除にはアプリ内の操作をご利用ください。サーバー上の内容の追加削除、アクセス、訂正、削除の権利に関するご相談は support-airi@moeru.ai までご連絡ください。パスワードや認証コードを送信したり、公開 GitHub Issue に個人データを書き込んだりしないでください。',
             ],
             links: [
               { label: 'サポートリポジトリを開く', url: 'https://github.com/Neko-233/airi-pocket-privacy' },
