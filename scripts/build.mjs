@@ -62,7 +62,7 @@ async function check(files) {
       mismatches.push(path)
     }
   }
-  for (const asset of ['styles.css', 'site.js', 'app-icon.png']) {
+  for (const asset of ['styles.css', 'site.js', 'app-icon.png', 'brand-icon.svg']) {
     const source = await readFile(resolve(root, 'static', asset))
     try {
       const actual = await readFile(resolve(output, 'assets', asset))
@@ -86,6 +86,7 @@ async function build(files) {
   await cp(resolve(root, 'static', 'styles.css'), resolve(output, 'assets', 'styles.css'))
   await cp(resolve(root, 'static', 'site.js'), resolve(output, 'assets', 'site.js'))
   await cp(resolve(root, 'static', 'app-icon.png'), resolve(output, 'assets', 'app-icon.png'))
+  await cp(resolve(root, 'static', 'brand-icon.svg'), resolve(output, 'assets', 'brand-icon.svg'))
 }
 
 const files = await expectedFiles()

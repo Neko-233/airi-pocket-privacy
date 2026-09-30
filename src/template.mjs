@@ -109,9 +109,9 @@ export function renderPage(locale, content, page) {
   <meta name="description" content="${escapeHtml(pageContent.description)}">
   <link rel="canonical" href="${siteOrigin}/${locale}/${page}/">
   ${alternateLinks}
-  <link rel="icon" type="image/png" href="../../assets/app-icon.png">
+  <link rel="icon" type="image/svg+xml" href="../../assets/brand-icon.svg">
   <link rel="apple-touch-icon" href="../../assets/app-icon.png">
-  <link rel="stylesheet" href="../../assets/styles.css?v=20260930-neutral">
+  <link rel="stylesheet" href="../../assets/styles.css?v=20260930-icon">
   <script type="application/ld+json">${renderStructuredData(locale, page, content)}</script>
 </head>
 <body data-language="${locale}" data-page="${page}">
@@ -119,7 +119,7 @@ export function renderPage(locale, content, page) {
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="../../${locale}/privacy/" aria-label="AIRI Lite Legal">
-        <img class="brand-icon" src="../../assets/app-icon.png" width="32" height="32" alt="">
+        <img class="brand-icon" src="../../assets/brand-icon.svg" width="32" height="32" alt="">
         <span class="brand-name"><strong>AIRI Lite</strong><small>${escapeHtml(labels.intro)}</small></span>
       </a>
       <nav class="primary-nav" aria-label="${escapeHtml(content.ui.primaryNavigation)}">
@@ -184,8 +184,8 @@ export function renderRootRedirect() {
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AIRI Lite Legal</title>
   <meta name="description" content="Privacy Policy, Terms of Service, and Account Deletion for AIRI Lite.">
-  <link rel="icon" type="image/png" href="./assets/app-icon.png">
-  <link rel="stylesheet" href="./assets/styles.css?v=20260930-neutral">
+  <link rel="icon" type="image/svg+xml" href="./assets/brand-icon.svg">
+  <link rel="stylesheet" href="./assets/styles.css?v=20260930-icon">
   <script>
     (() => {
       const value = (navigator.languages?.[0] || navigator.language || 'en').toLowerCase()
@@ -221,8 +221,8 @@ export function renderLanguageRedirect(locale, content) {
   <meta http-equiv="refresh" content="0; url=./privacy/">
   <title>${escapeHtml(content.navigation.privacy)} · AIRI Lite</title>
   <link rel="canonical" href="${siteOrigin}/${locale}/privacy/">
-  <link rel="icon" type="image/png" href="../assets/app-icon.png">
-  <link rel="stylesheet" href="../assets/styles.css?v=20260930-neutral">
+  <link rel="icon" type="image/svg+xml" href="../assets/brand-icon.svg">
+  <link rel="stylesheet" href="../assets/styles.css?v=20260930-icon">
   <script>location.replace('./privacy/')</script>
 </head>
 <body class="landing">
