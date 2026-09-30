@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="color-scheme" content="light dark">
-  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
-  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#111111">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#faf8fb">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1c1920">
   <title>服務條款 · AIRI Lite</title>
   <meta name="description" content="AIRI Lite iOS 應用程式的服務條款。">
   <link rel="canonical" href="https://neko-233.github.io/airi-pocket-privacy/zh-Hant/terms/">
@@ -13,6 +13,8 @@
 <link rel="alternate" hreflang="zh-Hant" href="https://neko-233.github.io/airi-pocket-privacy/zh-Hant/terms/">
 <link rel="alternate" hreflang="en" href="https://neko-233.github.io/airi-pocket-privacy/en/terms/">
 <link rel="alternate" hreflang="ja" href="https://neko-233.github.io/airi-pocket-privacy/ja/terms/">
+  <link rel="icon" type="image/png" href="../../assets/app-icon.png">
+  <link rel="apple-touch-icon" href="../../assets/app-icon.png">
   <link rel="stylesheet" href="../../assets/styles.css">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"服務條款","description":"AIRI Lite iOS 應用程式的服務條款。","inLanguage":"zh-Hant","url":"https://neko-233.github.io/airi-pocket-privacy/zh-Hant/terms/","dateModified":"2026-08-03","isPartOf":{"@type":"WebSite","name":"AIRI Lite Legal","url":"https://neko-233.github.io/airi-pocket-privacy"}}</script>
 </head>
@@ -21,8 +23,8 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="../../zh-Hant/privacy/" aria-label="AIRI Lite Legal">
-        <strong>AIRI Lite</strong>
-        <small>法律與隱私</small>
+        <img class="brand-icon" src="../../assets/app-icon.png" width="44" height="44" alt="">
+        <span class="brand-name"><strong>AIRI Lite</strong><small>隱私與支援</small></span>
       </a>
       <nav class="primary-nav" aria-label="法律文件">
         <a href="../../zh-Hant/privacy/">隱私權政策</a>
@@ -44,13 +46,15 @@
 
   <main id="content">
     <section class="hero" aria-labelledby="page-title">
-      <div class="eyebrow">AIRI Lite · iOS</div>
+      <div class="hero-copy"><div class="eyebrow">AIRI Lite <span aria-hidden="true">/</span> 法律與隱私</div>
       <h1 id="page-title">服務條款</h1>
       <p class="lede">本條款規範您使用 AIRI Lite 帳號、AI 對話、語音、購買及其他行動功能時的基本規則。</p>
       <div class="metadata">
         <span>生效日期： <time datetime="2026-08-03">2026 年 8 月 3 日</time></span>
         <span>版本 1.0</span>
       </div>
+      </div>
+      <div class="hero-brand" aria-hidden="true"><img src="../../assets/app-icon.png" width="240" height="240" alt=""><span>AIRI Lite</span></div>
     </section>
 
     <div class="mobile-nav" aria-label="法律文件">
@@ -59,10 +63,7 @@
 <a href="../../zh-Hant/account-deletion/">帳號刪除</a>
     </div>
 
-    <div class="document-layout">
-      <aside class="toc" aria-label="本頁內容">
-        <strong>本頁內容</strong>
-        <a href="#acceptance">1. 接受條款</a>
+    <details class="mobile-toc"><summary>瀏覽文件目錄</summary><nav><a href="#acceptance">1. 接受條款</a>
 <a href="#accounts">2. 帳號與資格</a>
 <a href="#ai">3. AI 內容與限制</a>
 <a href="#conduct">4. 可接受使用</a>
@@ -71,7 +72,21 @@
 <a href="#third-party">7. 第三方與開源元件</a>
 <a href="#availability">8. 可用性、變更與終止</a>
 <a href="#disclaimer">9. 免責聲明與責任限制</a>
-<a href="#changes">10. 條款變更與聯絡</a>
+<a href="#changes">10. 條款變更與聯絡</a></nav></details>
+    <div class="document-layout">
+      <aside class="toc" aria-label="本頁內容">
+        <strong>本頁內容</strong>
+        <nav><a href="#acceptance">1. 接受條款</a>
+<a href="#accounts">2. 帳號與資格</a>
+<a href="#ai">3. AI 內容與限制</a>
+<a href="#conduct">4. 可接受使用</a>
+<a href="#content">5. 您的內容</a>
+<a href="#purchases">6. 購買、Flux 與退款</a>
+<a href="#third-party">7. 第三方與開源元件</a>
+<a href="#availability">8. 可用性、變更與終止</a>
+<a href="#disclaimer">9. 免責聲明與責任限制</a>
+<a href="#changes">10. 條款變更與聯絡</a></nav>
+        <a class="support-shortcut" href="mailto:support-airi@moeru.ai"><span aria-hidden="true">↗</span> 聯絡支援</a>
       </aside>
       <article class="legal-document">
         
@@ -129,6 +144,7 @@
 
   <footer>
     <p><strong>AIRI Lite</strong> · 行動版法律文件 · <a href="https://github.com/Neko-233/airi-pocket-privacy" rel="external">GitHub</a></p>
+    <a class="footer-support" href="mailto:support-airi@moeru.ai">聯絡支援 ↗</a>
     <button id="copy-link" type="button" data-label="複製連結" data-copied="已複製">複製連結</button>
   </footer>
   <script src="../../assets/site.js" defer></script>

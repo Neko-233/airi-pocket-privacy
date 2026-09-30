@@ -1,7 +1,15 @@
 import { languages, pageModifiedDates, pageOrder } from './content.mjs'
 
+const interfaceLabels = {
+  en: { support: 'Contact support', intro: 'Privacy & support', contents: 'Explore this document' },
+  'zh-Hans': { support: '联系支持', intro: '隐私与支持', contents: '浏览文档目录' },
+  'zh-Hant': { support: '聯絡支援', intro: '隱私與支援', contents: '瀏覽文件目錄' },
+  ja: { support: 'サポートに連絡', intro: 'プライバシーとサポート', contents: '目次を開く' },
+}
+
 const siteOrigin = 'https://neko-233.github.io/airi-pocket-privacy'
 
+/** Escapes content before inserting it into HTML markup. */
 function escapeHtml(value) {
   return String(value)
     .replaceAll('&', '&amp;')
@@ -11,12 +19,14 @@ function escapeHtml(value) {
     .replaceAll("'", '&#039;')
 }
 
+/** Renders the limited inline formatting supported by the policy source. */
 function renderInline(value) {
   return escapeHtml(value)
     .replaceAll(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
     .replaceAll(/`(.+?)`/g, '<code>$1</code>')
 }
 
+/** Builds localized document links with the active page exposed to assistive tools. */
 function renderNav(locale, content, currentPage) {
   return pageOrder.map((page) => {
     const current = page === currentPage ? ' aria-current="page"' : ''
@@ -24,6 +34,7 @@ function renderNav(locale, content, currentPage) {
   }).join('\n')
 }
 
+/** Lists supported languages while retaining the selected locale. */
 function renderLanguageOptions(locale) {
   return Object.entries(languages).map(([key, language]) => {
     const selected = key === locale ? ' selected' : ''
@@ -31,6 +42,7 @@ function renderLanguageOptions(locale) {
   }).join('\n')
 }
 
+/** Renders a policy section without altering its wording or link destinations. */
 function renderSection(section) {
   const paragraphs = (section.paragraphs ?? [])
     .map((paragraph) => `<p>${renderInline(paragraph)}</p>`)
@@ -53,6 +65,7 @@ function renderSection(section) {
   </section>`
 }
 
+/** Describes the current localized document for search engines. */
 function renderStructuredData(locale, page, content) {
   const data = {
     '@context': 'https://schema.org',
@@ -71,8 +84,10 @@ function renderStructuredData(locale, page, content) {
   return JSON.stringify(data).replaceAll('<', '\\u003c')
 }
 
+/** Composes the shared accessible document shell for every policy and locale. */
 export function renderPage(locale, content, page) {
   const pageContent = content.pages[page]
+  const labels = interfaceLabels[locale]
   const direction = languages[locale].direction ?? 'ltr'
   const alternateLinks = Object.keys(languages)
     .map((language) => `<link rel="alternate" hreflang="${language}" href="${siteOrigin}/${language}/${page}/">`)
@@ -88,12 +103,14 @@ export function renderPage(locale, content, page) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="color-scheme" content="light dark">
-  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
-  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#111111">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#faf8fb">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1c1920">
   <title>${escapeHtml(pageContent.title)} · AIRI Lite</title>
   <meta name="description" content="${escapeHtml(pageContent.description)}">
   <link rel="canonical" href="${siteOrigin}/${locale}/${page}/">
   ${alternateLinks}
+  <link rel="icon" type="image/png" href="../../assets/app-icon.png">
+  <link rel="apple-touch-icon" href="../../assets/app-icon.png">
   <link rel="stylesheet" href="../../assets/styles.css">
   <script type="application/ld+json">${renderStructuredData(locale, page, content)}</script>
 </head>
@@ -102,8 +119,8 @@ export function renderPage(locale, content, page) {
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="../../${locale}/privacy/" aria-label="AIRI Lite Legal">
-        <strong>AIRI Lite</strong>
-        <small>${escapeHtml(content.ui.legal)}</small>
+        <img class="brand-icon" src="../../assets/app-icon.png" width="44" height="44" alt="">
+        <span class="brand-name"><strong>AIRI Lite</strong><small>${escapeHtml(labels.intro)}</small></span>
       </a>
       <nav class="primary-nav" aria-label="${escapeHtml(content.ui.primaryNavigation)}">
         ${renderNav(locale, content, page)}
@@ -120,23 +137,27 @@ export function renderPage(locale, content, page) {
 
   <main id="content">
     <section class="hero" aria-labelledby="page-title">
-      <div class="eyebrow">AIRI Lite · iOS</div>
+      <div class="hero-copy"><div class="eyebrow">AIRI Lite <span aria-hidden="true">/</span> ${escapeHtml(content.ui.legal)}</div>
       <h1 id="page-title">${escapeHtml(pageContent.title)}</h1>
       <p class="lede">${escapeHtml(pageContent.summary)}</p>
       <div class="metadata">
         <span>${escapeHtml(content.ui.effectiveDate)} <time datetime="${pageModifiedDates[page]}">${escapeHtml(pageContent.effectiveDate)}</time></span>
         <span>${escapeHtml(content.ui.version)} 1.0</span>
       </div>
+      </div>
+      <div class="hero-brand" aria-hidden="true"><img src="../../assets/app-icon.png" width="240" height="240" alt=""><span>AIRI Lite</span></div>
     </section>
 
     <div class="mobile-nav" aria-label="${escapeHtml(content.ui.primaryNavigation)}">
       ${renderNav(locale, content, page)}
     </div>
 
+    <details class="mobile-toc"><summary>${escapeHtml(labels.contents)}</summary><nav>${toc}</nav></details>
     <div class="document-layout">
       <aside class="toc" aria-label="${escapeHtml(content.ui.onThisPage)}">
         <strong>${escapeHtml(content.ui.onThisPage)}</strong>
-        ${toc}
+        <nav>${toc}</nav>
+        <a class="support-shortcut" href="mailto:support-airi@moeru.ai"><span aria-hidden="true">↗</span> ${escapeHtml(labels.support)}</a>
       </aside>
       <article class="legal-document">
         ${pageContent.highlights?.length ? `<ul class="key-points">${pageContent.highlights.map((item) => `<li>${renderInline(item.text)}</li>`).join('')}</ul>` : ''}
@@ -147,6 +168,7 @@ export function renderPage(locale, content, page) {
 
   <footer>
     <p><strong>AIRI Lite</strong> · ${escapeHtml(content.ui.footer)} · <a href="https://github.com/Neko-233/airi-pocket-privacy" rel="external">GitHub</a></p>
+    <a class="footer-support" href="mailto:support-airi@moeru.ai">${escapeHtml(labels.support)} ↗</a>
     <button id="copy-link" type="button" data-label="${escapeHtml(content.ui.copyLink)}" data-copied="${escapeHtml(content.ui.copied)}">${escapeHtml(content.ui.copyLink)}</button>
   </footer>
   <script src="../../assets/site.js" defer></script>
@@ -154,6 +176,7 @@ export function renderPage(locale, content, page) {
 </html>`
 }
 
+/** Routes visitors to their preferred supported language with a no-script fallback. */
 export function renderRootRedirect() {
   return `<!doctype html>
 <html lang="en">
@@ -162,6 +185,7 @@ export function renderRootRedirect() {
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AIRI Lite Legal</title>
   <meta name="description" content="Privacy Policy, Terms of Service, and Account Deletion for AIRI Lite.">
+  <link rel="icon" type="image/png" href="./assets/app-icon.png">
   <link rel="stylesheet" href="./assets/styles.css">
   <script>
     (() => {
@@ -188,6 +212,7 @@ export function renderRootRedirect() {
 </html>`
 }
 
+/** Resolves a locale landing URL to its privacy document. */
 export function renderLanguageRedirect(locale, content) {
   return `<!doctype html>
 <html lang="${locale}">
@@ -197,6 +222,7 @@ export function renderLanguageRedirect(locale, content) {
   <meta http-equiv="refresh" content="0; url=./privacy/">
   <title>${escapeHtml(content.navigation.privacy)} · AIRI Lite</title>
   <link rel="canonical" href="${siteOrigin}/${locale}/privacy/">
+  <link rel="icon" type="image/png" href="../assets/app-icon.png">
   <link rel="stylesheet" href="../assets/styles.css">
   <script>location.replace('./privacy/')</script>
 </head>

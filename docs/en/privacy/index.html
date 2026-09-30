@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="color-scheme" content="light dark">
-  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
-  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#111111">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#faf8fb">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1c1920">
   <title>Privacy Policy · AIRI Lite</title>
   <meta name="description" content="Privacy Policy for the AIRI Lite iOS app.">
   <link rel="canonical" href="https://neko-233.github.io/airi-pocket-privacy/en/privacy/">
@@ -13,6 +13,8 @@
 <link rel="alternate" hreflang="zh-Hant" href="https://neko-233.github.io/airi-pocket-privacy/zh-Hant/privacy/">
 <link rel="alternate" hreflang="en" href="https://neko-233.github.io/airi-pocket-privacy/en/privacy/">
 <link rel="alternate" hreflang="ja" href="https://neko-233.github.io/airi-pocket-privacy/ja/privacy/">
+  <link rel="icon" type="image/png" href="../../assets/app-icon.png">
+  <link rel="apple-touch-icon" href="../../assets/app-icon.png">
   <link rel="stylesheet" href="../../assets/styles.css">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Privacy Policy","description":"Privacy Policy for the AIRI Lite iOS app.","inLanguage":"en","url":"https://neko-233.github.io/airi-pocket-privacy/en/privacy/","dateModified":"2026-08-04","isPartOf":{"@type":"WebSite","name":"AIRI Lite Legal","url":"https://neko-233.github.io/airi-pocket-privacy"}}</script>
 </head>
@@ -21,8 +23,8 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="../../en/privacy/" aria-label="AIRI Lite Legal">
-        <strong>AIRI Lite</strong>
-        <small>Legal &amp; Privacy</small>
+        <img class="brand-icon" src="../../assets/app-icon.png" width="44" height="44" alt="">
+        <span class="brand-name"><strong>AIRI Lite</strong><small>Privacy &amp; support</small></span>
       </a>
       <nav class="primary-nav" aria-label="Legal documents">
         <a href="../../en/privacy/" aria-current="page">Privacy Policy</a>
@@ -44,13 +46,15 @@
 
   <main id="content">
     <section class="hero" aria-labelledby="page-title">
-      <div class="eyebrow">AIRI Lite · iOS</div>
+      <div class="hero-copy"><div class="eyebrow">AIRI Lite <span aria-hidden="true">/</span> Legal &amp; Privacy</div>
       <h1 id="page-title">Privacy Policy</h1>
       <p class="lede">This policy explains how AIRI Lite handles data when providing accounts, AI chat, voice, purchases, and optional product analytics.</p>
       <div class="metadata">
         <span>Effective:  <time datetime="2026-08-04">August 4, 2026</time></span>
         <span>Version 1.0</span>
       </div>
+      </div>
+      <div class="hero-brand" aria-hidden="true"><img src="../../assets/app-icon.png" width="240" height="240" alt=""><span>AIRI Lite</span></div>
     </section>
 
     <div class="mobile-nav" aria-label="Legal documents">
@@ -59,10 +63,7 @@
 <a href="../../en/account-deletion/">Account Deletion</a>
     </div>
 
-    <div class="document-layout">
-      <aside class="toc" aria-label="On this page">
-        <strong>On this page</strong>
-        <a href="#support">Technical support and feedback</a>
+    <details class="mobile-toc"><summary>Explore this document</summary><nav><a href="#support">Technical support and feedback</a>
 <a href="#scope">1. Scope</a>
 <a href="#data">2. Data we process</a>
 <a href="#analytics">3. Product analytics</a>
@@ -72,7 +73,22 @@
 <a href="#choices">7. Your choices and rights</a>
 <a href="#security">8. Security and international processing</a>
 <a href="#children">9. Children</a>
-<a href="#changes-contact">10. Changes and contact</a>
+<a href="#changes-contact">10. Changes and contact</a></nav></details>
+    <div class="document-layout">
+      <aside class="toc" aria-label="On this page">
+        <strong>On this page</strong>
+        <nav><a href="#support">Technical support and feedback</a>
+<a href="#scope">1. Scope</a>
+<a href="#data">2. Data we process</a>
+<a href="#analytics">3. Product analytics</a>
+<a href="#purpose">4. Why we use data</a>
+<a href="#sharing">5. Service providers and sharing</a>
+<a href="#retention">6. Retention</a>
+<a href="#choices">7. Your choices and rights</a>
+<a href="#security">8. Security and international processing</a>
+<a href="#children">9. Children</a>
+<a href="#changes-contact">10. Changes and contact</a></nav>
+        <a class="support-shortcut" href="mailto:support-airi@moeru.ai"><span aria-hidden="true">↗</span> Contact support</a>
       </aside>
       <article class="legal-document">
         <ul class="key-points"><li><strong>Product analytics is off by default</strong> and can be changed in the app at any time.</li><li><strong>Chat content is excluded from product analytics</strong>, with no advertising tracking.</li><li><strong>Memories and custom backgrounds stay on your device</strong> and remain under your control.</li></ul>
@@ -133,6 +149,7 @@
 
   <footer>
     <p><strong>AIRI Lite</strong> · Mobile legal documents · <a href="https://github.com/Neko-233/airi-pocket-privacy" rel="external">GitHub</a></p>
+    <a class="footer-support" href="mailto:support-airi@moeru.ai">Contact support ↗</a>
     <button id="copy-link" type="button" data-label="Copy link" data-copied="Copied">Copy link</button>
   </footer>
   <script src="../../assets/site.js" defer></script>

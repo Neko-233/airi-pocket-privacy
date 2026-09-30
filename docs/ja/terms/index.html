@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="color-scheme" content="light dark">
-  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
-  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#111111">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#faf8fb">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1c1920">
   <title>利用規約 · AIRI Lite</title>
   <meta name="description" content="AIRI Lite iOS アプリの利用規約。">
   <link rel="canonical" href="https://neko-233.github.io/airi-pocket-privacy/ja/terms/">
@@ -13,6 +13,8 @@
 <link rel="alternate" hreflang="zh-Hant" href="https://neko-233.github.io/airi-pocket-privacy/zh-Hant/terms/">
 <link rel="alternate" hreflang="en" href="https://neko-233.github.io/airi-pocket-privacy/en/terms/">
 <link rel="alternate" hreflang="ja" href="https://neko-233.github.io/airi-pocket-privacy/ja/terms/">
+  <link rel="icon" type="image/png" href="../../assets/app-icon.png">
+  <link rel="apple-touch-icon" href="../../assets/app-icon.png">
   <link rel="stylesheet" href="../../assets/styles.css">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"利用規約","description":"AIRI Lite iOS アプリの利用規約。","inLanguage":"ja","url":"https://neko-233.github.io/airi-pocket-privacy/ja/terms/","dateModified":"2026-08-03","isPartOf":{"@type":"WebSite","name":"AIRI Lite Legal","url":"https://neko-233.github.io/airi-pocket-privacy"}}</script>
 </head>
@@ -21,8 +23,8 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="../../ja/privacy/" aria-label="AIRI Lite Legal">
-        <strong>AIRI Lite</strong>
-        <small>法務とプライバシー</small>
+        <img class="brand-icon" src="../../assets/app-icon.png" width="44" height="44" alt="">
+        <span class="brand-name"><strong>AIRI Lite</strong><small>プライバシーとサポート</small></span>
       </a>
       <nav class="primary-nav" aria-label="法的文書">
         <a href="../../ja/privacy/">プライバシーポリシー</a>
@@ -44,13 +46,15 @@
 
   <main id="content">
     <section class="hero" aria-labelledby="page-title">
-      <div class="eyebrow">AIRI Lite · iOS</div>
+      <div class="hero-copy"><div class="eyebrow">AIRI Lite <span aria-hidden="true">/</span> 法務とプライバシー</div>
       <h1 id="page-title">利用規約</h1>
       <p class="lede">本規約は、AIRI Lite のアカウント、AI チャット、音声、購入、その他のモバイル機能を利用する際の基本ルールを定めます。</p>
       <div class="metadata">
         <span>発効日： <time datetime="2026-08-03">2026年8月3日</time></span>
         <span>バージョン 1.0</span>
       </div>
+      </div>
+      <div class="hero-brand" aria-hidden="true"><img src="../../assets/app-icon.png" width="240" height="240" alt=""><span>AIRI Lite</span></div>
     </section>
 
     <div class="mobile-nav" aria-label="法的文書">
@@ -59,10 +63,7 @@
 <a href="../../ja/account-deletion/">アカウント削除</a>
     </div>
 
-    <div class="document-layout">
-      <aside class="toc" aria-label="このページの内容">
-        <strong>このページの内容</strong>
-        <a href="#acceptance">1. 規約への同意</a>
+    <details class="mobile-toc"><summary>目次を開く</summary><nav><a href="#acceptance">1. 規約への同意</a>
 <a href="#accounts">2. アカウントと利用資格</a>
 <a href="#ai">3. AI コンテンツと制限</a>
 <a href="#conduct">4. 適切な利用</a>
@@ -71,7 +72,21 @@
 <a href="#third-party">7. 第三者サービスとオープンソース</a>
 <a href="#availability">8. 提供、変更、終了</a>
 <a href="#disclaimer">9. 免責事項と責任制限</a>
-<a href="#changes">10. 変更とお問い合わせ</a>
+<a href="#changes">10. 変更とお問い合わせ</a></nav></details>
+    <div class="document-layout">
+      <aside class="toc" aria-label="このページの内容">
+        <strong>このページの内容</strong>
+        <nav><a href="#acceptance">1. 規約への同意</a>
+<a href="#accounts">2. アカウントと利用資格</a>
+<a href="#ai">3. AI コンテンツと制限</a>
+<a href="#conduct">4. 適切な利用</a>
+<a href="#content">5. ユーザーコンテンツ</a>
+<a href="#purchases">6. 購入、Flux、返金</a>
+<a href="#third-party">7. 第三者サービスとオープンソース</a>
+<a href="#availability">8. 提供、変更、終了</a>
+<a href="#disclaimer">9. 免責事項と責任制限</a>
+<a href="#changes">10. 変更とお問い合わせ</a></nav>
+        <a class="support-shortcut" href="mailto:support-airi@moeru.ai"><span aria-hidden="true">↗</span> サポートに連絡</a>
       </aside>
       <article class="legal-document">
         
@@ -129,6 +144,7 @@
 
   <footer>
     <p><strong>AIRI Lite</strong> · モバイル版法的文書 · <a href="https://github.com/Neko-233/airi-pocket-privacy" rel="external">GitHub</a></p>
+    <a class="footer-support" href="mailto:support-airi@moeru.ai">サポートに連絡 ↗</a>
     <button id="copy-link" type="button" data-label="リンクをコピー" data-copied="コピーしました">リンクをコピー</button>
   </footer>
   <script src="../../assets/site.js" defer></script>

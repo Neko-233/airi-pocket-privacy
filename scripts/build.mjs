@@ -8,6 +8,7 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const output = resolve(root, 'docs')
 const checkOnly = process.argv.includes('--check')
 
+/** Generates every localized page from the shared template and content. */
 async function expectedFiles() {
   const files = new Map([
     ['index.html', renderRootRedirect()],
@@ -30,6 +31,7 @@ async function expectedFiles() {
   return files
 }
 
+/** Checks required metadata and locale coverage before emitting pages. */
 async function validate(files) {
   for (const [path, html] of files) {
     if (!path.endsWith('.html')) continue
@@ -49,6 +51,7 @@ async function validate(files) {
   }
 }
 
+/** Compares generated pages and binary assets against their sources. */
 async function check(files) {
   const mismatches = []
   for (const [path, expected] of files) {
@@ -59,11 +62,11 @@ async function check(files) {
       mismatches.push(path)
     }
   }
-  for (const asset of ['styles.css', 'site.js']) {
-    const source = await readFile(resolve(root, 'static', asset), 'utf8')
+  for (const asset of ['styles.css', 'site.js', 'app-icon.png']) {
+    const source = await readFile(resolve(root, 'static', asset))
     try {
-      const actual = await readFile(resolve(output, 'assets', asset), 'utf8')
-      if (actual !== source) mismatches.push(`assets/${asset}`)
+      const actual = await readFile(resolve(output, 'assets', asset))
+      if (!actual.equals(source)) mismatches.push(`assets/${asset}`)
     } catch {
       mismatches.push(`assets/${asset}`)
     }
@@ -71,6 +74,7 @@ async function check(files) {
   if (mismatches.length) throw new Error(`Generated output is stale: ${mismatches.join(', ')}`)
 }
 
+/** Rebuilds the generated Pages output and copies the shared assets. */
 async function build(files) {
   await rm(output, { recursive: true, force: true })
   for (const [path, contents] of files) {
@@ -81,6 +85,7 @@ async function build(files) {
   await mkdir(resolve(output, 'assets'), { recursive: true })
   await cp(resolve(root, 'static', 'styles.css'), resolve(output, 'assets', 'styles.css'))
   await cp(resolve(root, 'static', 'site.js'), resolve(output, 'assets', 'site.js'))
+  await cp(resolve(root, 'static', 'app-icon.png'), resolve(output, 'assets', 'app-icon.png'))
 }
 
 const files = await expectedFiles()

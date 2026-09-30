@@ -1,3 +1,4 @@
+/** Connects locale navigation, link copying, and accessible section tracking. */
 (() => {
   const select = document.querySelector('#language-select')
   const page = document.body.dataset.page
@@ -33,7 +34,8 @@
         .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)[0]
       if (!visible) return
       links.forEach((link) => {
-        link.toggleAttribute('aria-current', link.getAttribute('href') === `#${visible.target.id}`)
+        if (link.getAttribute('href') === `#${visible.target.id}`) link.setAttribute('aria-current', 'true')
+        else link.removeAttribute('aria-current')
       })
     }, { rootMargin: '-18% 0px -70% 0px' })
     sections.forEach((section) => observer.observe(section))
