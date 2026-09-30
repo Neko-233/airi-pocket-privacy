@@ -111,7 +111,7 @@ export function renderPage(locale, content, page) {
   ${alternateLinks}
   <link rel="icon" type="image/png" href="../../assets/app-icon.png">
   <link rel="apple-touch-icon" href="../../assets/app-icon.png">
-  <link rel="stylesheet" href="../../assets/styles.css">
+  <link rel="stylesheet" href="../../assets/styles.css?v=20260930-neutral">
   <script type="application/ld+json">${renderStructuredData(locale, page, content)}</script>
 </head>
 <body data-language="${locale}" data-page="${page}">
@@ -185,7 +185,7 @@ export function renderRootRedirect() {
   <title>AIRI Lite Legal</title>
   <meta name="description" content="Privacy Policy, Terms of Service, and Account Deletion for AIRI Lite.">
   <link rel="icon" type="image/png" href="./assets/app-icon.png">
-  <link rel="stylesheet" href="./assets/styles.css">
+  <link rel="stylesheet" href="./assets/styles.css?v=20260930-neutral">
   <script>
     (() => {
       const value = (navigator.languages?.[0] || navigator.language || 'en').toLowerCase()
@@ -222,7 +222,7 @@ export function renderLanguageRedirect(locale, content) {
   <title>${escapeHtml(content.navigation.privacy)} · AIRI Lite</title>
   <link rel="canonical" href="${siteOrigin}/${locale}/privacy/">
   <link rel="icon" type="image/png" href="../assets/app-icon.png">
-  <link rel="stylesheet" href="../assets/styles.css">
+  <link rel="stylesheet" href="../assets/styles.css?v=20260930-neutral">
   <script>location.replace('./privacy/')</script>
 </head>
 <body class="landing">
