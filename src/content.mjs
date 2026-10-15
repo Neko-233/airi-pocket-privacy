@@ -248,12 +248,12 @@ export const localizedContent = {
       },
       'account-deletion': {
         title: '账号删除',
-        effectiveDate: '2026 年 9 月 30 日',
+        effectiveDate: '2026 年 10 月 16 日',
         description: '如何删除 AIRI Lite 账号和关联数据。',
         summary: '您可以直接在 AIRI Lite 内发起账号删除，无需访问主站或联系客服。',
         highlights: [
-          { symbol: '1', text: '**在应用内发起**，入口位于“数据与隐私”。' },
-          { symbol: '2', text: '**按提示验证**，服务器可能要求邮件确认或重新登录。' },
+          { symbol: '1', text: '**在应用内发起**，入口位于“设置 → 账号”。' },
+          { symbol: '2', text: '**确认后删除**，无需邮件确认；如提示验证身份，请按应用内指引完成。' },
           { symbol: '3', text: '**不可撤销**，完成后需创建新账号才能再次使用。' },
         ],
         sections: [
@@ -261,10 +261,10 @@ export const localizedContent = {
             id: 'steps',
             title: '删除步骤',
             steps: [
-              '打开 **AIRI Lite** 并进入角色页的设置。',
-              '选择 **数据与隐私**。',
-              '轻点 **删除账号**，阅读说明后选择 **继续删除**。',
-              '如服务器要求，请完成邮件确认或重新登录验证。请求被接受后，应用会在本机退出登录。',
+              '登录 **AIRI Lite**，轻点角色页面右上角的齿轮图标，打开 **设置**。',
+              '轻点设置顶部的账号资料，进入 **账号** 页面。',
+              '向下滚动，轻点“退出登录”下方的 **删除账号**。阅读提示并输入要求的确认内容（邮箱账号需再次输入账号邮箱），然后轻点 **永久删除**。',
+              '如提示验证身份，请按应用内指引完成密码验证或第三方重新认证。删除成功后，应用显示“账号已删除”并返回登录页面；此流程无需点击邮件链接。',
             ],
           },
           {
@@ -543,12 +543,12 @@ export const localizedContent = {
       },
       'account-deletion': {
         title: '帳號刪除',
-        effectiveDate: '2026 年 9 月 30 日',
+        effectiveDate: '2026 年 10 月 16 日',
         description: '如何刪除 AIRI Lite 帳號與關聯資料。',
         summary: '您可直接在 AIRI Lite 內提出帳號刪除，無需造訪主站或聯絡客服。',
         highlights: [
-          { symbol: '1', text: '**在應用程式內提出**，入口位於「資料與隱私」。' },
-          { symbol: '2', text: '**依提示驗證**，伺服器可能要求電子郵件確認或重新登入。' },
+          { symbol: '1', text: '**在應用程式內提出**，入口位於「設定 → 帳號」。' },
+          { symbol: '2', text: '**確認後刪除**，無需電子郵件確認；如提示驗證身分，請依應用程式指引完成。' },
           { symbol: '3', text: '**無法撤銷**，完成後需建立新帳號才能再次使用。' },
         ],
         sections: [
@@ -556,10 +556,10 @@ export const localizedContent = {
             id: 'steps',
             title: '刪除步驟',
             steps: [
-              '開啟 **AIRI Lite** 並進入角色頁的設定。',
-              '選擇 **資料與隱私**。',
-              '點一下 **刪除帳號**，閱讀說明後選擇 **繼續刪除**。',
-              '如伺服器要求，請完成電子郵件確認或重新登入驗證。請求獲接受後，應用程式會在本機登出。',
+              '登入 **AIRI Lite**，點一下角色頁面右上角的齒輪圖示，開啟 **設定**。',
+              '點一下設定頂部的帳號資料，進入 **帳號** 頁面。',
+              '向下捲動，點一下「登出」下方的 **刪除帳號**。閱讀提示並輸入要求的確認內容（電子郵件帳號需再次輸入帳號信箱），然後點一下 **永久刪除**。',
+              '如提示驗證身分，請依應用程式指引完成密碼驗證或第三方重新認證。刪除成功後，應用程式顯示「帳號已刪除」並返回登入頁面；此流程無需點擊郵件連結。',
             ],
           },
           {
@@ -838,12 +838,12 @@ export const localizedContent = {
       },
       'account-deletion': {
         title: 'Account Deletion',
-        effectiveDate: 'September 30, 2026',
+        effectiveDate: 'October 16, 2026',
         description: 'How to delete your AIRI Lite account and associated data.',
         summary: 'You can request account deletion directly inside AIRI Lite without visiting the main website or contacting support.',
         highlights: [
-          { symbol: '1', text: '**Start in the app** from Data & Privacy settings.' },
-          { symbol: '2', text: '**Complete verification** if the server requests email confirmation or a new sign-in.' },
+          { symbol: '1', text: '**Start in the app** under Settings → Account.' },
+          { symbol: '2', text: '**Confirm deletion** without an email link. Follow the in-app instructions if identity verification is requested.' },
           { symbol: '3', text: '**Deletion cannot be undone.** You will need a new account to return.' },
         ],
         sections: [
@@ -851,10 +851,10 @@ export const localizedContent = {
             id: 'steps',
             title: 'How to delete your account',
             steps: [
-              'Open **AIRI Lite** and enter Settings from the Character screen.',
-              'Select **Data & Privacy**.',
-              'Tap **Delete Account**, read the explanation, then choose **Continue Deletion**.',
-              'Complete email confirmation or sign-in verification if requested by the server. Once the request is accepted, the app signs you out on this device.',
+              'Sign in to **AIRI Lite**, then tap the gear icon in the upper-right corner of the character screen to open **Settings**.',
+              'Tap the account profile at the top of Settings to open **Account**.',
+              'Scroll down and tap **Delete Account** below Sign Out. Read the warning and enter the requested confirmation (your account email for an email account), then tap **Delete Permanently**.',
+              'If identity verification is requested, follow the in-app instructions to verify your password or reauthenticate with your sign-in provider. After deletion succeeds, the app displays “Account deleted” and returns to the sign-in screen. This flow does not require an email confirmation link.',
             ],
           },
           {
@@ -1133,12 +1133,12 @@ export const localizedContent = {
       },
       'account-deletion': {
         title: 'アカウント削除',
-        effectiveDate: '2026年9月30日',
+        effectiveDate: '2026年10月16日',
         description: 'AIRI Lite アカウントと関連データを削除する方法。',
         summary: 'メインサイトへのアクセスやサポートへの連絡なしで、AIRI Lite アプリ内から直接アカウント削除を申請できます。',
         highlights: [
-          { symbol: '1', text: '「データとプライバシー」から**アプリ内で開始**します。' },
-          { symbol: '2', text: 'メール確認または再ログインを求められた場合は**確認を完了**します。' },
+          { symbol: '1', text: '「設定 → アカウント」から**アプリ内で開始**します。' },
+          { symbol: '2', text: '**確認後に削除**します。メール確認は不要です。本人確認を求められた場合はアプリの案内に従ってください。' },
           { symbol: '3', text: '**削除は取り消せません。**再利用には新しいアカウントが必要です。' },
         ],
         sections: [
@@ -1146,10 +1146,10 @@ export const localizedContent = {
             id: 'steps',
             title: 'アカウント削除の手順',
             steps: [
-              '**AIRI Lite** を開き、キャラクター画面から設定へ進みます。',
-              '**データとプライバシー**を選択します。',
-              '**アカウントを削除**をタップし、説明を読んで**削除を続ける**を選択します。',
-              'サーバーから求められた場合は、メール確認またはサインイン確認を完了します。申請が受理されると、この端末のアプリからサインアウトします。',
+              '**AIRI Lite** にログインし、キャラクター画面右上の歯車アイコンをタップして **設定** を開きます。',
+              '設定の上部にあるプロフィールをタップし、**アカウント** ページを開きます。',
+              '下にスクロールし、ログアウトの下にある **アカウントを削除** をタップします。注意事項を読み、求められた確認内容（メールアカウントの場合は登録メールアドレス）を入力して、**完全に削除** をタップします。',
+              '本人確認を求められた場合は、アプリの案内に従ってパスワード確認またはログインサービスでの再認証を完了します。削除が成功すると「アカウントを削除しました」と表示され、ログイン画面に戻ります。メール内のリンクを開く必要はありません。',
             ],
           },
           {
