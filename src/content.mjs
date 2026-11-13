@@ -1,4 +1,4 @@
-export const documentVersion = '1.1'
+export const documentVersion = '1.2'
 
 export const pageOrder = ['privacy', 'terms', 'account-deletion']
 
@@ -137,9 +137,9 @@ export const localizedContent = {
             id: 'retention',
             title: '6. 保存期限',
             paragraphs: [
-              '本地数据可通过应用内相应清理功能或卸载应用移除，移除本地副本不会自动删除云端副本。云同步聊天目前没有固定的自动到期清理期限。删除云端会话或注销账号时，当前服务端主要将相关私人会话及用户消息标记为已删除，消息正文仍可能保留在数据库中，并不等于立即彻底清除。',
-              '交易、用量、诊断和安全记录可能因履约、退款、排错、防欺诈或法定义务继续保留。目前尚未制定覆盖所有记录及备份的统一清理期限，因此不承诺在固定天数内自动清除。第三方持有的数据按其适用政策及设置处理。',
-              '角色卡、上传模型及其历史或备份有独立于本机缓存的服务端生命周期。关闭同步或删除本地副本不能作为已删除全部云端内容的确认。对进一步清除、第三方持有记录及必要保留范围的询问，请联系 support-airi@moeru.ai；我们会按适用法律及实际处理结果答复。',
+              '您可使用应用内功能清理本地数据、删除云端会话或发起账号删除。删除本地副本或卸载应用不会自动删除云端内容。',
+              '账号删除后，部分历史聊天内容及备份仍可能保留。交易、用量、诊断和安全记录可能因履约、退款、排错、防欺诈或法定义务继续保留。第三方持有的数据按其隐私政策及设置处理。',
+              '角色卡和上传模型需通过相应的云端管理功能处理；关闭同步不会自动删除已上传内容。有关数据保存或删除的问题，请联系 support-airi@moeru.ai。',
             ],
           },
           {
@@ -173,7 +173,7 @@ export const localizedContent = {
             title: '10. 变更与联系',
             paragraphs: [
               '当应用功能或法律要求发生变化时，我们可能更新本政策，并在本页标注新的生效日期。重大变更会通过适当方式另行提示。',
-              '账号删除请优先使用应用内入口。若需申请进一步清除服务端内容，或行使访问、更正、删除等权利，请联系 support-airi@moeru.ai。请勿发送密码或验证码，也不要在公开 GitHub Issue 中提供个人数据。',
+              '账号删除可直接在应用内操作。有关个人信息访问、更正、删除或其他隐私问题，请联系 support-airi@moeru.ai。请勿发送密码或验证码，也不要在公开 GitHub Issue 中提供个人数据。',
             ],
             links: [
               { label: 'AIRI Lite 隐私仓库', url: 'https://github.com/Neko-233/airi-pocket-privacy' },
@@ -337,12 +337,12 @@ export const localizedContent = {
             id: 'deleted',
             title: '会删除什么',
             items: [
-              '账号资料和登录关联由账号删除流程处理；服务端关联资源按各自的清理流程处理，不能保证所有数据同时被物理删除。',
-              '私人聊天及用户消息目前主要标记为已删除，正文仍可能保留；共享会话中的消息可能继续保留。交易、用量和诊断记录也可能保留。',
+              '账号删除流程处理账号资料、登录关联及相关云端资源，包括角色卡和上传模型。',
+              '部分历史聊天、交易、用量、诊断记录及备份可能继续保留，详情请参阅隐私政策。',
               '可归属于账号的产品分析身份会停止继续关联；分析偏好可在删除前随时关闭。',
-              '角色卡、上传模型及其服务端历史或备份也有各自的清理流程。移除本机模型、关闭云同步或卸载应用，不等于已确认删除云端副本。若需进一步清除关联内容，请通过下方支持邮箱提出请求。',
+              '关闭同步、移除本地副本或卸载应用不会自动删除云端内容。',
             ],
-            note: '当前尚无覆盖聊天正文、服务记录及备份的统一自动清理期限。若需进一步清除个人内容，请联系 support-airi@moeru.ai；请勿发送密码或验证码。',
+            note: '如需了解删除范围或行使个人信息权利，请联系 support-airi@moeru.ai；请勿发送密码或验证码。',
           },
           {
             id: 'local',
@@ -369,7 +369,7 @@ export const localizedContent = {
             id: 'help',
             title: '无法登录或需要帮助',
             paragraphs: [
-              '账号删除请优先使用应用内入口。若需申请进一步清除服务端内容，或行使访问、更正、删除等权利，请联系 support-airi@moeru.ai。请勿发送密码或验证码，也不要在公开 GitHub Issue 中提供个人数据。',
+              '账号删除可直接在应用内操作。有关个人信息访问、更正、删除或其他隐私问题，请联系 support-airi@moeru.ai。请勿发送密码或验证码，也不要在公开 GitHub Issue 中提供个人数据。',
             ],
             links: [
               { label: '打开支持仓库', url: 'https://github.com/Neko-233/airi-pocket-privacy' },
@@ -501,9 +501,9 @@ export const localizedContent = {
             id: 'retention',
             title: '6. 保存期限',
             paragraphs: [
-              '本機資料可透過應用程式內相應清理功能或解除安裝移除；移除本機副本不會自動刪除雲端副本。雲端同步聊天目前沒有固定的自動到期清理期限。刪除雲端對話或帳號時，現行伺服器主要將相關私人對話及使用者訊息標記為已刪除，訊息正文仍可能保留在資料庫，並不等於立即徹底清除。',
-              '交易、用量、診斷及安全紀錄可能因履約、退款、除錯、防詐騙或法定義務繼續保留。目前尚未制定涵蓋所有紀錄與備份的統一清理期限，因此不承諾在固定天數內自動清除。第三方持有的資料依其適用政策與設定處理。',
-              '角色卡、上傳模型及其歷史或備份具有獨立於本機快取的伺服器生命週期。關閉同步或刪除本機副本，不能作為已刪除全部雲端內容的確認。對進一步清除、第三方持有紀錄及必要保留範圍的詢問，請聯絡 support-airi@moeru.ai；我們會依適用法律及實際處理結果答覆。',
+              '您可使用應用程式內功能清理本機資料、刪除雲端對話或提出帳號刪除。刪除本機副本或解除安裝不會自動刪除雲端內容。',
+              '帳號刪除後，部分歷史對話內容及備份仍可能保留。交易、用量、診斷及安全紀錄可能因履約、退款、除錯、防詐騙或法定義務繼續保留。第三方持有的資料依其隱私權政策及設定處理。',
+              '角色卡及上傳模型需透過相應的雲端管理功能處理；關閉同步不會自動刪除已上傳內容。有關資料保存或刪除的問題，請聯絡 support-airi@moeru.ai。',
             ],
           },
           {
@@ -537,7 +537,7 @@ export const localizedContent = {
             title: '10. 變更與聯絡',
             paragraphs: [
               '當應用程式功能或法律要求改變時，我們可能更新本政策，並在本頁標示新的生效日期。重大變更會以適當方式另行提示。',
-              '帳號刪除請優先使用應用程式內入口。若需申請進一步清除伺服器內容，或行使存取、更正、刪除等權利，請聯絡 support-airi@moeru.ai。請勿傳送密碼或驗證碼，也不要在公開 GitHub Issue 中提供個人資料。',
+              '帳號刪除可直接在應用程式內操作。有關個人資料存取、更正、刪除或其他隱私問題，請聯絡 support-airi@moeru.ai。請勿傳送密碼或驗證碼，也不要在公開 GitHub Issue 中提供個人資料。',
             ],
             links: [
               { label: 'AIRI Lite 隱私儲存庫', url: 'https://github.com/Neko-233/airi-pocket-privacy' },
@@ -701,12 +701,12 @@ export const localizedContent = {
             id: 'deleted',
             title: '將刪除的內容',
             items: [
-              '帳號資料及登入關聯由帳號刪除流程處理；伺服器關聯資源依各自清理流程處理，不能保證所有資料同時被實體刪除。',
-              '私人聊天及使用者訊息目前主要標記為已刪除，正文仍可能保留；共享對話中的訊息可能繼續保留。交易、用量和診斷紀錄亦可能保留。',
+              '帳號刪除流程處理帳號資料、登入關聯及相關雲端資源，包括角色卡及上傳模型。',
+              '部分歷史對話、交易、用量、診斷紀錄及備份可能繼續保留，詳情請參閱隱私權政策。',
               '可歸屬於帳號的產品分析身分將停止繼續關聯；分析偏好可在刪除前隨時關閉。',
-              '角色卡、上傳模型及其伺服器歷史或備份亦有各自清理流程。移除本機模型、關閉雲端同步或解除安裝，不等於已確認刪除雲端副本。如需進一步清除關聯內容，請透過下方支援信箱提出申請。',
+              '關閉同步、移除本機副本或解除安裝不會自動刪除雲端內容。',
             ],
-            note: '目前尚無涵蓋聊天正文、服務紀錄與備份的統一自動清理期限。如需進一步清除個人內容，請聯絡 support-airi@moeru.ai；請勿傳送密碼或驗證碼。',
+            note: '如需瞭解刪除範圍或行使個人資料權利，請聯絡 support-airi@moeru.ai；請勿傳送密碼或驗證碼。',
           },
           {
             id: 'local',
@@ -733,7 +733,7 @@ export const localizedContent = {
             id: 'help',
             title: '無法登入或需要協助',
             paragraphs: [
-              '帳號刪除請優先使用應用程式內入口。若需申請進一步清除伺服器內容，或行使存取、更正、刪除等權利，請聯絡 support-airi@moeru.ai。請勿傳送密碼或驗證碼，也不要在公開 GitHub Issue 中提供個人資料。',
+              '帳號刪除可直接在應用程式內操作。有關個人資料存取、更正、刪除或其他隱私問題，請聯絡 support-airi@moeru.ai。請勿傳送密碼或驗證碼，也不要在公開 GitHub Issue 中提供個人資料。',
             ],
             links: [
               { label: '開啟支援儲存庫', url: 'https://github.com/Neko-233/airi-pocket-privacy' },
@@ -865,9 +865,9 @@ export const localizedContent = {
             id: 'retention',
             title: '6. Retention',
             paragraphs: [
-              'You can remove on-device data using the relevant in-app controls or by uninstalling the app; removing a local copy does not automatically delete its cloud copy. Cloud-synchronized chats currently have no fixed automatic expiration period. When a cloud conversation or account is deleted, the current server implementation mainly marks the relevant private conversations and user messages as deleted. Message content may remain in the database; this is not immediate, complete erasure.',
-              'Transaction, usage, diagnostic, and security records may remain for fulfillment, refunds, troubleshooting, fraud prevention, or legal obligations. A uniform deletion schedule covering all records and backups has not yet been established, so we do not promise automatic erasure within a fixed number of days. Data held by third parties is handled under their applicable policies and settings.',
-              'Character cards, uploaded models, and their history or backups have server lifecycles separate from local caches. Disabling sync or deleting local copies is not confirmation that all cloud content has been erased. For further removal, third-party records, or necessary retention, contact support-airi@moeru.ai; we will respond according to applicable law and the actual processing outcome.',
+              'Use the in-app controls to clear local data, delete cloud conversations, or initiate account deletion. Deleting local copies or uninstalling the app does not automatically delete cloud content.',
+              'Some historical chat content and backups may remain after account deletion. Transaction, usage, diagnostic, and security records may be retained for fulfillment, refunds, troubleshooting, fraud prevention, or legal obligations. Third-party data is handled under the relevant privacy policies and settings.',
+              'Manage character cards and uploaded models through the relevant cloud controls; disabling sync does not automatically delete uploaded content. For questions about data retention or deletion, contact support-airi@moeru.ai.',
             ],
           },
           {
@@ -901,7 +901,7 @@ export const localizedContent = {
             title: '10. Changes and contact',
             paragraphs: [
               'We may update this policy when app features or legal requirements change. The effective date on this page will be updated, and material changes will be communicated through an appropriate notice.',
-              'Use the in-app account-deletion option first. To request further removal of server-side content, or to exercise access, correction, or deletion rights, contact support-airi@moeru.ai. Do not send passwords or verification codes, or post personal data in public GitHub issues.',
+              'You can delete your account directly in the app. For personal-data access, correction, deletion, or other privacy questions, contact support-airi@moeru.ai. Do not send passwords or verification codes, or post personal data in public GitHub issues.',
             ],
             links: [
               { label: 'AIRI Lite privacy repository', url: 'https://github.com/Neko-233/airi-pocket-privacy' },
@@ -1065,12 +1065,12 @@ export const localizedContent = {
             id: 'deleted',
             title: 'What is deleted',
             items: [
-              'The account-deletion flow handles your account profile and sign-in associations. Related server resources follow their respective cleanup procedures; this does not guarantee physical deletion of all data at the same time.',
-              'Private chats and user messages are currently mainly marked as deleted, and their content may remain. Messages in shared conversations may also remain, as may transaction, usage, and diagnostic records.',
+              'Account deletion handles your profile, sign-in associations, and related cloud resources, including character cards and uploaded models.',
+              'Some historical chats, transaction, usage, and diagnostic records, and backups may remain. See the Privacy Policy for details.',
               'Product-analytics identity stops being associated with the account. You can turn analytics off at any time before deletion.',
-              'Character cards, uploaded models, and server-side history or backups also follow their respective cleanup procedures. Removing a local model, disabling cloud sync, or uninstalling the app is not confirmation of cloud-copy deletion. Use the support email below to request further removal of related content.',
+              'Disabling sync, removing local copies, or uninstalling the app does not automatically delete cloud content.',
             ],
-            note: 'There is currently no uniform automatic erasure schedule covering chat content, service records, and backups. For further removal of personal content, contact support-airi@moeru.ai. Do not send passwords or verification codes.',
+            note: 'For questions about the scope of deletion or to exercise your personal-data rights, contact support-airi@moeru.ai. Do not send passwords or verification codes.',
           },
           {
             id: 'local',
@@ -1097,7 +1097,7 @@ export const localizedContent = {
             id: 'help',
             title: 'If you cannot sign in',
             paragraphs: [
-              'Use the in-app account-deletion option first. To request further removal of server-side content, or to exercise access, correction, or deletion rights, contact support-airi@moeru.ai. Do not send passwords or verification codes, or post personal data in public GitHub issues.',
+              'You can delete your account directly in the app. For personal-data access, correction, deletion, or other privacy questions, contact support-airi@moeru.ai. Do not send passwords or verification codes, or post personal data in public GitHub issues.',
             ],
             links: [
               { label: 'Open the support repository', url: 'https://github.com/Neko-233/airi-pocket-privacy' },
@@ -1229,9 +1229,9 @@ export const localizedContent = {
             id: 'retention',
             title: '6. 保存期間',
             paragraphs: [
-              '端末内データは対応するアプリ内操作またはアンインストールで削除できますが、ローカルのコピーを削除してもクラウド上のコピーは自動削除されません。クラウド同期された会話には現在、固定の自動削除期限がありません。クラウド会話やアカウントの削除時、現行サーバーは主に対象の非公開会話とユーザーメッセージに削除済みの印を付けます。本文はデータベースに残る場合があり、即時の完全消去ではありません。',
-              '取引、使用量、診断、セキュリティ記録は、サービス提供、返金、障害調査、不正防止、法的義務のため保持される場合があります。全記録とバックアップを対象とする統一的な削除期限は未設定のため、一定日数以内の自動消去を約束していません。第三者が保有するデータには各自のポリシーと設定が適用されます。',
-              'キャラクターカード、アップロードしたモデル、その履歴やバックアップには、ローカルキャッシュとは別のサーバー上の保存・削除処理があります。同期の無効化やローカルコピーの削除は、すべてのクラウド内容の消去確認にはなりません。追加削除、第三者が保有する記録、必要な保存範囲については support-airi@moeru.ai へお問い合わせください。適用法と実際の処理結果に基づいて回答します。',
+              'アプリ内の操作で端末内データの消去、クラウド会話の削除、アカウント削除の申請ができます。ローカルのコピーを削除したり、アプリをアンインストールしたりしても、クラウド上の内容は自動削除されません。',
+              'アカウント削除後も、過去の会話内容やバックアップの一部が残る場合があります。取引、使用量、診断、セキュリティ記録は、サービス提供、返金、障害調査、不正防止、法的義務のため保持される場合があります。第三者が保有するデータには、各自のプライバシーポリシーと設定が適用されます。',
+              'キャラクターカードやアップロードしたモデルは、対応するクラウド管理機能で管理してください。同期を無効にしても、アップロード済みの内容は自動削除されません。データの保存や削除に関するお問い合わせは support-airi@moeru.ai までご連絡ください。',
             ],
           },
           {
@@ -1265,7 +1265,7 @@ export const localizedContent = {
             title: '10. 変更とお問い合わせ',
             paragraphs: [
               'アプリ機能や法的要件の変更に応じて本ポリシーを更新する場合があります。このページの発効日を更新し、重要な変更は適切な方法で通知します。',
-              'アカウント削除にはアプリ内の操作をご利用ください。サーバー上の内容の追加削除、アクセス、訂正、削除の権利に関するご相談は support-airi@moeru.ai までご連絡ください。パスワードや認証コードを送信したり、公開 GitHub Issue に個人データを書き込んだりしないでください。',
+              'アカウントはアプリ内から直接削除できます。個人データの開示、訂正、削除、その他のプライバシーに関するお問い合わせは support-airi@moeru.ai までご連絡ください。パスワードや認証コードを送信したり、公開 GitHub Issue に個人データを書き込んだりしないでください。',
             ],
             links: [
               { label: 'AIRI Lite プライバシーリポジトリ', url: 'https://github.com/Neko-233/airi-pocket-privacy' },
@@ -1429,12 +1429,12 @@ export const localizedContent = {
             id: 'deleted',
             title: '削除される内容',
             items: [
-              'アカウント削除処理はプロフィールとログインの関連付けを処理します。関連するサーバー資源はそれぞれの削除処理に従うため、全データの同時の物理削除を保証するものではありません。',
-              '非公開会話とユーザーメッセージは現在、主に削除済みとして扱われ、本文が残る場合があります。共有会話のメッセージや、取引、使用量、診断記録も残る場合があります。',
+              'アカウント削除では、プロフィール、ログインの関連付け、およびキャラクターカードやアップロードしたモデルなどの関連クラウド資源を処理します。',
+              '過去の会話、取引、使用量、診断記録、バックアップの一部が残る場合があります。詳細はプライバシーポリシーをご確認ください。',
               '製品分析の識別子はアカウントとの新たな関連付けを停止します。削除前にいつでも分析をオフにできます。',
-              'キャラクターカード、アップロードしたモデル、そのサーバー上の履歴やバックアップにも個別の削除処理があります。ローカルモデルの削除、クラウド同期の無効化、アンインストールは、クラウドコピーの削除確認にはなりません。関連内容の追加削除は下記のサポートメールへご依頼ください。',
+              '同期の無効化、ローカルコピーの削除、アンインストールでは、クラウド上の内容は自動削除されません。',
             ],
-            note: '会話本文、サービス記録、バックアップの統一的な自動消去期限は現在未設定です。個人の内容の追加削除は support-airi@moeru.ai までご相談ください。パスワードや認証コードは送信しないでください。',
+            note: '削除対象の範囲や個人データの権利については support-airi@moeru.ai までご連絡ください。パスワードや認証コードは送信しないでください。',
           },
           {
             id: 'local',
@@ -1461,7 +1461,7 @@ export const localizedContent = {
             id: 'help',
             title: 'サインインできない場合',
             paragraphs: [
-              'アカウント削除にはアプリ内の操作をご利用ください。サーバー上の内容の追加削除、アクセス、訂正、削除の権利に関するご相談は support-airi@moeru.ai までご連絡ください。パスワードや認証コードを送信したり、公開 GitHub Issue に個人データを書き込んだりしないでください。',
+              'アカウントはアプリ内から直接削除できます。個人データの開示、訂正、削除、その他のプライバシーに関するお問い合わせは support-airi@moeru.ai までご連絡ください。パスワードや認証コードを送信したり、公開 GitHub Issue に個人データを書き込んだりしないでください。',
             ],
             links: [
               { label: 'サポートリポジトリを開く', url: 'https://github.com/Neko-233/airi-pocket-privacy' },
