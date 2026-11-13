@@ -119,7 +119,7 @@ export function renderPage(locale, content, page) {
   ${alternateLinks}
   <link rel="icon" type="image/svg+xml" href="../../assets/brand-icon.svg">
   <link rel="apple-touch-icon" href="../../assets/app-icon.png">
-  <link rel="stylesheet" href="../../assets/styles.css?v=20260930-icon">
+  <link rel="stylesheet" href="../../assets/styles.css?v=20261113-support-context">
   <script type="application/ld+json">${renderStructuredData(locale, page, content)}</script>
 </head>
 <body data-language="${locale}" data-page="${page}">
