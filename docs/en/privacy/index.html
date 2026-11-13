@@ -16,10 +16,10 @@
   <link rel="icon" type="image/svg+xml" href="../../assets/brand-icon.svg">
   <link rel="apple-touch-icon" href="../../assets/app-icon.png">
   <link rel="stylesheet" href="../../assets/styles.css?v=20260930-icon">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Privacy Policy","description":"Privacy Policy for the AIRI Lite iOS app.","inLanguage":"en","url":"https://neko-233.github.io/airi-pocket-privacy/en/privacy/","dateModified":"2026-09-30","isPartOf":{"@type":"WebSite","name":"AIRI Lite Legal","url":"https://neko-233.github.io/airi-pocket-privacy"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Privacy Policy","description":"Privacy Policy for the AIRI Lite iOS app.","inLanguage":"en","url":"https://neko-233.github.io/airi-pocket-privacy/en/privacy/","dateModified":"2026-11-13","isPartOf":{"@type":"WebSite","name":"AIRI Lite Legal","url":"https://neko-233.github.io/airi-pocket-privacy"}}</script>
 </head>
 <body data-language="en" data-page="privacy">
-  <a class="skip-link" href="#content">Skip to content</a>
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="../../en/privacy/" aria-label="AIRI Lite Legal">
@@ -44,14 +44,14 @@
     </div>
   </header>
 
-  <main id="content">
+  <main id="main-content">
     <section class="hero" aria-labelledby="page-title">
       <div class="hero-copy">
       <h1 id="page-title">Privacy Policy</h1>
-      <p class="lede">This policy explains how AIRI Lite handles data when providing accounts, AI chat, voice, purchases, and optional product analytics.</p>
+      <p class="lede">This policy explains data handling for AIRI Lite accounts, AI chat, voice, cloud sync, purchases, optional weather and calendar features, and product analytics. Availability depends on your app version and settings.</p>
       <div class="metadata">
-        <span>Effective:  <time datetime="2026-09-30">September 30, 2026</time></span>
-        <span>Version 1.0</span>
+        <span>Effective:  <time datetime="2026-11-13">November 13, 2026</time></span>
+        <span>Version 1.1</span>
       </div>
       </div>
     </section>
@@ -65,6 +65,8 @@
     <details class="mobile-toc"><summary>Explore this document</summary><nav><a href="#support">Technical support and feedback</a>
 <a href="#scope">1. Scope</a>
 <a href="#data">2. Data we process</a>
+<a href="#device-features">2.1 Optional system features</a>
+<a href="#cloud-sync">2.2 Cloud sync and local copies</a>
 <a href="#analytics">3. Product analytics</a>
 <a href="#purpose">4. Why we use data</a>
 <a href="#sharing">5. Service providers and sharing</a>
@@ -79,6 +81,8 @@
         <nav><a href="#support">Technical support and feedback</a>
 <a href="#scope">1. Scope</a>
 <a href="#data">2. Data we process</a>
+<a href="#device-features">2.1 Optional system features</a>
+<a href="#cloud-sync">2.2 Cloud sync and local copies</a>
 <a href="#analytics">3. Product analytics</a>
 <a href="#purpose">4. Why we use data</a>
 <a href="#sharing">5. Service providers and sharing</a>
@@ -102,7 +106,16 @@
   </section>
 <section id="data">
     <h2>2. Data we process</h2>
-    <ul><li><strong>Account and sign-in data:</strong> name or display name, email address, backend user ID, sign-in method, and access credentials required to keep you signed in. Credentials are stored in the iOS Keychain or protected app storage.</li><li><strong>AI feature content:</strong> with your permission, text, images, relevant conversation context, and selected memories are sent over encrypted connections to AIRI services and the third-party AI services needed to fulfill your request. Web search sends queries to upstream search services; speech synthesis sends the text to be spoken to speech services. Encryption in transit does not prevent the receiving services from reading the content.</li><li><strong>Purchases and entitlements:</strong> selected products, transaction or receipt-verification identifiers, purchase state, Flux balance, and fulfillment records. Apple processes payment details; we do not receive full payment-card information.</li><li><strong>Optional product analytics:</strong> when enabled, app version, page categories, feature actions and outcomes, entry points, sign-in or input methods, model or service categories, performance timings, message counts, Flux balance, selected plans and purchase-flow stages, and an account or device analytics identifier. Analytics excludes chat content, prompts, response text, names, email addresses, tokens, full URLs, user-entered labels, and raw error details.</li><li><strong>Network and security data:</strong> servers may process IP addresses, request times, response status, and abuse-prevention security records when receiving requests.</li><li><strong>On-device data:</strong> conversation history, confirmed memories, memory suggestions, custom chat backgrounds, preferences, caches, logs, and temporary context are stored in the app container. Relevant memories may be included as context in a chat request when they are useful to that request.</li><li><strong>Cloud chat synchronization and service records:</strong> eligible chat text and replies are linked to your account and stored on the server to synchronize and restore conversations. The server also stores records such as user ID, model, request status, duration, token usage, and Flux consumption. These records are separate from optional product analytics and do not stop being stored when product analytics is disabled.</li></ul><aside class="note"><span aria-hidden="true">i</span><p>AIRI Lite does not request precise location, sell personal data, or use data for cross-app advertising tracking.</p></aside>
+    <ul><li><strong>Account and sign-in data:</strong> name or display name, email address, backend user ID, sign-in method, and access credentials required to keep you signed in. Credentials are stored in the iOS Keychain or protected app storage.</li><li><strong>AI feature content:</strong> with your permission, text, images, relevant conversation context, and selected memories are sent over encrypted connections to AIRI services and the third-party AI services needed to fulfill your request. Web search sends queries to upstream search services; speech synthesis sends the text to be spoken to speech services. Encryption in transit does not prevent the receiving services from reading the content.</li><li><strong>Purchases and entitlements:</strong> products, transaction or receipt-verification identifiers, purchase and renewal status, expiration dates, Flux balances, and fulfillment records. Apple processes payments. RevenueCat receives the backend user ID and purchase, subscription, and entitlement records to validate and synchronize subscriptions. We do not receive full payment-card information.</li><li><strong>Optional product analytics:</strong> when enabled, app version, page categories, feature actions and outcomes, entry points, sign-in or input methods, model or service categories, performance timings, message counts, Flux balance, selected plans and purchase-flow stages, and an account or device analytics identifier. Analytics excludes chat content, prompts, response text, names, email addresses, tokens, full URLs, user-entered labels, and raw error details.</li><li><strong>Network and security data:</strong> servers may process IP addresses, request times, response status, and abuse-prevention security records when receiving requests.</li><li><strong>On-device data:</strong> conversation history, confirmed memories, memory suggestions, custom chat backgrounds, preferences, caches, logs, and temporary context are stored in the app container. Relevant memories may be included as context in a chat request when they are useful to that request.</li><li><strong>Cloud chat synchronization and service records:</strong> eligible chat text and replies are linked to your account and stored on the server to synchronize and restore conversations. The server also stores records such as user ID, model, request status, duration, token usage, and Flux consumption. These records are separate from optional product analytics and do not stop being stored when product analytics is disabled.</li><li><strong>Character and model cloud sync:</strong> when you enable sync, character names, settings, prompts, model references, and related configuration may be uploaded to AIRI services and linked to your account. Imported models you explicitly upload, or enable for automatic upload, are stored as model files and necessary metadata in the cloud. This does not automatically upload bundled model files.</li></ul><aside class="note"><span aria-hidden="true">i</span><p>AIRI Lite does not request precise location, sell personal data, or use data for cross-app advertising tracking.</p></aside>
+  </section>
+<section id="device-features">
+    <h2>2.1 Optional system features</h2>
+    <ul><li><strong>Voice input:</strong> after you start recording, microphone audio is processed by Apple&#039;s on-device speech recognition. Language assets may need to be downloaded from Apple. The current voice-input feature does not upload recordings to AIRI or third-party AI services. Transcripts enter the editable composer first and are treated as AI content if you send them. Speech synthesis sends text to be spoken, rather than microphone recordings.</li><li><strong>Weather and location:</strong> when setting up weather, you can authorize a single foreground coarse-location fix or select a city manually. City search and place-name lookup use Apple Maps services. Forecast requests go directly from your device to MET Norway with coordinates rounded to about two decimal places; the provider can also see the request IP address. The selected location is stored locally. There is no continuous background location tracking, and weather location is not automatically added to chat or product analytics.</li><li><strong>Calendar:</strong> only after you connect and authorize your calendar does the app use EventKit to read today&#039;s remaining events for the on-device companion panel. The panel does not upload event titles to AIRI, AI services, or product analytics, or persist them. iOS manages any synchronization performed by your system calendar account.</li><li><strong>Local notifications:</strong> if you permit notifications or enable proactive contact, the app may display message text in system notifications, including on the lock screen. You can disable notifications or hide previews through the app and iOS notification settings. Cloud generation for proactive contact remains subject to this policy&#039;s AI-content rules.</li></ul>
+  </section>
+<section id="cloud-sync">
+    <h2>2.2 Cloud sync and local copies</h2>
+    <p>Character cloud sync and automatic upload of newly imported models have separate controls. Disabling sync stops new synchronization work; it does not automatically delete earlier uploads. Removing a model locally or uninstalling the app also does not automatically delete its cloud copy. Use the relevant cloud-deletion control or contact support to request removal.</p>
+<p>Character and model sync, chat sync, AI-content permission, and product analytics are separate controls. Disabling product analytics does not stop cloud sync you have enabled, necessary purchase validation, or service records.</p>
   </section>
 <section id="analytics">
     <h2>3. Product analytics</h2>
@@ -111,23 +124,27 @@
   </section>
 <section id="purpose">
     <h2>4. Why we use data</h2>
-    <ul><li>Create and maintain accounts, authenticate sign-ins, and provide services across sessions.</li><li>Generate AI responses, speech, and other features you actively request.</li><li>Process purchases, verify entitlements, maintain Flux balances, and prevent fraud.</li><li>Analyze product use and performance when you consent.</li><li>Protect the service, troubleshoot problems, and comply with legal obligations.</li></ul>
+    <ul><li>Create and maintain accounts, authenticate sign-ins, and provide services across sessions.</li><li>Generate AI responses, speech, and other features you actively request.</li><li>Process purchases, verify entitlements, maintain Flux balances, and prevent fraud.</li><li>Analyze product use and performance when you consent.</li><li>Protect the service, troubleshoot problems, and comply with legal obligations.</li><li>Synchronize characters and models under your enabled settings, and provide weather, on-device calendar display, and local notifications.</li></ul>
   </section>
 <section id="sharing">
     <h2>5. Service providers and sharing</h2>
     <p>We transfer data to service providers only as needed to provide a feature, keep the service secure, or meet legal obligations. Providers may include Apple for sign-in, app distribution, and in-app purchases; the AIRI official backend; third-party AI and speech service providers; and PostHog only when you enable analytics.</p>
 <p>The current default chat route uses OpenRouter, and default speech synthesis uses StepFun. Other available routes may use Amazon Bedrock, Alibaba Cloud, or other speech services. The service used depends on the selected feature and route configuration. Third parties may retain inputs, images, queries, or outputs under their policies and account settings; we do not promise zero data retention for every request.</p>
 <p>We require every third party that can access user data to provide the same or an equivalent level of protection as this policy and Apple’s requirements.</p>
-<p>We do not sell or rent personal data. We do not disclose it to other parties except when required by law, necessary to protect users or the service, or part of a business transfer that remains subject to this policy.</p><div class="resource-links"><a href="https://www.apple.com/legal/privacy/" rel="external noreferrer">Apple Privacy Policy<span aria-hidden="true">↗</span></a><a href="https://posthog.com/privacy" rel="external noreferrer">PostHog Privacy Policy<span aria-hidden="true">↗</span></a></div>
+<p>We do not sell or rent personal data. We do not disclose it to other parties except when required by law, necessary to protect users or the service, or part of a business transfer that remains subject to this policy.</p>
+<p>RevenueCat provides subscription validation, entitlement synchronization, purchase restoration, and subscription operations. The app identifies a subscription account using the AIRI backend user ID and provides purchase and entitlement information. This necessary subscription processing is separate from the optional PostHog product-analytics switch.</p>
+<p>When weather is enabled, Apple Maps services process city searches or approximate coordinates, and MET Norway processes approximate coordinates and request IP addresses for forecasts. MET Norway service logs may be stored in Norway; see its official terms and privacy notice.</p>
+<p>AI-content retention and use for model training depend on the actual route, downstream model provider, applicable agreements, and deployment settings. We do not promise that every third party has zero retention or excludes all training use. Contact support about a particular model before sending sensitive content if you need that assurance.</p><div class="resource-links"><a href="https://www.apple.com/legal/privacy/" rel="external noreferrer">Apple Privacy Policy<span aria-hidden="true">↗</span></a><a href="https://posthog.com/privacy" rel="external noreferrer">PostHog Privacy Policy<span aria-hidden="true">↗</span></a><a href="https://www.revenuecat.com/privacy/" rel="external noreferrer">RevenueCat Privacy Policy<span aria-hidden="true">↗</span></a><a href="https://openrouter.ai/privacy" rel="external noreferrer">OpenRouter Privacy Policy<span aria-hidden="true">↗</span></a><a href="https://api.met.no/doc/TermsOfService" rel="external noreferrer">MET Norway service and privacy information<span aria-hidden="true">↗</span></a></div>
   </section>
 <section id="retention">
     <h2>6. Retention</h2>
     <p>You can remove on-device data using the relevant in-app controls or by uninstalling the app; removing a local copy does not automatically delete its cloud copy. Cloud-synchronized chats currently have no fixed automatic expiration period. When a cloud conversation or account is deleted, the current server implementation mainly marks the relevant private conversations and user messages as deleted. Message content may remain in the database; this is not immediate, complete erasure.</p>
 <p>Transaction, usage, diagnostic, and security records may remain for fulfillment, refunds, troubleshooting, fraud prevention, or legal obligations. A uniform deletion schedule covering all records and backups has not yet been established, so we do not promise automatic erasure within a fixed number of days. Data held by third parties is handled under their applicable policies and settings.</p>
+<p>Character cards, uploaded models, and their history or backups have server lifecycles separate from local caches. Disabling sync or deleting local copies is not confirmation that all cloud content has been erased. For further removal, third-party records, or necessary retention, contact support-airi@moeru.ai; we will respond according to applicable law and the actual processing outcome.</p>
   </section>
 <section id="choices">
     <h2>7. Your choices and rights</h2>
-    <ul><li>Allow or decline AI services processing chat content under Settings → Data &amp; Privacy. Turning it off stops the app from sending new chat or preview content to AIRI official services and third-party AI or speech service providers.</li><li>Enable or disable product analytics under Settings → Data &amp; Privacy.</li><li>Review, edit, unpin, or delete local memories in the app, and remove a custom chat background.</li><li>Manage system permissions such as Photos, Microphone, and Notifications through iOS Settings.</li><li>Request account deletion inside the app. You may also request access, correction, or deletion where applicable law provides those rights.</li></ul>
+    <ul><li>Allow or decline AI services processing chat content under Settings → Data &amp; Privacy. Turning it off stops the app from sending new chat or preview content to AIRI official services and third-party AI or speech service providers.</li><li>Enable or disable product analytics under Settings → Data &amp; Privacy.</li><li>Review, edit, unpin, or delete local memories in the app, and remove a custom chat background.</li><li>Manage Photos, Microphone, Location, Calendar, and Notifications permissions in iOS Settings. Weather can use a manually selected city. You can also disable character cloud sync and automatic upload of newly imported models.</li><li>Request account deletion inside the app. You may also request access, correction, or deletion where applicable law provides those rights.</li></ul>
   </section>
 <section id="security">
     <h2>8. Security and international processing</h2>

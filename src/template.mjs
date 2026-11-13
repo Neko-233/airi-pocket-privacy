@@ -1,4 +1,4 @@
-import { languages, pageModifiedDates, pageOrder } from './content.mjs'
+import { documentVersion, languages, pageModifiedDates, pageOrder } from './content.mjs'
 
 const interfaceLabels = {
   en: { support: 'Contact support', intro: 'Privacy & support', contents: 'Explore this document' },
@@ -115,7 +115,7 @@ export function renderPage(locale, content, page) {
   <script type="application/ld+json">${renderStructuredData(locale, page, content)}</script>
 </head>
 <body data-language="${locale}" data-page="${page}">
-  <a class="skip-link" href="#content">${escapeHtml(content.ui.skip)}</a>
+  <a class="skip-link" href="#main-content">${escapeHtml(content.ui.skip)}</a>
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="../../${locale}/privacy/" aria-label="AIRI Lite Legal">
@@ -135,14 +135,14 @@ export function renderPage(locale, content, page) {
     </div>
   </header>
 
-  <main id="content">
+  <main id="main-content">
     <section class="hero" aria-labelledby="page-title">
       <div class="hero-copy">
       <h1 id="page-title">${escapeHtml(pageContent.title)}</h1>
       <p class="lede">${escapeHtml(pageContent.summary)}</p>
       <div class="metadata">
         <span>${escapeHtml(content.ui.effectiveDate)} <time datetime="${pageModifiedDates[page]}">${escapeHtml(pageContent.effectiveDate)}</time></span>
-        <span>${escapeHtml(content.ui.version)} 1.0</span>
+        <span>${escapeHtml(content.ui.version)} ${escapeHtml(documentVersion)}</span>
       </div>
       </div>
     </section>
