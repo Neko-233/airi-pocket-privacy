@@ -1,10 +1,10 @@
 import { documentVersion, languages, pageModifiedDates, pageOrder } from './content.mjs'
 
 const interfaceLabels = {
-  en: { support: 'Contact support', intro: 'Privacy & support', contents: 'Explore this document' },
-  'zh-Hans': { support: '联系支持', intro: '隐私与支持', contents: '浏览文档目录' },
-  'zh-Hant': { support: '聯絡支援', intro: '隱私與支援', contents: '瀏覽文件目錄' },
-  ja: { support: 'サポートに連絡', intro: 'プライバシーとサポート', contents: '目次を開く' },
+  en: { sendEmail: 'Send email', copyEmail: 'Copy email address', intro: 'Privacy & support', contents: 'Explore this document' },
+  'zh-Hans': { sendEmail: '发送邮件', copyEmail: '复制邮箱', intro: '隐私与支持', contents: '浏览文档目录' },
+  'zh-Hant': { sendEmail: '傳送電子郵件', copyEmail: '複製信箱', intro: '隱私與支援', contents: '瀏覽文件目錄' },
+  ja: { sendEmail: 'メールを送信', copyEmail: 'メールアドレスをコピー', intro: 'プライバシーとサポート', contents: '目次を開く' },
 }
 
 const siteOrigin = 'https://neko-233.github.io/airi-pocket-privacy'
@@ -88,6 +88,12 @@ function renderStructuredData(locale, page, content) {
 export function renderPage(locale, content, page) {
   const pageContent = content.pages[page]
   const labels = interfaceLabels[locale]
+  const email = 'support-airi@moeru.ai'
+  const contact = `<div class="email-contact">
+    <a href="mailto:${email}">${escapeHtml(labels.sendEmail)}</a>
+    <span dir="ltr">${email}</span>
+    <button type="button" data-copy="${email}" data-label="${escapeHtml(labels.copyEmail)}" data-copied="${escapeHtml(content.ui.copied)}">${escapeHtml(labels.copyEmail)}</button>
+  </div>`
   const direction = languages[locale].direction ?? 'ltr'
   const alternateLinks = Object.keys(languages)
     .map((language) => `<link rel="alternate" hreflang="${language}" href="${siteOrigin}/${language}/${page}/">`)
@@ -156,7 +162,7 @@ export function renderPage(locale, content, page) {
       <aside class="toc" aria-label="${escapeHtml(content.ui.onThisPage)}">
         <strong>${escapeHtml(content.ui.onThisPage)}</strong>
         <nav>${toc}</nav>
-        <a class="support-shortcut" href="mailto:support-airi@moeru.ai"><span aria-hidden="true">↗</span> ${escapeHtml(labels.support)}</a>
+        ${contact}
       </aside>
       <article class="legal-document">
         ${pageContent.highlights?.length ? `<ul class="key-points">${pageContent.highlights.map((item) => `<li>${renderInline(item.text)}</li>`).join('')}</ul>` : ''}
@@ -167,8 +173,8 @@ export function renderPage(locale, content, page) {
 
   <footer>
     <p><strong>AIRI Lite</strong> · ${escapeHtml(content.ui.footer)} · <a href="https://github.com/Neko-233/airi-pocket-privacy" rel="external">GitHub</a></p>
-    <a class="footer-support" href="mailto:support-airi@moeru.ai">${escapeHtml(labels.support)} ↗</a>
-    <button id="copy-link" type="button" data-label="${escapeHtml(content.ui.copyLink)}" data-copied="${escapeHtml(content.ui.copied)}">${escapeHtml(content.ui.copyLink)}</button>
+    ${contact}
+    <button id="copy-link" data-copy="" type="button" data-label="${escapeHtml(content.ui.copyLink)}" data-copied="${escapeHtml(content.ui.copied)}">${escapeHtml(content.ui.copyLink)}</button>
   </footer>
   <script src="../../assets/site.js" defer></script>
 </body>

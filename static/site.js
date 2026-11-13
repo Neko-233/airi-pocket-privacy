@@ -9,17 +9,19 @@
     window.location.assign(destination)
   })
 
-  const copyButton = document.querySelector('#copy-link')
-  copyButton?.addEventListener('click', async () => {
-    try {
-      await navigator.clipboard.writeText(window.location.href)
-      copyButton.textContent = copyButton.dataset.copied
-      window.setTimeout(() => {
-        copyButton.textContent = copyButton.dataset.label
-      }, 1800)
-    } catch {
-      window.prompt(copyButton.dataset.label, window.location.href)
+  document.querySelectorAll('[data-copy]').forEach((button) => {
+    /** Copies the support address or the current page URL, with a manual fallback. */
+    async function copyValue() {
+      const value = button.dataset.copy || window.location.href
+      try {
+        await navigator.clipboard.writeText(value)
+        button.textContent = button.dataset.copied
+        window.setTimeout(() => { button.textContent = button.dataset.label }, 1800)
+      } catch {
+        window.prompt(button.dataset.label, value)
+      }
     }
+    button.addEventListener('click', copyValue)
   })
 
   const links = [...document.querySelectorAll('.toc a')]
