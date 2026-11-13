@@ -45,6 +45,8 @@ h1 { font-size: 36px; font-weight: 600; line-height: 1.3; letter-spacing: -.025e
 .toc nav a { font-size: 12px; line-height: 1.6; text-decoration: none; color: var(--muted); padding: 7px 14px; border-left: 1px solid transparent; margin-left: -1px; }
 .toc nav a:hover, .toc nav a[aria-current] { color: var(--ink); border-color: var(--ink); }
 .email-contact { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; font-size: 12px; color: var(--muted); }
+.email-contact .email-contact-title { flex-basis: 100%; margin: 0; color: var(--ink); font-size: 12px; font-weight: 500; }
+.email-contact .email-contact-purpose { flex-basis: 100%; margin: 0; line-height: 1.7; }
 .toc .email-contact { margin-top: 24px; }
 .legal-document { min-width: 0; }
 .legal-document h2 { font-size: 21px; line-height: 1.5; font-weight: 600; margin: 0 0 16px; }
@@ -65,6 +67,7 @@ h1 { font-size: 36px; font-weight: 600; line-height: 1.3; letter-spacing: -.025e
 .note p { font-size: 14px; }
 footer { padding: 24px 0 max(32px, env(safe-area-inset-bottom)); display: flex; align-items: center; gap: 24px; border-top: 1px solid var(--line); font-size: 12px; color: var(--muted); }
 footer p { margin: 0; flex: 1; }
+footer .email-contact { flex: 0 1 360px; }
 footer a { white-space: nowrap; }
 footer button, .email-contact button { padding: 8px 0; color: inherit; font-size: 12px; background: none; border: 0; text-decoration: underline; text-underline-offset: 4px; }
 .landing { min-height: 100vh; display: grid; place-items: center; }

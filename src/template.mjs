@@ -1,10 +1,10 @@
 import { documentVersion, languages, pageModifiedDates, pageOrder } from './content.mjs'
 
 const interfaceLabels = {
-  en: { sendEmail: 'Send email', copyEmail: 'Copy email address', intro: 'Privacy & support', contents: 'Explore this document' },
-  'zh-Hans': { sendEmail: '发送邮件', copyEmail: '复制邮箱', intro: '隐私与支持', contents: '浏览文档目录' },
-  'zh-Hant': { sendEmail: '傳送電子郵件', copyEmail: '複製信箱', intro: '隱私與支援', contents: '瀏覽文件目錄' },
-  ja: { sendEmail: 'メールを送信', copyEmail: 'メールアドレスをコピー', intro: 'プライバシーとサポート', contents: '目次を開く' },
+  en: { sendEmail: 'Send email', copyEmail: 'Copy email address', contactTitle: 'Contact support', contactPurpose: 'For help with AIRI Lite, bug reports, or account, purchase, and privacy questions.', intro: 'Privacy & support', contents: 'Explore this document' },
+  'zh-Hans': { sendEmail: '发送邮件', copyEmail: '复制邮箱', contactTitle: '联系支持', contactPurpose: '如需使用帮助、反馈问题，或咨询账号、购买和隐私事项，请通过下方邮箱联系 AIRI Lite 支持。', intro: '隐私与支持', contents: '浏览文档目录' },
+  'zh-Hant': { sendEmail: '傳送電子郵件', copyEmail: '複製信箱', contactTitle: '聯絡支援', contactPurpose: '如需使用協助、回報問題，或詢問帳號、購買及隱私事項，請透過下方信箱聯絡 AIRI Lite 支援。', intro: '隱私與支援', contents: '瀏覽文件目錄' },
+  ja: { sendEmail: 'メールを送信', copyEmail: 'メールアドレスをコピー', contactTitle: 'サポートへのお問い合わせ', contactPurpose: 'AIRI Lite の使い方、不具合、アカウント、購入、プライバシーに関するご相談は、下記のメールアドレスへお送りください。', intro: 'プライバシーとサポート', contents: '目次を開く' },
 }
 
 const siteOrigin = 'https://neko-233.github.io/airi-pocket-privacy'
@@ -84,12 +84,14 @@ function renderStructuredData(locale, page, content) {
   return JSON.stringify(data).replaceAll('<', '\\u003c')
 }
 
-/** Composes the shared accessible document shell for every policy and locale. */
+/** Composes each localized document with support context beside its email actions. */
 export function renderPage(locale, content, page) {
   const pageContent = content.pages[page]
   const labels = interfaceLabels[locale]
   const email = 'support-airi@moeru.ai'
   const contact = `<div class="email-contact">
+    <strong class="email-contact-title">${escapeHtml(labels.contactTitle)}</strong>
+    <p class="email-contact-purpose">${escapeHtml(labels.contactPurpose)}</p>
     <a href="mailto:${email}">${escapeHtml(labels.sendEmail)}</a>
     <span dir="ltr">${email}</span>
     <button type="button" data-copy="${email}" data-label="${escapeHtml(labels.copyEmail)}" data-copied="${escapeHtml(content.ui.copied)}">${escapeHtml(labels.copyEmail)}</button>
